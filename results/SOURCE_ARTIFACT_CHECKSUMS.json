@@ -1,0 +1,17 @@
+{
+  "algorithm": "sha256",
+  "artifacts": {
+    "as1063_b2_control_raw_result": "7eb9faf704cf000e9dd5a16d46b563cd96d6fcde388e439af427e8b25bb340a6",
+    "as1063_b2_raw_result": "1092c3193b3af4aabbcf14d4c009d1bbaaba17f0186da622efd9d4cebbd2410a",
+    "canonical_channels_raw_result": "35924b49ddb2f74370e8d5dfa506173cc363b954e553ee07abe7ef83d5ea647d",
+    "hff_raw_result": "9da2e6bcb59dbf022f9aef2f31e1be1d9a0e77a99b8b77285726fd7104824afd",
+    "n13_m1_raw_result": "33f5fa15c699199a14dbc3b5e2cd6d48a304bd3aa5d4aa72dab5b11b5bbec84d",
+    "n13_m2_raw_result": "eb83e068f68af8096b5e103a9257a5e960dc4fb27a45910f4e5e69f9f3971e33",
+    "n13_m3_raw_result": "97cfafc00f0040dda35da62872d6ab8eeef2572185adb7f0ea40cf704c7f105f",
+    "program_c_raw_result": "c2d6159ce99af1a345f170d5c4b463ae66998d8c4d530b33016df59bbdd5a9b9",
+    "program_ea_raw_result": "a6c7f7c4c883d3dce3536ffe24f382aa86b78dc9234e1e68cfb421bbfe6d9ca2",
+    "sidm_halo000_raw_result": "92362ba589cf96125404bf7fb4476fbb270db3abe2515265587a8e9646c91dd1",
+    "sidm_halo352_raw_result": "47bca0415053ccdb14f5c66fcda4be1e3d2726adea098d87273dbbe5808357e9"
+  },
+  "boundary": "Hashes identify internal upstream result artifacts; only sanitized derivatives are public."
+}

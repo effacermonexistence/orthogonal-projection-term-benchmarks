@@ -1,0 +1,9 @@
+record_id,unit_count,independence,headline_result,status,file
+N13_DEVELOPMENT_CHAIN,1,development sample reused,M1 delta chi2 -1.2543; 20th percentile under null; M2 absorbs residual,DEVELOPMENT_NEGATIVE,results/n13_development_chain.json
+PROGRAM_C_HZ_BACKGROUND_FLUID,31,separate H(z) dataset; different term,delta chi2 -0.00874; AIC/BIC worse,NO_REAL_UPLIFT,results/program_c_hz_background_fluid.json
+PROGRAM_EA_WEAK_FIELD_LENSING,5,same N13 development sample,delta chi2 -0.8760,SAME_SAMPLE_DIAGNOSTIC,results/program_ea_weak_field_lensing.json
+CANONICAL_EQUATION_CHANNEL_DIAGNOSTICS,6,"overlapping channels, not six independent datasets",4 non-neutral cluster channels negative; NFW/outer neutral,CHANNEL_DIAGNOSTIC,results/canonical_equation_channels.json
+AS1063_TRUE_DENSITY_B2,1,public model-component diagnostic,Plummer 3D residual reduction 19.857%,DIRECTIONAL_DIAGNOSTIC,results/as1063_b2_true_density.json
+HFF_MAP_TRANSFER_6_CLUSTER,6,six cluster targets; shared map-team/systematics,Plummer-like 2D negative delta 6/6; generic controls also 6/6 and win 5/6,GENERIC_SMOOTHING_EXPLANATION,results/hff_six_cluster_transfer.json
+SIDM_CONCERTO_HALO000_3D,1,new public simulation-parametric target,Plummer 29.366%; Gaussian/top-hat approximately 29.44%,DIRECTION_PASS_SPECIFICITY_FAIL,results/sidm_halo000_3d.json
+SIDM_CONCERTO_HALO352_FRESH_3D,1,score-blind fresh public simulation-parametric target,Plummer 41.000%; Gaussian 42.129%; top-hat 42.581%,DIRECTION_PASS_SPECIFICITY_FAIL,results/sidm_halo352_fresh_3d.json
