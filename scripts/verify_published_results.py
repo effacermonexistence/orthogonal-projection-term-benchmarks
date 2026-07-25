@@ -54,6 +54,58 @@ def verify_sparc():
     assert public_reproduction['status']=='PASS'
     assert public_reproduction['scope']=='PUBLIC_REPRODUCTION_NUMERICAL_PARITY_ONLY'
     assert public_reproduction['heldout_numeric_match']['aggregate']==plummer
+def verify_jeans():
+    held=load('results/jeans_dsph_heldout.json')
+    dev=load('results/jeans_dsph_dev_grid.json')
+    policy=load('results/jeans_dsph_frozen_policy.json')
+    sample=load('results/jeans_dsph_sample_manifest.json')
+    receipt=load('results/jeans_dsph_run_receipt.json')
+    verification=load('results/jeans_dsph_verification.json')
+    failures=load('results/jeans_dsph_failure_ledger.json')
+    assert not set(sample['dev']).intersection(sample['heldout'])
+    assert sample['dev']==['Sextans','Fornax']
+    assert sample['heldout']==['Sculptor','Carina']
+    assert held['heldout_names']==sample['heldout']
+    assert dev['heldout_accessed'] is False
+    assert policy['heldout_scores_accessed'] is False
+    assert held['safe_policy']['f']==policy['safe_optimum']['f']==0.0
+    assert held['forced_nonzero_policy']['f']==policy['forced_nonzero_optimum']['f']==0.05
+    assert held['forced_nonzero_policy']['eta']==policy['forced_nonzero_optimum']['eta']==0.03125
+    assert sample['dispersion_profiles']['Carina']['member_count']==746
+    assert sample['dispersion_profiles']['Fornax']['member_count']==2279
+    assert sample['dispersion_profiles']['Sculptor']['member_count']==1349
+    assert sample['dispersion_profiles']['Sextans']['member_count']==397
+    rows=held['rows']
+    assert len(rows)==2 and all(row['baseline_stable'] for row in rows)
+    for key in ('safe_plummer','forced_plummer','forced_gaussian','forced_top_hat'):
+        aggregate=held['aggregates'][key]
+        base=sum(row['baseline_chi2'] for row in rows)
+        candidate=sum(row[key]['chi2'] for row in rows)
+        verify_delta(base,candidate,aggregate['raw_delta_chi2'],aggregate['residual_reduction_pct'])
+        close(base,aggregate['baseline_total_chi2'])
+        close(candidate,aggregate['candidate_total_chi2'])
+        assert aggregate['improved_count']==sum(row[key]['delta_chi2']<0 for row in rows)
+        assert aggregate['worsened_count']==sum(row[key]['delta_chi2']>0 for row in rows)
+        for row in rows:
+            result=row[key]
+            verify_delta(row['baseline_chi2'],result['chi2'],result['delta_chi2'],result['residual_reduction_pct'])
+            assert result['f0_max_abs_kms']==0.0
+            assert abs(result['raw_mass_leak_fraction'])<=0.02
+            assert abs(result['mass_leak_fraction'])<=1e-12
+    safe=held['aggregates']['safe_plummer']
+    forced=held['aggregates']['forced_plummer']
+    close(safe['raw_delta_chi2'],0.0)
+    close(forced['raw_delta_chi2'],0.00190530699818936)
+    close(forced['residual_reduction_pct'],-0.005389404945401978)
+    assert forced['improved_count']==0 and forced['worsened_count']==2
+    assert verification['status']=='PASS'
+    assert verification['checks']['dev_replay_byte_identical'] is True
+    assert verification['checks']['heldout_replay_byte_identical'] is True
+    assert receipt['status']=='COMPLETE_NEGATIVE_RESULT'
+    assert receipt['result_label']=='NO_ADAPTER_UPLIFT_SAFE_FLOOR_SELECTED'
+    assert receipt['heldout_aggregates']==held['aggregates']
+    assert receipt['claim_boundary']==held['claim_boundary']
+    assert len(failures['failures'])==3
 def main():
     hff=load('results/hff_six_cluster_transfer.json')
     for row in hff['rows']:
@@ -64,6 +116,7 @@ def main():
         x=load(rel); base=x['base_chi_total']
         for r in x['kernels'].values(): verify_delta(base,r['chi_total'],r['raw_delta_chi_total'],r['residual_reduction_pct'])
     verify_sparc()
+    verify_jeans()
     forbidden=[re.compile('/'+'Users/'),re.compile(r'sk-(?:proj-)?[A-Za-z0-9_-]{16,}'),re.compile(r'BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY')]
     skipped={'.git','.venv','__pycache__','.pytest_cache','build','dist'}
     for p in ROOT.rglob('*'):

@@ -55,6 +55,23 @@ Raw third-party datasets are not committed. This repository stores URLs, source 
   galaxy metadata for the shared equation-adapter dev/heldout diagnostic.
 - The original source files are not redistributed in this repository.
 
+## Walker et al. dwarf-spheroidal stellar velocities
+
+- Catalog: CDS/VizieR `J/AJ/137/3100`.
+- Catalog landing page: https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/137/3100
+- FTP root: https://cdsarc.cds.unistra.fr/ftp/J/AJ/137/3100/
+- Walker et al. paper/source record: https://ui.adsabs.harvard.edu/abs/2009AJ....137.3100W/abstract
+- Use: membership-filtered stellar velocities for Carina, Fornax, Sculptor, and Sextans; deterministic radial dispersion profiles for the spherical-Jeans shared-adapter dev/heldout diagnostic.
+- Membership rule: unique summary row with `Mmb >= 0.95`.
+- `ReadMe` SHA-256: `efb2d2f1040d1719b359d9490d4a6b5662cad1349faca5e701483166e97b7d80`
+- `table2.dat` (Carina) SHA-256: `fe88e35c3d4626113e1c4e3af26de4adcb7c8b7ef927c9602054d050b9e3da02e`
+- `table3.dat` (Fornax) SHA-256: `03835f7317e9665b026a8469756957c89f4352a508c5ecedc54e0cd0d01eb02e`
+- `table4.dat` (Sculptor) SHA-256: `d7ed95def36543514f1896adc0dfbfcd183b44ccf2af7fb819b15dc70b6e0326`
+- `table5.dat` (Sextans) SHA-256: `da1fe06a1db5b95f1dc8b89468c5af6726022f909af565859eb1773d775cd45e`
+- Walker paper source archive SHA-256: `fbe10b9157115e465af431f326d24e5795c5388ee4b62ded7408843c0dd2bf42`
+- Łokas Jeans reference source archive SHA-256: `6888ae71a5150da7e1ee9ae031fc6689fb5bbca7a46660e12f0fa3cb3594456d`
+- The original catalogs and paper archives are not redistributed.
+
 ## Integrity boundary
 
 Checksums identify byte-level inputs; they do not elevate a public model product into raw observational data. Each result file states its evidence class.

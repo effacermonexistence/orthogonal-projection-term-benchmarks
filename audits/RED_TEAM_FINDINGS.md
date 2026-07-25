@@ -41,6 +41,19 @@ nuisance parameters. Plummer was best in aggregate, but all three matched
 kernels improved 5/6 stable galaxies, one heldout baseline was unstable, and
 the stable sample is too small for confirmatory or kernel-specific claims.
 
+## 8. Dwarf-spheroidal Jeans rejection
+
+The Jeans lane calibrated the shared adapter on Sextans and Fornax before
+opening Sculptor and Carina. The safe development policy selected `f=0`.
+The separately frozen forced-nonzero Plummer policy slightly worsened both
+heldout galaxies (`delta chi-square = +0.001905307`), while matched generic
+controls were also near-neutral and adverse in aggregate. The correct result
+is no adapter uplift, not a small positive effect.
+
 ## Durable conclusion
 
-The evidence supports a reproducible redistribution effect in selected diagnostic spaces. It does not currently require or identify a unique physical kernel or new cosmological source term.
+The evidence supports a reproducible redistribution effect in selected
+diagnostic spaces, not a universal improvement. The independent Jeans
+calibration rejected the nonzero adapter. The combined record does not
+currently require or identify a unique physical kernel or new cosmological
+source term.

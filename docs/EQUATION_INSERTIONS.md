@@ -40,13 +40,26 @@ The SIDM Concerto runs compare this augmented CDM/NFW profile with a matched pub
 
 ## Jeans lane
 
-The standard spherical Jeans calculation is retained, but its mass source is derived from the corrected density:
+The standard spherical Jeans equation is retained:
 
 $$
-M_{\rm aug}(<r)=4\pi\int_0^r \rho_{\rm aug}(r')r'^2dr'.
+\frac{d(\nu\sigma_r^2)}{dr}+\frac{2\beta}{r}\nu\sigma_r^2
+=-\nu\frac{G M(<r)}{r^2}.
 $$
 
-No separate free residual map is added.
+The dwarf-spheroidal adapter acts only on the three-dimensional NFW halo density:
+
+$$
+d_g=\eta r_{1/2,g},
+\qquad
+\rho_{h,\rm aug}=(1-f)\rho_{\rm NFW}+f(K_{d_g}*\rho_{\rm NFW}),
+$$
+
+$$
+M_{\rm aug}(<r)=M_\star(<r)+4\pi\int_0^r \rho_{h,\rm aug}(r')r'^2dr'.
+$$
+
+No separate free residual map is added, and the stellar tracer/mass is not convolved. Development calibration selected `f=0`; the forced nonzero diagnostic was slightly adverse on both heldout galaxies. Full details are in [`JEANS_DSPH_ADAPTER.md`](JEANS_DSPH_ADAPTER.md).
 
 ## SPARC circular-velocity lane
 

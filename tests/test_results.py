@@ -34,3 +34,23 @@ def test_sparc_public_reproduction_check_is_bounded():
     assert x['status']=='PASS'
     assert x['scope']=='PUBLIC_REPRODUCTION_NUMERICAL_PARITY_ONLY'
     assert 'not a new heldout run' in x['proof_boundary']
+def test_jeans_calibration_selected_safe_floor():
+    x=json.loads((ROOT/'results/jeans_dsph_heldout.json').read_text())
+    assert x['safe_policy']['f']==0.0
+    assert x['aggregates']['safe_plummer']['raw_delta_chi2']==0.0
+    assert x['claim_allowed'] is False
+def test_jeans_forced_nonzero_result_is_negative():
+    x=json.loads((ROOT/'results/jeans_dsph_heldout.json').read_text())
+    a=x['aggregates']['forced_plummer']
+    assert round(a['raw_delta_chi2'],9)==0.001905307
+    assert round(a['residual_reduction_pct'],6)==-0.005389
+    assert a['improved_count']==0
+    assert a['worsened_count']==2
+    assert a['downlift'] is True
+def test_jeans_replay_and_numerical_gates_passed():
+    x=json.loads((ROOT/'results/jeans_dsph_verification.json').read_text())
+    assert x['status']=='PASS'
+    assert x['checks']['dev_replay_byte_identical'] is True
+    assert x['checks']['heldout_replay_byte_identical'] is True
+    assert x['checks']['all_f0_exact'] is True
+    assert x['checks']['all_mass_corrections_within_gate'] is True

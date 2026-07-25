@@ -9,6 +9,9 @@
 - The fresh Halo352 result is a clean directional diagnostic and a clean Plummer-specificity failure.
 - In the SPARC shared-adapter heldout lane, the frozen Plummer adapter reduced
   aggregate chi-square by 9.256213 (4.432%) and improved 5/6 stable galaxies.
+- The dwarf-spheroidal Jeans calibration and heldout evaluation are fully
+  preserved as a negative result: the safe policy selected `f=0`, while the
+  forced Plummer term slightly worsened both heldout galaxies.
 
 ## Conditional / limited
 
@@ -22,6 +25,9 @@
 - Plummer beat the two frozen matched generic controls in SPARC aggregate
   chi-square, but Gaussian and top-hat also improved 5/6 stable galaxies.
   Kernel-specific physics remains unproven.
+- The Jeans heldout label applies only to shared `f/eta`; each heldout galaxy
+  received its own baseline NFW and constant-anisotropy nuisance fit. Its
+  nonzero deltas are materially negligible and do not support adapter adoption.
 
 ## Not supported
 
@@ -39,3 +45,7 @@
 The SPARC-specific sentence is:
 
 > A development-selected galaxy-scaled redistribution adapter reduced aggregate residuals on a heldout SPARC subset by 4.432%, while matched generic smoothers also improved the same 5/6 stable galaxies; this is a shared-adapter diagnostic, not clean predictive or physical proof.
+
+The dwarf-spheroidal Jeans-specific sentence is:
+
+> On a public-data spherical-Jeans dev/heldout diagnostic, calibration selected the unmodified baseline (`f=0`); a separately frozen nonzero Plummer adapter slightly worsened both heldout galaxies, so this lane provides no adapter uplift.

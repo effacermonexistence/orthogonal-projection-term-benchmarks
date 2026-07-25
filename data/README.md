@@ -5,3 +5,7 @@ No third-party data files are committed. Download the source products described 
 For the SPARC lane, use `data/sparc/Rotmod_LTG.zip` and
 `data/sparc/SPARC_Lelli2016c.mrt`; the exact commands and expected hashes are in
 [`scripts/sparc/README.md`](../scripts/sparc/README.md).
+
+For the dwarf-spheroidal Jeans lane, download the CDS/VizieR
+`J/AJ/137/3100` `ReadMe` and `table2.dat` through `table5.dat`; commands and
+expected hashes are in [`scripts/jeans/README.md`](../scripts/jeans/README.md).

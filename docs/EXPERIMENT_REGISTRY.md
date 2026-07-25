@@ -1,6 +1,6 @@
 # Experiment registry and independence map
 
-The registry contains **nine experimental records**, not nine independent confirmations.
+The registry contains **ten experimental records**, not ten independent confirmations.
 
 | Record | Stored units | Independence status | Result class |
 |---|---:|---|---|
@@ -13,6 +13,7 @@ The registry contains **nine experimental records**, not nine independent confir
 | SIDM Concerto Halo000 | 1 public simulation-parametric target | New target | Direction pass; specificity fail |
 | SIDM Concerto Halo352 | 1 score-blind fresh target | New target | Direction pass; specificity fail |
 | SPARC rotation-curve adapter | 14 dev / 7 heldout; 6 stable heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | 4.432% aggregate heldout reduction; diagnostic only |
+| Dwarf-spheroidal spherical-Jeans adapter | 2 dev / 2 heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | Safe policy selected `f=0`; forced term slightly worsened both heldout galaxies |
 
 ## Development chain
 
@@ -30,3 +31,7 @@ The strongest fresh 3D run passed the first question and failed the second. Ther
 ## SPARC shared-adapter lane
 
 SPARC adds a new observational domain and freezes one shared `f/eta` policy after development before evaluating the heldout galaxy identities. This is stronger than replaying the same development rows, but the heldout boundary does not cover each galaxy's baseline NFW nuisance fit. One of seven heldout baselines hit a bound and is retained as an excluded row. The valid public label is `PUBLIC_DATA_DEV_OPTIMIZATION_PLUS_HELDOUT_SHARED_ADAPTER_DIAGNOSTIC`.
+
+## Dwarf-spheroidal Jeans lane
+
+The Walker et al. public stellar-velocity catalogs add another equation and data domain. Sextans and Fornax calibrated a shared `f/eta` grid; Sculptor and Carina were held out from shared-policy selection. Calibration selected `f=0`, while the separately frozen forced-nonzero Plummer diagnostic produced `delta chi-square = +0.001905307` and worsened both heldout galaxies. This is a complete negative result under the label `NO_ADAPTER_UPLIFT_SAFE_FLOOR_SELECTED`. As in SPARC, each heldout object's own baseline NFW and anisotropy nuisances were fitted, so the lane is not clean end-to-end prediction.

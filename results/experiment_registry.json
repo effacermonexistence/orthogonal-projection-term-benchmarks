@@ -67,11 +67,19 @@
     },
     {
       "file": "results/sparc_rotation_curve_heldout.json",
-      "headline_result": "heldout shared adapter: chi2 208.845\u2192199.589; delta -9.256; 4.432%; 5/6 stable galaxies improved",
+      "headline_result": "heldout shared adapter: chi2 208.845→199.589; delta -9.256; 4.432%; 5/6 stable galaxies improved",
       "independence": "new SPARC public-data domain; shared f/eta held out; per-galaxy baseline nuisances fitted",
       "record_id": "SPARC_ROTATION_CURVE_SHARED_ADAPTER",
       "status": "PUBLIC_DATA_DEV_OPTIMIZATION_PLUS_HELDOUT_SHARED_ADAPTER_DIAGNOSTIC",
       "unit_count": 7
+    },
+    {
+      "file": "results/jeans_dsph_heldout.json",
+      "headline_result": "safe calibration selected f=0; forced Plummer chi2 35.352827→35.354732; delta +0.001905; no uplift",
+      "independence": "new dSph public-data domain; shared f/eta held out; per-galaxy NFW/beta nuisances fitted",
+      "record_id": "DSPH_SPHERICAL_JEANS_SHARED_ADAPTER",
+      "status": "NO_ADAPTER_UPLIFT_SAFE_FLOOR_SELECTED",
+      "unit_count": 2
     }
   ]
 }
