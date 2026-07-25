@@ -1,6 +1,6 @@
 # Experiment registry and independence map
 
-The registry contains **eleven experimental records**, not eleven independent confirmations.
+The registry contains **twelve experimental records**, not twelve independent confirmations.
 
 | Record | Stored units | Independence status | Result class |
 |---|---:|---|---|
@@ -15,6 +15,7 @@ The registry contains **eleven experimental records**, not eleven independent co
 | SPARC rotation-curve adapter | 14 dev / 7 heldout; 6 stable heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | 4.432% aggregate heldout reduction; diagnostic only |
 | Dwarf-spheroidal spherical-Jeans adapter | 2 dev / 2 heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | Safe policy selected `f=0`; forced term slightly worsened both heldout galaxies |
 | Jeans-v2 nuisance-orthogonal response adapter | 4 dev / 2 untouched heldout | Different public heldout catalog and galaxy identities; shared `eta/a_perp` frozen; per-galaxy nuisances fitted | Frozen Plummer response worsened Draco and Ursa Minor; no generalization |
+| Corrective direct formal-source Jeans insertion | 4 dev / 2 post-exposure evaluation | Reuses Draco/Ursa Minor identities after Jeans-v2; direct-source scores were new but not fresh/unseen | Both deltas negative, aggregate reduction 0.005077%; dev-safe policy remained `f=0`; materiality not established |
 
 ## Development chain
 
@@ -53,3 +54,8 @@ This is a stronger heldout boundary than Jeans-v1 for shared adapter transfer,
 but each heldout galaxy still has a fitted NFW/anisotropy baseline. The result
 is therefore a clean negative adapter-generalization diagnostic, not clean
 end-to-end prediction.
+
+
+## Corrective direct formal-source Jeans lane
+
+Jeans-v2 is an off-object response-space experiment relative to the canonical-source question. The corrective lane preserves it and separately inserts `rho_perp=f(K_d*rho_NFW-rho_NFW)` into the halo density source of the unchanged Jeans equation. Carina, Fornax, Sculptor, and Sextans calibrated the direct shared `f/eta` grid; the safe optimum was `f=0`. The best frozen nonzero diagnostic (`f=0.05`, `eta=0.03125`) moved Draco and Ursa Minor from `22.835647795309` to `22.834488396426` chi-square (`delta=-0.001159398883`, `0.005077%`, 2/0 direction). Because those galaxy identities were already exposed under Jeans-v2, the result is `POST_EXPOSURE_CORRECTIVE_FORMAL_SOURCE_REPRODUCTION`, not a new independent validation.

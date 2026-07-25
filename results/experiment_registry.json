@@ -88,6 +88,14 @@
       "record_id": "DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER",
       "status": "UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION",
       "unit_count": 2
+    },
+    {
+      "file": "results/jeans_dsph_formal_corrective_evaluation.json",
+      "headline_result": "post-exposure corrective direct source: chi2 22.835648\u219222.834488; delta -0.001159; 0.005077%; 2/0 negative direction",
+      "independence": "reuses Draco/Ursa Minor after off-object Jeans-v2 exposure; direct formal-source candidate scores new but not fresh/unseen",
+      "record_id": "DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE",
+      "status": "CORRECT_FORMAL_SOURCE_DIRECTIONAL_DELTA_NEGATIVE_BUT_MATERIALITY_NOT_ESTABLISHED",
+      "unit_count": 2
     }
   ]
 }

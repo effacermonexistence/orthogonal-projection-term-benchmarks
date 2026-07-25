@@ -1,5 +1,7 @@
 # Jeans-v2 nuisance-orthogonal response adapter
 
+> **Executed-object boundary:** this is a response-space adapter experiment, not the direct orthogonal-density insertion into the canonical Jeans source. Its result is preserved unchanged. The direct formal-source correction is documented separately in [`JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md`](JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md).
+
 ## Result
 
 Jeans-v2 was designed after Jeans-v1 rejected the direct density adapter. It does **not** overwrite that earlier negative result. The new adapter was calibrated on four previously inspected development galaxies and then frozen before any model score was computed for Draco or Ursa Minor from a different public catalog.

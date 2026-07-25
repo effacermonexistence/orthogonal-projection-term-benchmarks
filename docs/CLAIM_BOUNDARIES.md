@@ -17,6 +17,7 @@
   Plummer response worsened both untouched heldout galaxies from a different
   public catalog (`delta chi-square = +1.250092`; `-5.474%` residual
   reduction).
+- The corrective direct formal-source rerun executed the requested spherical-Jeans source insertion without response projection. Its frozen nonzero Plummer diagnostic moved both Draco and Ursa Minor deltas negative (`delta chi-square = -0.001159399`; `0.005077%` residual reduction), while the development-safe policy remained `f=0`.
 
 ## Conditional / limited
 
@@ -39,6 +40,7 @@
 - The Jeans-v2 development optimum hit its declared amplitude upper bound.
   The bound was not widened after heldout scoring; this limits interpretation
   but does not alter the negative heldout result.
+- The corrective direct-source run is post-exposure because Draco and Ursa Minor were already evaluated under Jeans-v2. Candidate nuisances were frozen at the baseline fit; this is a forced directional comparison, not a best-fit augmented-model or fresh/unseen test. The absolute effect is materially tiny.
 
 ## Not supported
 
@@ -48,6 +50,7 @@
 - Replacement or falsification of GR, LambdaCDM, NFW, or baryonic countermodels.
 - Raw-observational-likelihood improvement from model-to-model diagnostic scores.
 - Treating overlapping channels or repeated development runs as independent validations.
+- Treating the corrective `0.005077%` Jeans reduction as material uplift, adoption evidence, kernel specificity, or physical proof.
 
 ## Public sentence
 
@@ -64,3 +67,7 @@ The dwarf-spheroidal Jeans-specific sentence is:
 The Jeans-v2-specific sentence is:
 
 > A nuisance-orthogonal Jeans response adapter calibrated on four development galaxies worsened both untouched Draco and Ursa Minor heldout profiles after policy freeze (`22.835649 → 24.085741` chi-square), so the v2 adapter did not generalize.
+
+The corrective direct-formal Jeans sentence is:
+
+> The direct halo-density insertion moved both post-exposure Draco and Ursa Minor deltas slightly negative (`22.835648 → 22.834488` chi-square), but development selected `f=0` and the aggregate reduction was only `0.005077%`; this is a corrected equation-object diagnostic, not material uplift or fresh proof.

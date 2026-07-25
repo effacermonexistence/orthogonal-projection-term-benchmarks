@@ -61,6 +61,17 @@ $$
 
 No separate free residual map is added, and the stellar tracer/mass is not convolved. Development calibration selected `f=0`; the forced nonzero diagnostic was slightly adverse on both heldout galaxies. Full details are in [`JEANS_DSPH_ADAPTER.md`](JEANS_DSPH_ADAPTER.md).
 
+### Corrective direct formal-source rerun
+
+A later corrective run applied exactly the same direct density-source equation to Draco and Ursa Minor after the separate Jeans-v2 response-space experiment exposed those galaxy identities. It used
+
+$$
+\rho_\perp=f(K_d*\rho_{\rm NFW}-\rho_{\rm NFW}),\qquad
+M_\perp(<r)=4\pi\int_0^r\rho_\perp(r')r'^2dr',
+$$
+
+and inserted `M_perp` directly on the Jeans right-hand side. No response projection was used. The development-safe policy again selected `f=0`; the frozen nonzero diagnostic produced a tiny aggregate `delta chi-square = -0.001159399` (`0.005077%`) with both galaxy deltas negative. This is post-exposure correction of the executed equation object, not fresh proof or material uplift. See [`JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md`](JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md).
+
 ### Jeans-v2 response-orthogonal diagnostic
 
 Jeans-v2 uses the same halo-only smoothing only to generate a raw response,
@@ -82,7 +93,7 @@ $$
 $$
 
 This is an empirical equation-response adapter, not a new density or source
-law. The development-selected response worsened both untouched heldout
+law and not a direct canonical-equation insertion. Its negative result remains valid only for that response adapter; the corrected direct-source question is recorded separately. The development-selected response worsened both untouched heldout
 galaxies. Full details are in
 [`JEANS_DSPH_RESPONSE_ADAPTER_V2.md`](JEANS_DSPH_RESPONSE_ADAPTER_V2.md).
 

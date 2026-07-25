@@ -65,6 +65,10 @@ amplitude hit its declared upper bound, but widening that bound after heldout
 inspection would invalidate the locked experiment. The valid result is
 `UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION`.
 
+## 10. Jeans executed-object correction
+
+Jeans-v2 answered a response-adapter question rather than the requested direct canonical-source insertion. The record now labels that mismatch explicitly and preserves both experiments. In the corrected formal-source run, development again selected the baseline `f=0`. A frozen nonzero diagnostic moved both post-exposure evaluation deltas negative, but only by `delta chi-square = -0.001159399` (`0.005077%`). That establishes executed-object correction and a tiny directional delta, not material uplift, fresh proof, or adoption support.
+
 ## Durable conclusion
 
 The evidence supports a reproducible redistribution effect in selected

@@ -166,6 +166,47 @@ def verify_jeans_v2():
     assert replay['status']=='PASS'
     assert replay['dev_byte_identical'] is True
     assert replay['heldout_byte_identical'] is True
+def verify_jeans_formal_corrective():
+    held=load('results/jeans_dsph_formal_corrective_evaluation.json')
+    dev=load('results/jeans_dsph_formal_corrective_dev_grid.json')
+    policy=load('results/jeans_dsph_formal_corrective_frozen_policy.json')
+    sample=load('results/jeans_dsph_formal_corrective_sample_manifest.json')
+    audit=load('results/jeans_dsph_formal_corrective_audit.json')
+    replay=load('results/jeans_dsph_formal_corrective_replay_receipt.json')
+    public_reproduction=load('results/jeans_dsph_formal_corrective_public_reproduction_check.json')
+    assert sample['development']==['Carina','Fornax','Sculptor','Sextans']
+    assert sample['heldout']==['Draco','Ursa Minor'] and sample['overlap_count']==0
+    assert held['proof_mode']=='POST_EXPOSURE_CORRECTIVE_FORMAL_SOURCE_REPRODUCTION'
+    assert held['claim_allowed'] is False and held['response_projection_used'] is False
+    assert dev['response_projection_used'] is False
+    assert policy['response_projection_used'] is False
+    assert policy['status']=='FROZEN_BEFORE_CORRECTIVE_EVALUATION_SCORING'
+    assert policy['safe_optimum']['f']==0.0
+    assert policy['direct_nonzero_optimum']['f']==0.05
+    assert policy['direct_nonzero_optimum']['eta']==0.03125
+    for key in ('safe_plummer','direct_nonzero_plummer','direct_nonzero_gaussian','direct_nonzero_top_hat'):
+        a=held['aggregates'][key]
+        base=sum(row['baseline_chi2'] for row in held['rows'])
+        cand=sum(row[key]['chi2'] for row in held['rows'])
+        verify_delta(base,cand,a['raw_delta_chi2'],a['residual_reduction_pct'])
+        close(base,a['baseline_total_chi2']); close(cand,a['candidate_total_chi2'])
+        assert a['improved_count']==sum(row[key]['delta_chi2']<0 for row in held['rows'])
+        assert a['worsened_count']==sum(row[key]['delta_chi2']>0 for row in held['rows'])
+    p=held['aggregates']['direct_nonzero_plummer']
+    close(p['raw_delta_chi2'],-0.0011593988829652346)
+    close(p['residual_reduction_pct'],0.005077144705320756)
+    assert p['improved_count']==2 and p['worsened_count']==0
+    assert all(row['safe_plummer']['f0_max_abs_kms']==0.0 for row in held['rows'])
+    assert audit['status']=='PASS' and len(audit['checks'])==61 and all(x['pass'] for x in audit['checks'])
+    assert replay['status']=='PASS_NUMERICALLY_EQUIVALENT_NON_BYTE_IDENTICAL'
+    assert replay['aggregate_direction_counts_preserved'] is True
+    assert replay['aggregate_delta_signs_preserved'] is True
+    assert public_reproduction['status']=='PASS_NUMERICAL_PARITY'
+    assert public_reproduction['scope']=='PUBLIC_REPRODUCTION_NUMERICAL_PARITY_ONLY'
+    assert public_reproduction['policy_identity_preserved'] is True
+    assert public_reproduction['direction_counts_preserved'] is True
+    assert public_reproduction['delta_signs_preserved'] is True
+    close(public_reproduction['max_raw_delta_chi2_difference'],0.0)
 def main():
     hff=load('results/hff_six_cluster_transfer.json')
     for row in hff['rows']:
@@ -178,6 +219,7 @@ def main():
     verify_sparc()
     verify_jeans()
     verify_jeans_v2()
+    verify_jeans_formal_corrective()
     forbidden=[re.compile('/'+'Users/'),re.compile(r'sk-(?:proj-)?[A-Za-z0-9_-]{16,}'),re.compile(r'BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY')]
     skipped={'.git','.venv','__pycache__','.pytest_cache','build','dist'}
     for p in ROOT.rglob('*'):

@@ -83,3 +83,32 @@ def test_jeans_v2_public_replay_and_audit_pass():
     assert audit['verdict']=='PASS_NEGATIVE_RESULT_PRESERVED'
     assert audit['check_count']==27
     assert audit['failed_checks']==[]
+
+def test_jeans_corrective_direct_source_is_tiny_negative_direction():
+    x=json.loads((ROOT/'results/jeans_dsph_formal_corrective_evaluation.json').read_text())
+    a=x['aggregates']['direct_nonzero_plummer']
+    assert x['response_projection_used'] is False
+    assert x['proof_mode']=='POST_EXPOSURE_CORRECTIVE_FORMAL_SOURCE_REPRODUCTION'
+    assert round(a['raw_delta_chi2'],12)==round(-0.0011593988829652346,12)
+    assert round(a['residual_reduction_pct'],9)==round(0.005077144705320756,9)
+    assert a['improved_count']==2 and a['worsened_count']==0
+    assert x['claim_allowed'] is False
+
+def test_jeans_corrective_safe_policy_and_audit_boundary():
+    policy=json.loads((ROOT/'results/jeans_dsph_formal_corrective_frozen_policy.json').read_text())
+    audit=json.loads((ROOT/'results/jeans_dsph_formal_corrective_audit.json').read_text())
+    assert policy['safe_optimum']['f']==0.0
+    assert policy['direct_nonzero_optimum']['f']==0.05
+    assert policy['direct_nonzero_optimum']['eta']==0.03125
+    assert audit['status']=='PASS'
+    assert audit['audit_label']=='CORRECT_FORMAL_SOURCE_DIRECTIONAL_DELTA_NEGATIVE_BUT_MATERIALITY_NOT_ESTABLISHED'
+    assert len(audit['checks'])==61 and all(x['pass'] for x in audit['checks'])
+
+def test_jeans_corrective_public_reproduction_parity():
+    x=json.loads((ROOT/'results/jeans_dsph_formal_corrective_public_reproduction_check.json').read_text())
+    assert x['status']=='PASS_NUMERICAL_PARITY'
+    assert x['scope']=='PUBLIC_REPRODUCTION_NUMERICAL_PARITY_ONLY'
+    assert x['policy_identity_preserved'] is True
+    assert x['direction_counts_preserved'] is True
+    assert x['delta_signs_preserved'] is True
+    assert x['max_raw_delta_chi2_difference']==0.0

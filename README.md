@@ -10,7 +10,7 @@ $$
 X_{\mathrm{aug}}=(1-f_\perp)X+f_\perp\mathcal K_d[X].
 $$
 
-It does **not** create mass by construction when the kernel is normalized on the full domain; it redistributes a selected component. The earlier fixed-scale lanes freeze `f_perp = 0.30` and `d = 16 kpc`. The SPARC lane freezes one development-selected equation adapter, `f = 1.0` and `d_g = 0.125 R_disk,g`, before heldout evaluation. The first dwarf-spheroidal Jeans lane independently calibrates the same density-adapter grammar and selects the safe baseline, `f = 0`. A separate Jeans-v2 experiment calibrates a nuisance-orthogonal equation-response adapter on four development galaxies and freezes it before evaluating Draco and Ursa Minor from a different public catalog.
+It does **not** create mass by construction when the kernel is normalized on the full domain; it redistributes a selected component. The earlier fixed-scale lanes freeze `f_perp = 0.30` and `d = 16 kpc`. The SPARC lane freezes one development-selected equation adapter, `f = 1.0` and `d_g = 0.125 R_disk,g`, before heldout evaluation. The first dwarf-spheroidal Jeans lane independently calibrates the same density-adapter grammar and selects the safe baseline, `f = 0`. A separate Jeans-v2 experiment tests a nuisance-orthogonal response-space adapter; it is not a canonical source insertion. The corrective formal-source record then inserts the term directly into the spherical-Jeans halo-density source for Draco and Ursa Minor while preserving the post-exposure proof boundary.
 
 ## What the record shows
 
@@ -23,10 +23,11 @@ It does **not** create mass by construction when the kernel is normalized on the
 | SPARC rotation curves, shared-adapter heldout | 208.845 → 199.589 χ²; 4.432% reduction; 5/6 stable galaxies improved | Gaussian 2.620%; top-hat 2.413%; Plummer best in aggregate | Shared `f/eta` held out; per-galaxy NFW nuisances fitted; diagnostic, not clean predictive proof |
 | Dwarf-spheroidal spherical Jeans, shared-adapter heldout | Safe calibration selected `f=0`; forced Plummer 35.352827 → 35.354732 χ² | Gaussian/top-hat were also near-neutral but adverse in aggregate | Valid negative result; no adapter uplift |
 | Jeans-v2 nuisance-orthogonal response, untouched-galaxy heldout | 22.835649 → 24.085741 χ²; -5.474% residual reduction; 0/2 improved | Gaussian -5.331%; top-hat -3.202%; all three worsened both galaxies | Clean negative generalization result on Draco and Ursa Minor; no v2 uplift |
+| Corrective direct formal-source Jeans insertion, post-exposure | 22.835648 → 22.834488 χ²; +0.005077% residual reduction; 2/2 negative deltas | Gaussian +0.000709%; top-hat +0.000534% | Correct equation object; dev-safe policy stayed `f=0`; tiny direction-only diagnostic, not material uplift |
 | N13-style development likelihood | raw delta chi-square -1.2543 | 20th percentile under null; baryonic countermodel absorbs residual | Development negative / not proof |
 | H(z) background-fluid lane | raw delta chi-square -0.00874 | AIC and BIC worsen | Separate Program C term; no real uplift |
 
-**Supported reading:** inserting a frozen redistribution term can move selected public model products, parametric profiles, or heldout shared-adapter rotation-curve residuals in the favorable direction under the stored metric. It does not do so universally: Jeans-v1 selected the unmodified baseline, and Jeans-v2 worsened both untouched heldout galaxies after its development-selected response rule was frozen.
+**Supported reading:** inserting a frozen redistribution term can move selected public model products, parametric profiles, or heldout shared-adapter rotation-curve residuals in the favorable direction under the stored metric. It does not do so universally: Jeans-v1 selected the unmodified baseline, and Jeans-v2 worsened both untouched heldout galaxies under its response-space rule. The later direct formal-source correction moved both deltas slightly negative, but development still selected `f=0` and the aggregate reduction was only about 0.0051%.
 
 **Not supported:** a new physical source, a Plummer-specific mechanism, a detection of hidden geometry, a replacement for GR/LambdaCDM, or an observational-likelihood improvement. In the strongest fresh 3D control, generic smoothers performed slightly better than Plummer.
 
@@ -42,6 +43,7 @@ Scientific iteration is easier to audit when positive deltas, failed specificity
 - [`docs/SPARC_ROTATION_CURVE_ADAPTER.md`](docs/SPARC_ROTATION_CURVE_ADAPTER.md) — the full SPARC equation, sample lock, dev/heldout split, controls, row results, and audit boundary.
 - [`docs/JEANS_DSPH_ADAPTER.md`](docs/JEANS_DSPH_ADAPTER.md) — the dwarf-spheroidal Jeans equation placement, calibration, heldout negative result, controls, and verification.
 - [`docs/JEANS_DSPH_RESPONSE_ADAPTER_V2.md`](docs/JEANS_DSPH_RESPONSE_ADAPTER_V2.md) — the nuisance-orthogonal response construction, different-catalog heldout split, frozen downlift, and independent audit.
+- [`docs/JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md`](docs/JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md) — the corrected direct Jeans-source insertion, post-exposure evaluation, matched controls, replay, and claim boundary.
 - [`docs/DATA_PROVENANCE.md`](docs/DATA_PROVENANCE.md) — external sources and checksums.
 - [`docs/CLAIM_BOUNDARIES.md`](docs/CLAIM_BOUNDARIES.md) — exact public claim limits.
 - [`results/`](results/) — sanitized machine-readable scores with upstream artifact hashes.
@@ -92,6 +94,9 @@ The separate Jeans-v2 path is documented in
 [`scripts/jeans_v2/README.md`](scripts/jeans_v2/README.md). Its public dev and
 heldout replays are byte-identical to the published artifacts; the result is a
 preserved negative generalization result, not a repaired or hidden failure.
+
+The corrective direct-source path is documented in
+[`scripts/jeans_formal_corrective/README.md`](scripts/jeans_formal_corrective/README.md). It preserves Jeans-v2 as a separate response-adapter result and records the direct canonical-equation correction without upgrading it to fresh proof.
 
 ## License and citation
 
