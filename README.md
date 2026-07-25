@@ -10,7 +10,7 @@ $$
 X_{\mathrm{aug}}=(1-f_\perp)X+f_\perp\mathcal K_d[X].
 $$
 
-It does **not** create mass by construction when the kernel is normalized on the full domain; it redistributes a selected component. The stored runs usually freeze `f_perp = 0.30` and `d = 16 kpc` and compare the baseline residual with the augmented residual.
+It does **not** create mass by construction when the kernel is normalized on the full domain; it redistributes a selected component. The earlier fixed-scale lanes freeze `f_perp = 0.30` and `d = 16 kpc`. The newer SPARC lane instead freezes one development-selected equation adapter, `f = 1.0` and `d_g = 0.125 R_disk,g`, before heldout evaluation.
 
 ## What the record shows
 
@@ -20,10 +20,11 @@ It does **not** create mass by construction when the kernel is normalized on the
 | AS1063 true-density B2 | 19.857% residual reduction | Gaussian 19.011%; top-hat 18.681% | Plummer slightly best, but specificity unresolved |
 | SIDM Concerto Halo000 | 29.366% residual reduction | Gaussian/top-hat about 29.44% | Direction pass; Plummer specificity fail |
 | SIDM Concerto Halo352, fresh target | 41.000% residual reduction | Gaussian 42.129%; top-hat 42.581% | Direction pass; Plummer specificity fail |
+| SPARC rotation curves, shared-adapter heldout | 208.845 → 199.589 χ²; 4.432% reduction; 5/6 stable galaxies improved | Gaussian 2.620%; top-hat 2.413%; Plummer best in aggregate | Shared `f/eta` held out; per-galaxy NFW nuisances fitted; diagnostic, not clean predictive proof |
 | N13-style development likelihood | raw delta chi-square -1.2543 | 20th percentile under null; baryonic countermodel absorbs residual | Development negative / not proof |
 | H(z) background-fluid lane | raw delta chi-square -0.00874 | AIC and BIC worsen | Separate Program C term; no real uplift |
 
-**Supported reading:** inserting the frozen redistribution term can move selected public model products or parametric profiles closer to the chosen reference under the stored metric.
+**Supported reading:** inserting a frozen redistribution term can move selected public model products, parametric profiles, or heldout shared-adapter rotation-curve residuals in the favorable direction under the stored metric.
 
 **Not supported:** a new physical source, a Plummer-specific mechanism, a detection of hidden geometry, a replacement for GR/LambdaCDM, or an observational-likelihood improvement. In the strongest fresh 3D control, generic smoothers performed slightly better than Plummer.
 
@@ -36,6 +37,7 @@ Scientific iteration is easier to audit when positive deltas, failed specificity
 - [`docs/OPERATOR.md`](docs/OPERATOR.md) — exact 2D/3D operator definitions and kernel lineage.
 - [`docs/EQUATION_INSERTIONS.md`](docs/EQUATION_INSERTIONS.md) — Poisson, lensing, halo-profile, Jeans, Friedmann, and Einstein-container placements.
 - [`docs/EXPERIMENT_REGISTRY.md`](docs/EXPERIMENT_REGISTRY.md) — what was run and what is or is not independent.
+- [`docs/SPARC_ROTATION_CURVE_ADAPTER.md`](docs/SPARC_ROTATION_CURVE_ADAPTER.md) — the full SPARC equation, sample lock, dev/heldout split, controls, row results, and audit boundary.
 - [`docs/DATA_PROVENANCE.md`](docs/DATA_PROVENANCE.md) — external sources and checksums.
 - [`docs/CLAIM_BOUNDARIES.md`](docs/CLAIM_BOUNDARIES.md) — exact public claim limits.
 - [`results/`](results/) — sanitized machine-readable scores with upstream artifact hashes.
@@ -71,6 +73,11 @@ scoring mask, and half-mass-matches both generic controls to the discrete
 finite Plummer-like kernel before scoring.
 
 Large external FITS archives and simulation tables are not redistributed. Download instructions and source hashes are in [`docs/DATA_PROVENANCE.md`](docs/DATA_PROVENANCE.md).
+
+The SPARC public-data reproduction path is documented in
+[`scripts/sparc/README.md`](scripts/sparc/README.md). Its full development grid,
+heldout rows, matched controls, verification receipt, and pre-heldout failures
+are preserved under [`results/`](results/).
 
 ## License and citation
 

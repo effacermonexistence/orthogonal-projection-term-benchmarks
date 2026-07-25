@@ -33,6 +33,28 @@ Raw third-party datasets are not committed. This repository stores URLs, source 
 - Source file: https://raw.githubusercontent.com/reggiebernardo/datasets/main/Hdz_2020_CConly.txt
 - SHA-256: `bd36beac5c36d161437ee32d9a597195544a3a5c092e74bb58fca73998778f3b`
 
+## SPARC galaxy rotation curves
+
+- Dataset: SPARC v1, 175 disk galaxies.
+- Authors: Federico Lelli, Stacy McGaugh, and James Schombert.
+- Master paper: https://doi.org/10.3847/0004-6256/152/6/157
+- Official project page: https://astroweb.case.edu/SPARC/
+- Archived dataset DOI: https://doi.org/10.5281/zenodo.16284118
+- `Rotmod_LTG.zip` download:
+  https://zenodo.org/records/16284118/files/Rotmod_LTG.zip?download=1
+- `Rotmod_LTG.zip` SHA-256:
+  `0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588`
+- `Rotmod_LTG.zip` official MD5: `e4c8b92766026770ed35e5889064e12b`
+- `SPARC_Lelli2016c.mrt` download:
+  https://zenodo.org/records/16284118/files/SPARC_Lelli2016c.mrt?download=1
+- `SPARC_Lelli2016c.mrt` SHA-256:
+  `5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243`
+- `SPARC_Lelli2016c.mrt` official MD5:
+  `6181df386bfc05868a3700c196e800da`
+- Use: public rotation-curve observations, baryonic velocity components, and
+  galaxy metadata for the shared equation-adapter dev/heldout diagnostic.
+- The original source files are not redistributed in this repository.
+
 ## Integrity boundary
 
 Checksums identify byte-level inputs; they do not elevate a public model product into raw observational data. Each result file states its evidence class.

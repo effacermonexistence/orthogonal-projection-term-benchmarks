@@ -32,6 +32,15 @@ The run is deterministic, uses the correct 3D Plummer density kernel, has exact 
 
 The SIDM references are cored and the CDM baselines are cusped. Low-pass redistribution removes cusp power, so a negative directional delta is expected for many smoothers. The direction alone carries little operator-specific information.
 
+## 7. SPARC shared-adapter boundary
+
+The SPARC result adds a different public observational domain and a real
+dev/heldout split for shared adapter parameters. It does not create a clean
+predictive lane because each heldout curve still fits its own NFW baseline
+nuisance parameters. Plummer was best in aggregate, but all three matched
+kernels improved 5/6 stable galaxies, one heldout baseline was unstable, and
+the stable sample is too small for confirmatory or kernel-specific claims.
+
 ## Durable conclusion
 
 The evidence supports a reproducible redistribution effect in selected diagnostic spaces. It does not currently require or identify a unique physical kernel or new cosmological source term.

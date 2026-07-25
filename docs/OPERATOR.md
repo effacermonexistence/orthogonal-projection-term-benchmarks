@@ -20,6 +20,17 @@ $$
 
 Finite grids leak at their boundaries. Every stored 3D result reports that leakage rather than treating the finite grid as an infinite domain.
 
+The SPARC rotation-curve lane uses the same 3D kernel lineage but not the
+legacy fixed `f = 0.30`, `d = 16 kpc` constants. It freezes a
+galaxy-scaled adapter selected on development data:
+
+$$
+f=1.0,\qquad d_g=0.125R_{{\rm disk},g}.
+$$
+
+Its finite-grid convolution is deterministically renormalized to the unchanged
+halo mass, while the pre-renormalization leakage remains reported and gated.
+
 ## 3D Plummer kernel
 
 The true three-dimensional Plummer density kernel used in the 3D lanes is

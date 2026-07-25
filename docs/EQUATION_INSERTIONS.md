@@ -48,6 +48,42 @@ $$
 
 No separate free residual map is added.
 
+## SPARC circular-velocity lane
+
+For a SPARC galaxy, the fixed baryonic contribution is
+
+$$
+V_{\rm bar}^2(R)=V_{\rm gas}|V_{\rm gas}|
++0.5V_{\rm disk}|V_{\rm disk}|
++0.7V_{\rm bulge}|V_{\rm bulge}|.
+$$
+
+The per-galaxy baseline is
+
+$$
+V_{\rm base}^2(R)=V_{\rm bar}^2(R)
++\frac{G M_{\rm NFW}(<R;V_{200},c)}{R}.
+$$
+
+The shared equation adapter ties the 3D-kernel scale to the measured disk
+scale length:
+
+$$
+d_g=\eta R_{{\rm disk},g},
+\qquad
+\rho_{{\rm aug},g}=(1-f)\rho_{{\rm NFW},g}
++f(K_{d_g}*\rho_{{\rm NFW},g}),
+$$
+
+$$
+V_{\rm aug}^2(R)=V_{\rm bar}^2(R)+\frac{G M_{\rm aug}(<R)}{R}.
+$$
+
+The development-selected shared policy was `f = 1.0`, `eta = 0.125`, frozen
+before heldout evaluation. It acts on halo-only 3D density. Each galaxy still
+receives its own baseline NFW nuisance fit, so this lane tests transfer of the
+shared adapter rather than clean end-to-end prediction.
+
 ## Program C Friedmann/background-fluid lane — a different term
 
 $$

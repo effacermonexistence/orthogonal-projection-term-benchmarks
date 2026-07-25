@@ -64,6 +64,14 @@
       "record_id": "SIDM_CONCERTO_HALO352_FRESH_3D",
       "status": "DIRECTION_PASS_SPECIFICITY_FAIL",
       "unit_count": 1
+    },
+    {
+      "file": "results/sparc_rotation_curve_heldout.json",
+      "headline_result": "heldout shared adapter: chi2 208.845\u2192199.589; delta -9.256; 4.432%; 5/6 stable galaxies improved",
+      "independence": "new SPARC public-data domain; shared f/eta held out; per-galaxy baseline nuisances fitted",
+      "record_id": "SPARC_ROTATION_CURVE_SHARED_ADAPTER",
+      "status": "PUBLIC_DATA_DEV_OPTIMIZATION_PLUS_HELDOUT_SHARED_ADAPTER_DIAGNOSTIC",
+      "unit_count": 7
     }
   ]
 }

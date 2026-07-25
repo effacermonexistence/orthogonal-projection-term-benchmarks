@@ -1,6 +1,6 @@
 # Experiment registry and independence map
 
-The registry contains **eight experimental records**, not eight independent confirmations.
+The registry contains **nine experimental records**, not nine independent confirmations.
 
 | Record | Stored units | Independence status | Result class |
 |---|---:|---|---|
@@ -12,6 +12,7 @@ The registry contains **eight experimental records**, not eight independent conf
 | HFF map transfer | 6 clusters | Six targets, shared teams/systematics | Generic low-pass effect |
 | SIDM Concerto Halo000 | 1 public simulation-parametric target | New target | Direction pass; specificity fail |
 | SIDM Concerto Halo352 | 1 score-blind fresh target | New target | Direction pass; specificity fail |
+| SPARC rotation-curve adapter | 14 dev / 7 heldout; 6 stable heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | 4.432% aggregate heldout reduction; diagnostic only |
 
 ## Development chain
 
@@ -25,3 +26,7 @@ Two questions are deliberately separated:
 2. **Specificity:** did the Plummer kernel beat half-mass-matched Gaussian and top-hat controls under the frozen comparison rule?
 
 The strongest fresh 3D run passed the first question and failed the second. Therefore the current durable result is a generic redistribution effect under the selected diagnostic, not Plummer-specific evidence.
+
+## SPARC shared-adapter lane
+
+SPARC adds a new observational domain and freezes one shared `f/eta` policy after development before evaluating the heldout galaxy identities. This is stronger than replaying the same development rows, but the heldout boundary does not cover each galaxy's baseline NFW nuisance fit. One of seven heldout baselines hit a bound and is retained as an excluded row. The valid public label is `PUBLIC_DATA_DEV_OPTIMIZATION_PLUS_HELDOUT_SHARED_ADAPTER_DIAGNOSTIC`.
