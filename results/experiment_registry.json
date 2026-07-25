@@ -96,6 +96,14 @@
       "record_id": "DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE",
       "status": "CORRECT_FORMAL_SOURCE_DIRECTIONAL_DELTA_NEGATIVE_BUT_MATERIALITY_NOT_ESTABLISHED",
       "unit_count": 2
+    },
+    {
+      "file": "results/xcop_hse_heldout.json",
+      "headline_result": "untouched-cluster heldout: pressure chi2 145.095308\u2192140.737785; delta -4.357523; 3.0032%; 3/3 negative direction",
+      "independence": "new X-COP public-profile domain; shared f/eta frozen before heldout scores; source profiles public; profile-consistency diagnostic",
+      "record_id": "XCOP_HYDROSTATIC_DIRECT_FORMAL_SOURCE",
+      "status": "PUBLIC_XCOP_PROFILE_DIRECT_EQUATION_DIAGNOSTIC",
+      "unit_count": 3
     }
   ]
 }

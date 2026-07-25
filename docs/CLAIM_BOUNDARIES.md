@@ -18,6 +18,12 @@
   public catalog (`delta chi-square = +1.250092`; `-5.474%` residual
   reduction).
 - The corrective direct formal-source rerun executed the requested spherical-Jeans source insertion without response projection. Its frozen nonzero Plummer diagnostic moved both Draco and Ursa Minor deltas negative (`delta chi-square = -0.001159399`; `0.005077%` residual reduction), while the development-safe policy remained `f=0`.
+- The X-COP direct hydrostatic-equation run applied the operator only to
+  reconstructed three-dimensional dark-halo density and retained the
+  canonical hydrostatic equation. After shared-policy freeze, aggregate
+  heldout pressure chi-square moved from `145.095308` to `140.737785`
+  (`delta=-4.357523`, `3.0032%`) with 3/3 negative cluster deltas and no
+  row-level fallback.
 
 ## Conditional / limited
 
@@ -41,6 +47,16 @@
   The bound was not widened after heldout scoring; this limits interpretation
   but does not alter the negative heldout result.
 - The corrective direct-source run is post-exposure because Draco and Ursa Minor were already evaluated under Jeans-v2. Candidate nuisances were frozen at the baseline fit; this is a forced directional comparison, not a best-fit augmented-model or fresh/unseen test. The absolute effect is materially tiny.
+- The X-COP heldout boundary applies to the shared `f/eta` policy and cluster
+  identities. The source profiles were public and physically accessible.
+  X-COP hydrostatic NFW profiles were reconstructed from the same
+  thermodynamic profile family used by the pressure consistency score, so the
+  lane is not an independent raw-observational likelihood.
+- The X-COP development optimum reached the declared `f=1.0` grid boundary.
+  The grid was not widened after heldout scoring.
+- Matched Gaussian and top-hat controls also improved all three X-COP heldout
+  clusters. Plummer was strongest in aggregate, but unique kernel physics is
+  not established.
 
 ## Not supported
 
@@ -51,6 +67,9 @@
 - Raw-observational-likelihood improvement from model-to-model diagnostic scores.
 - Treating overlapping channels or repeated development runs as independent validations.
 - Treating the corrective `0.005077%` Jeans reduction as material uplift, adoption evidence, kernel specificity, or physical proof.
+- Treating the X-COP profile-consistency result as independent raw-likelihood
+  proof, proof that the term is required, a universal no-downlift guarantee,
+  or unique Plummer validation.
 
 ## Public sentence
 
@@ -71,3 +90,12 @@ The Jeans-v2-specific sentence is:
 The corrective direct-formal Jeans sentence is:
 
 > The direct halo-density insertion moved both post-exposure Draco and Ursa Minor deltas slightly negative (`22.835648 → 22.834488` chi-square), but development selected `f=0` and the aggregate reduction was only `0.005077%`; this is a corrected equation-object diagnostic, not material uplift or fresh proof.
+
+The X-COP hydrostatic-equation sentence is:
+
+> On three untouched X-COP cluster profiles, the development-frozen direct
+> halo-only orthogonal insertion moved hydrostatic pressure chi-square from
+> `145.095308` to `140.737785` (`delta=-4.357523`; `3.0032%` residual
+> reduction), with negative delta in 3/3 clusters and no heldout downlift;
+> this is a public-profile direct-equation diagnostic, not independent
+> raw-observational or physical proof.

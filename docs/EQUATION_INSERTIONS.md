@@ -133,6 +133,47 @@ before heldout evaluation. It acts on halo-only 3D density. Each galaxy still
 receives its own baseline NFW nuisance fit, so this lane tests transfer of the
 shared adapter rather than clean end-to-end prediction.
 
+## X-COP hydrostatic-equilibrium lane
+
+The canonical electron-pressure hydrostatic equation is retained:
+
+$$
+\frac{dP_e}{dr}
+=
+-\mu m_p n_e(r)\frac{G M_{\rm total}(<r)}{r^2}.
+$$
+
+The published X-COP hydrostatic NFW mass is the baseline total gravitating
+mass. The dark-halo component is reconstructed as
+
+$$
+\rho_{\rm dm}
+=
+\rho_{\rm NFW,total}-\rho_{\rm gas}-\rho_\star,
+$$
+
+and only that component receives the three-dimensional redistribution:
+
+$$
+\rho_{\rm dm,aug}
+=(1-f)\rho_{\rm dm}+f(K_d*\rho_{\rm dm}).
+$$
+
+The augmented mass used on the unchanged hydrostatic right-hand side is
+
+$$
+M_{\rm aug}(<r)
+=
+M_{\rm NFW,total}(<r)
++f\left[M[K_d*\rho_{\rm dm}](<r)-M[\rho_{\rm dm}](<r)\right].
+$$
+
+No projected-kappa proxy, total-profile smoothing, or response-space
+transformation is used. The development-selected shared policy was
+`f=1.0`, `d=0.01 R500`, frozen before scoring the three heldout cluster
+identities. See
+[`XCOP_HYDROSTATIC_DIRECT_FORMAL.md`](XCOP_HYDROSTATIC_DIRECT_FORMAL.md).
+
 ## Program C Friedmann/background-fluid lane — a different term
 
 $$

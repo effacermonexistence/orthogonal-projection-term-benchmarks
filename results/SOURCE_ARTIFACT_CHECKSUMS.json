@@ -39,7 +39,14 @@
     "sparc_proof_contract": "c363790d0da9e1d2ef76da0d5b5822ad193874d922388ee9e3e834eba71ecddc",
     "sparc_result_report": "10a420e34cd1f8105c67c28c7e5131bd7bae8e4fd153c852eb7cb279e6eddebc",
     "sparc_sample_manifest": "4bb1107ec3f12566f4d1290cb4c8a76a6c92e2585d9a3fcd490362db3934c185",
-    "sparc_task_source_selection": "eb729c2121db31f084895cf1cf6d9a8db4748a4e8ce34ec0e32a69ab28f541e2"
+    "sparc_task_source_selection": "eb729c2121db31f084895cf1cf6d9a8db4748a4e8ce34ec0e32a69ab28f541e2",
+    "xcop_hse_adversarial_audit": "ab151ce45d6f44ea9eb013521892c22a7238429a0e55f5d5ae58c6689ff07c05",
+    "xcop_hse_executed_source_receipt": "7618106d13449b14e71ecf713988abc0ef438a72a5d673508aaae4e08f944413",
+    "xcop_hse_frozen_policy": "02a63e2528bb3f314df6c02e5a7404921a7ab2b91eaa75183e79f86fc2842835",
+    "xcop_hse_heldout_result": "a64fc7ed91078d796be9fa3be17e179c3e00b1c7d70ebae835c53aa760338065",
+    "xcop_hse_proof_contract": "502e58ac35b1edc1b90faa1afc02605cbf0927a2a56937abe77fa4c5c45d0d8d",
+    "xcop_hse_sample_lock": "762d2859b6d645dbf6d2c2cee7d341004a64920d8723eeb1cc66816f60861bab",
+    "xcop_hse_task_source_selection": "dfbb0aab55658efddd3876e0dbbc8c08c4e2f94033da7e0b1dab5e4480dbb46c"
   },
   "boundary": "Hashes identify internal upstream result artifacts; only sanitized derivatives are public."
 }

@@ -15,3 +15,9 @@ Jeans-v2 additionally uses the Spencer et al. (2018) CDS/VizieR
 `J/AJ/144/4` structural metadata. Exact source identifiers and hashes are in
 [`docs/DATA_PROVENANCE.md`](../docs/DATA_PROVENANCE.md); raw catalogs are not
 redistributed.
+
+For the X-COP direct hydrostatic-equation lane, download the official profile
+archive and verify SHA-256
+`0edf5038b419b70d070b73b22f4801e27f318b0854db61eec52142c27c140d94`.
+Exact commands are in
+[`scripts/xcop_hse/README.md`](../scripts/xcop_hse/README.md).

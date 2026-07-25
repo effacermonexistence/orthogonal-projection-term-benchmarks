@@ -33,6 +33,26 @@ Raw third-party datasets are not committed. This repository stores URLs, source 
 - Source file: https://raw.githubusercontent.com/reggiebernardo/datasets/main/Hdz_2020_CConly.txt
 - SHA-256: `bd36beac5c36d161437ee32d9a597195544a3a5c092e74bb58fca73998778f3b`
 
+## X-COP hydrostatic and thermodynamic profiles
+
+- Project data page: https://dominiqueeckert.wixsite.com/xcop/data
+- Hydrostatic-mass reference:
+  https://doi.org/10.1051/0004-6361/201833323
+- Official profile archive:
+  https://drive.switch.ch/index.php/s/j3WUOYXWgv9Jbnz/download
+- Archive SHA-256:
+  `0edf5038b419b70d070b73b22f4801e27f318b0854db61eec52142c27c140d94`
+- Archive contents inspected: 12 cluster directories / 115 FITS files.
+- Complete-component eligible set: A1795, A2029, A2142, A2319, A644, A85,
+  and ZW1215.
+- Use: electron-pressure score, electron-density profile, published
+  hydrostatic NFW mass, gas-mass profile, and stellar-mass profile for the
+  direct hydrostatic-equation source comparison.
+- Exact per-file hashes and byte counts for the seven eligible clusters are
+  preserved in
+  [`results/xcop_hse_sample_manifest.json`](../results/xcop_hse_sample_manifest.json).
+- The original FITS archive is not redistributed.
+
 ## SPARC galaxy rotation curves
 
 - Dataset: SPARC v1, 175 disk galaxies.

@@ -69,6 +69,22 @@ inspection would invalidate the locked experiment. The valid result is
 
 Jeans-v2 answered a response-adapter question rather than the requested direct canonical-source insertion. The record now labels that mismatch explicitly and preserves both experiments. In the corrected formal-source run, development again selected the baseline `f=0`. A frozen nonzero diagnostic moved both post-exposure evaluation deltas negative, but only by `delta chi-square = -0.001159399` (`0.005077%`). That establishes executed-object correction and a tiny directional delta, not material uplift, fresh proof, or adoption support.
 
+## 11. X-COP direct equation: direction survives, specificity remains open
+
+The X-COP lane corrects the equation object: the orthogonal term is inserted
+only into reconstructed three-dimensional dark-halo density on the unchanged
+hydrostatic-equilibrium right-hand side. The shared policy was frozen before
+heldout scores, exact `f=0` recovery and deterministic replay passed, and all
+three heldout cluster deltas were negative (`145.095308 → 140.737785`
+chi-square; `3.0032%`).
+
+The result remains limited. X-COP hydrostatic NFW profiles derive from the same
+thermodynamic profile family used in the pressure score, the development
+optimum reached the `f=1` grid boundary, and half-mass-matched Gaussian and
+top-hat controls also improved all three clusters. The valid interpretation is
+a public-profile direct-equation diagnostic, not independent raw-likelihood or
+Plummer-specific proof.
+
 ## Durable conclusion
 
 The evidence supports a reproducible redistribution effect in selected
@@ -76,4 +92,5 @@ diagnostic spaces, not a universal improvement. The independent Jeans
 calibration rejected the nonzero adapter, and the separate Jeans-v2 adapter
 failed on both untouched heldout galaxies. The combined record does not
 currently require or identify a unique physical kernel or new cosmological
-source term.
+source term. The X-COP direct-equation lane adds a clean heldout directional
+diagnostic, but generic-smoother and same-profile-family boundaries remain.

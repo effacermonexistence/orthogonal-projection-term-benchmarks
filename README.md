@@ -12,6 +12,11 @@ $$
 
 It does **not** create mass by construction when the kernel is normalized on the full domain; it redistributes a selected component. The earlier fixed-scale lanes freeze `f_perp = 0.30` and `d = 16 kpc`. The SPARC lane freezes one development-selected equation adapter, `f = 1.0` and `d_g = 0.125 R_disk,g`, before heldout evaluation. The first dwarf-spheroidal Jeans lane independently calibrates the same density-adapter grammar and selects the safe baseline, `f = 0`. A separate Jeans-v2 experiment tests a nuisance-orthogonal response-space adapter; it is not a canonical source insertion. The corrective formal-source record then inserts the term directly into the spherical-Jeans halo-density source for Draco and Ursa Minor while preserving the post-exposure proof boundary.
 
+The X-COP lane separately places the same three-dimensional redistribution
+grammar directly into the hydrostatic-equilibrium mass source. Its
+development-frozen shared policy is evaluated on three untouched cluster
+identities with no row-level fallback.
+
 ## What the record shows
 
 | Diagnostic | Frozen directional result | Matched-control result | Evidence boundary |
@@ -24,10 +29,11 @@ It does **not** create mass by construction when the kernel is normalized on the
 | Dwarf-spheroidal spherical Jeans, shared-adapter heldout | Safe calibration selected `f=0`; forced Plummer 35.352827 → 35.354732 χ² | Gaussian/top-hat were also near-neutral but adverse in aggregate | Valid negative result; no adapter uplift |
 | Jeans-v2 nuisance-orthogonal response, untouched-galaxy heldout | 22.835649 → 24.085741 χ²; -5.474% residual reduction; 0/2 improved | Gaussian -5.331%; top-hat -3.202%; all three worsened both galaxies | Clean negative generalization result on Draco and Ursa Minor; no v2 uplift |
 | Corrective direct formal-source Jeans insertion, post-exposure | 22.835648 → 22.834488 χ²; +0.005077% residual reduction; 2/2 negative deltas | Gaussian +0.000709%; top-hat +0.000534% | Correct equation object; dev-safe policy stayed `f=0`; tiny direction-only diagnostic, not material uplift |
+| X-COP direct hydrostatic-equation insertion, cluster heldout | 145.095308 → 140.737785 χ²; 3.0032% reduction; 3/3 negative deltas | Gaussian 2.1042%; top-hat 1.5773%; all improved 3/3 | Correct halo-only source insertion; Plummer strongest in aggregate, but public-profile consistency diagnostic rather than independent raw likelihood |
 | N13-style development likelihood | raw delta chi-square -1.2543 | 20th percentile under null; baryonic countermodel absorbs residual | Development negative / not proof |
 | H(z) background-fluid lane | raw delta chi-square -0.00874 | AIC and BIC worsen | Separate Program C term; no real uplift |
 
-**Supported reading:** inserting a frozen redistribution term can move selected public model products, parametric profiles, or heldout shared-adapter rotation-curve residuals in the favorable direction under the stored metric. It does not do so universally: Jeans-v1 selected the unmodified baseline, and Jeans-v2 worsened both untouched heldout galaxies under its response-space rule. The later direct formal-source correction moved both deltas slightly negative, but development still selected `f=0` and the aggregate reduction was only about 0.0051%.
+**Supported reading:** inserting a frozen redistribution term can move selected public model products, parametric profiles, or heldout shared-adapter residuals in the favorable direction under the stored metric. It does not do so universally: Jeans-v1 selected the unmodified baseline, and Jeans-v2 worsened both untouched heldout galaxies under its response-space rule. The later direct formal-source correction moved both deltas slightly negative, but development still selected `f=0` and the aggregate reduction was only about 0.0051%. In the X-COP direct hydrostatic lane, the frozen shared insertion reduced aggregate heldout pressure chi-square by 3.0032% with 3/3 negative deltas, while matched generic smoothers also improved 3/3.
 
 **Not supported:** a new physical source, a Plummer-specific mechanism, a detection of hidden geometry, a replacement for GR/LambdaCDM, or an observational-likelihood improvement. In the strongest fresh 3D control, generic smoothers performed slightly better than Plummer.
 
@@ -44,6 +50,7 @@ Scientific iteration is easier to audit when positive deltas, failed specificity
 - [`docs/JEANS_DSPH_ADAPTER.md`](docs/JEANS_DSPH_ADAPTER.md) — the dwarf-spheroidal Jeans equation placement, calibration, heldout negative result, controls, and verification.
 - [`docs/JEANS_DSPH_RESPONSE_ADAPTER_V2.md`](docs/JEANS_DSPH_RESPONSE_ADAPTER_V2.md) — the nuisance-orthogonal response construction, different-catalog heldout split, frozen downlift, and independent audit.
 - [`docs/JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md`](docs/JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md) — the corrected direct Jeans-source insertion, post-exposure evaluation, matched controls, replay, and claim boundary.
+- [`docs/XCOP_HYDROSTATIC_DIRECT_FORMAL.md`](docs/XCOP_HYDROSTATIC_DIRECT_FORMAL.md) — the direct hydrostatic-equilibrium source insertion, frozen cluster split, heldout result, matched controls, and audit boundary.
 - [`docs/DATA_PROVENANCE.md`](docs/DATA_PROVENANCE.md) — external sources and checksums.
 - [`docs/CLAIM_BOUNDARIES.md`](docs/CLAIM_BOUNDARIES.md) — exact public claim limits.
 - [`results/`](results/) — sanitized machine-readable scores with upstream artifact hashes.
@@ -97,6 +104,12 @@ preserved negative generalization result, not a repaired or hidden failure.
 
 The corrective direct-source path is documented in
 [`scripts/jeans_formal_corrective/README.md`](scripts/jeans_formal_corrective/README.md). It preserves Jeans-v2 as a separate response-adapter result and records the direct canonical-equation correction without upgrading it to fresh proof.
+
+The X-COP direct hydrostatic-equation path is documented in
+[`scripts/xcop_hse/README.md`](scripts/xcop_hse/README.md). It downloads the
+official profile archive, reproduces the deterministic split, calibrates the
+shared policy on four clusters, evaluates the frozen policy on three untouched
+cluster identities, and reruns the arithmetic audit.
 
 ## License and citation
 

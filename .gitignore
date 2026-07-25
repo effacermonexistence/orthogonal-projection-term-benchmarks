@@ -11,6 +11,8 @@ data/**/*.fits
 data/**/*.tar
 data/**/*.zip
 data/**/*.txt
+external/
+reproduced/
 .env
 .env.*
 !.env.example

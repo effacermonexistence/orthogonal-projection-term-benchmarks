@@ -112,3 +112,45 @@ def test_jeans_corrective_public_reproduction_parity():
     assert x['direction_counts_preserved'] is True
     assert x['delta_signs_preserved'] is True
     assert x['max_raw_delta_chi2_difference']==0.0
+
+def test_xcop_direct_hydrostatic_heldout_result():
+    x=json.loads((ROOT/'results/xcop_hse_heldout.json').read_text())
+    a=x['safe_aggregate']
+    assert x['heldout']==['A644','A2029','A1795']
+    assert x['overlap_count']==0
+    assert x['safe_policy']['f']==1.0
+    assert x['safe_policy']['eta']==0.01
+    assert round(a['baseline_chi2_sum'],6)==145.095308
+    assert round(a['augmented_chi2_sum'],6)==140.737785
+    assert round(a['delta_chi2_sum'],6)==-4.357523
+    assert a['improved_count']==3
+    assert a['downlift_count']==0
+    assert x['f0_recovery']['pass'] is True
+
+def test_xcop_controls_and_audit_boundary():
+    x=json.loads((ROOT/'results/xcop_hse_heldout.json').read_text())
+    audit=json.loads((ROOT/'results/xcop_hse_adversarial_audit.json').read_text())
+    p=x['safe_aggregate']['augmented_chi2_sum']
+    g=x['generic_control_aggregates']['gaussian']['augmented_chi2_sum']
+    t=x['generic_control_aggregates']['top_hat']['augmented_chi2_sum']
+    assert p < g < t
+    assert x['generic_control_aggregates']['gaussian']['improved_count']==3
+    assert x['generic_control_aggregates']['top_hat']['improved_count']==3
+    assert audit['status']=='PASS'
+    assert audit['direct_formal_equation_label']=='PASS'
+    assert audit['heldout_directional_label']=='DESCRIPTIVE_PASS_3_OF_3_NO_DOWNLIFT'
+    assert audit['plummer_specificity_label']=='AGGREGATE_ADVANTAGE_OVER_MATCHED_CONTROLS_NOT_ESTABLISHED_AS_UNIQUE'
+
+def test_xcop_public_reproduction_numerical_parity():
+    x=json.loads((ROOT/'results/xcop_hse_public_reproduction_check.json').read_text())
+    assert x['status']=='PASS_NUMERICAL_PARITY'
+    assert x['scope']=='PUBLIC_REPRODUCTION_NUMERICAL_PARITY_ONLY'
+    assert x['policy_identity_preserved'] is True
+    assert x['sample_identity_preserved'] is True
+    assert x['heldout_identity_preserved'] is True
+    assert x['direction_counts_preserved'] is True
+    assert x['delta_signs_preserved'] is True
+    assert x['public_replay_audit_status']=='PASS'
+    assert x['public_replay_internal_byte_identical'] is True
+    assert x['within_numerical_tolerance_1e_10'] is True
+    assert max(x['max_absolute_differences'].values()) < 1e-10

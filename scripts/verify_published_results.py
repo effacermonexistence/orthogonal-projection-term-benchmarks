@@ -207,6 +207,67 @@ def verify_jeans_formal_corrective():
     assert public_reproduction['direction_counts_preserved'] is True
     assert public_reproduction['delta_signs_preserved'] is True
     close(public_reproduction['max_raw_delta_chi2_difference'],0.0)
+def verify_xcop_hse():
+    held=load('results/xcop_hse_heldout.json')
+    policy=load('results/xcop_hse_frozen_policy.json')
+    sample=load('results/xcop_hse_sample_manifest.json')
+    audit=load('results/xcop_hse_adversarial_audit.json')
+    summary=load('results/xcop_hse_result_summary.json')
+    public_reproduction=load('results/xcop_hse_public_reproduction_check.json')
+    assert sample['development']==['A2319','A85','ZW1215','A2142']
+    assert sample['heldout']==['A644','A2029','A1795']
+    assert sample['overlap_count']==0
+    assert not set(sample['development']).intersection(sample['heldout'])
+    assert held['heldout']==sample['heldout']
+    assert held['overlap_count']==0
+    assert policy['status']=='FROZEN_BEFORE_HELDOUT_SCORING'
+    assert policy['heldout_rules']['parameter_update'] is False
+    assert policy['heldout_rules']['row_level_fallback'] is False
+    assert held['safe_policy']['f']==policy['safe_policy']['f']==1.0
+    assert held['safe_policy']['eta']==policy['safe_policy']['eta']==0.01
+    for rows,aggregate in [
+        (held['safe_rows'],held['safe_aggregate']),
+        (held['generic_control_rows']['gaussian'],held['generic_control_aggregates']['gaussian']),
+        (held['generic_control_rows']['top_hat'],held['generic_control_aggregates']['top_hat']),
+    ]:
+        base=sum(row['baseline_chi2'] for row in rows)
+        aug=sum(row['augmented_chi2'] for row in rows)
+        delta=sum(row['delta_chi2'] for row in rows)
+        close(base,aggregate['baseline_chi2_sum'])
+        close(aug,aggregate['augmented_chi2_sum'])
+        close(delta,aggregate['delta_chi2_sum'])
+        close(aug-base,delta)
+        assert aggregate['improved_count']==sum(row['delta_chi2']<0 for row in rows)
+        assert aggregate['downlift_count']==sum(row['delta_chi2']>0 for row in rows)
+        for row in rows:
+            verify_delta(row['baseline_chi2'],row['augmented_chi2'],row['delta_chi2'],row['residual_reduction_pct'])
+            assert abs(row['raw_mass_leak_fraction'])<=0.05
+            assert abs(row['mass_leak_fraction'])<=1e-12
+    primary=held['safe_aggregate']
+    close(primary['baseline_chi2_sum'],145.09530814170438)
+    close(primary['augmented_chi2_sum'],140.7377852116995)
+    close(primary['delta_chi2_sum'],-4.357522930004862)
+    assert primary['improved_count']==3 and primary['downlift_count']==0
+    assert held['f0_recovery']['pass'] is True
+    assert held['f0_recovery']['max_abs_mass_msun']==0.0
+    assert held['f0_recovery']['max_abs_pressure_prediction_kev_cm3']==0.0
+    assert held['safe_aggregate']['augmented_chi2_sum'] < held['generic_control_aggregates']['gaussian']['augmented_chi2_sum']
+    assert held['generic_control_aggregates']['gaussian']['augmented_chi2_sum'] < held['generic_control_aggregates']['top_hat']['augmented_chi2_sum']
+    assert audit['status']=='PASS'
+    assert all(audit['checks'].values())
+    assert audit['direct_formal_equation_label']=='PASS'
+    assert summary['verification']['deterministic_byte_identical_replay'] is True
+    assert public_reproduction['status']=='PASS_NUMERICAL_PARITY'
+    assert public_reproduction['scope']=='PUBLIC_REPRODUCTION_NUMERICAL_PARITY_ONLY'
+    assert public_reproduction['policy_identity_preserved'] is True
+    assert public_reproduction['sample_identity_preserved'] is True
+    assert public_reproduction['heldout_identity_preserved'] is True
+    assert public_reproduction['direction_counts_preserved'] is True
+    assert public_reproduction['delta_signs_preserved'] is True
+    assert public_reproduction['public_replay_audit_status']=='PASS'
+    assert public_reproduction['public_replay_internal_byte_identical'] is True
+    assert public_reproduction['within_numerical_tolerance_1e_10'] is True
+    assert max(public_reproduction['max_absolute_differences'].values()) < 1e-10
 def main():
     hff=load('results/hff_six_cluster_transfer.json')
     for row in hff['rows']:
@@ -220,6 +281,7 @@ def main():
     verify_jeans()
     verify_jeans_v2()
     verify_jeans_formal_corrective()
+    verify_xcop_hse()
     forbidden=[re.compile('/'+'Users/'),re.compile(r'sk-(?:proj-)?[A-Za-z0-9_-]{16,}'),re.compile(r'BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY')]
     skipped={'.git','.venv','__pycache__','.pytest_cache','build','dist'}
     for p in ROOT.rglob('*'):
