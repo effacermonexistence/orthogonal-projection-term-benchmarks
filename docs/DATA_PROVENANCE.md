@@ -72,6 +72,44 @@ Raw third-party datasets are not committed. This repository stores URLs, source 
 - Łokas Jeans reference source archive SHA-256: `6888ae71a5150da7e1ee9ae031fc6689fb5bbca7a46660e12f0fa3cb3594456d`
 - The original catalogs and paper archives are not redistributed.
 
+## Spencer et al. Draco and Ursa Minor multi-epoch velocities
+
+- Catalog: CDS/VizieR `J/AJ/156/257`.
+- Catalog landing page:
+  https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/156/257
+- FTP root: https://cdsarc.cds.unistra.fr/ftp/J/AJ/156/257/
+- Paper record: https://ui.adsabs.harvard.edu/abs/2018AJ....156..257S/abstract
+- Use: untouched-galaxy heldout source for the Jeans-v2 response-orthogonal
+  diagnostic.
+- Per-star preprocessing: inverse-variance constant-velocity fit; exclude
+  binary candidates with constant-velocity chi-square survival probability
+  below `0.001`; then apply the stored gradient-removal and radial-profile
+  procedure.
+- `ReadMe` SHA-256:
+  `3c2dd3bd406300e9d17c28e9c923c88b1e536252ce410bfda32b8447dfc03bf4`
+- `table3.dat` (Draco) SHA-256:
+  `241c15cf5a4f7308d6e3469efa48d628119cc3c380aa6efce3f4b613adc1fa93`
+- `table4.dat` (Ursa Minor) SHA-256:
+  `0a185607d1b2e17febbadc1343ecddc71bbbb2ff8070a7e9d6069e2f9aa62f2f`
+- Paper source archive SHA-256:
+  `97f16259f60d003423bfebde25c2cd2e196643db7f6aa240ae52c9c210472842`
+
+## McConnachie dwarf-galaxy structural metadata
+
+- Catalog: CDS/VizieR `J/AJ/144/4`.
+- Catalog landing page:
+  https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/144/4
+- FTP root: https://cdsarc.cds.unistra.fr/ftp/J/AJ/144/4/
+- Paper record: https://ui.adsabs.harvard.edu/abs/2012AJ....144....4M/abstract
+- Use: distance, half-light radius, luminosity, center, and global-dispersion
+  metadata for Draco and Ursa Minor in Jeans-v2.
+- `ReadMe` SHA-256:
+  `b8a381bc6567dbecbfa669edc911d15534033931563f13fa5b9874829c1c18ea`
+- `table1.dat` SHA-256:
+  `26242954e8befa9159a0757cbbcbf0d40f14ffd188ef58fcf1ada0930d17fe39`
+- Paper source archive SHA-256:
+  `3410f64ca8cc0dd6c77bc8147f32f048539273f7e1b034a3c9ff5480e2564f58`
+
 ## Integrity boundary
 
 Checksums identify byte-level inputs; they do not elevate a public model product into raw observational data. Each result file states its evidence class.

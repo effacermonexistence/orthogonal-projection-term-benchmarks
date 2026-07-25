@@ -8,6 +8,11 @@ The development calibration selected the safe baseline policy, `f = 0`. A separa
 
 This is a valid negative result. It is not an uplift, a detection, or evidence for a new physical term.
 
+This Jeans-v1 result remains immutable. A separate nuisance-orthogonal
+response construction was later tested on different heldout galaxies and also
+failed to generalize; see
+[`JEANS_DSPH_RESPONSE_ADAPTER_V2.md`](JEANS_DSPH_RESPONSE_ADAPTER_V2.md).
+
 ## Equation placement
 
 The baseline spherical Jeans equation is

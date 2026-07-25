@@ -12,6 +12,11 @@
 - The dwarf-spheroidal Jeans calibration and heldout evaluation are fully
   preserved as a negative result: the safe policy selected `f=0`, while the
   forced Plummer term slightly worsened both heldout galaxies.
+- Jeans-v2 is preserved as a second, structurally different negative result:
+  after development calibration and policy freeze, the nuisance-orthogonal
+  Plummer response worsened both untouched heldout galaxies from a different
+  public catalog (`delta chi-square = +1.250092`; `-5.474%` residual
+  reduction).
 
 ## Conditional / limited
 
@@ -28,6 +33,12 @@
 - The Jeans heldout label applies only to shared `f/eta`; each heldout galaxy
   received its own baseline NFW and constant-anisotropy nuisance fit. Its
   nonzero deltas are materially negligible and do not support adapter adoption.
+- The Jeans-v2 heldout boundary applies to shared `eta/a_perp`, heldout galaxy
+  identity, and a different public source catalog. Each heldout profile still
+  receives its own baseline NFW and constant-anisotropy nuisance fit.
+- The Jeans-v2 development optimum hit its declared amplitude upper bound.
+  The bound was not widened after heldout scoring; this limits interpretation
+  but does not alter the negative heldout result.
 
 ## Not supported
 
@@ -49,3 +60,7 @@ The SPARC-specific sentence is:
 The dwarf-spheroidal Jeans-specific sentence is:
 
 > On a public-data spherical-Jeans dev/heldout diagnostic, calibration selected the unmodified baseline (`f=0`); a separately frozen nonzero Plummer adapter slightly worsened both heldout galaxies, so this lane provides no adapter uplift.
+
+The Jeans-v2-specific sentence is:
+
+> A nuisance-orthogonal Jeans response adapter calibrated on four development galaxies worsened both untouched Draco and Ursa Minor heldout profiles after policy freeze (`22.835649 → 24.085741` chi-square), so the v2 adapter did not generalize.

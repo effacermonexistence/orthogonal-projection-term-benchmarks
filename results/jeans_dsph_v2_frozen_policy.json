@@ -1,0 +1,61 @@
+{
+  "claim_boundary": "Shared eta and response amplitude only. Each heldout galaxy fits its own baseline nuisance parameters; the frozen response rule then executes without heldout adoption or tuning.",
+  "development_names": [
+    "Carina",
+    "Fornax",
+    "Sculptor",
+    "Sextans"
+  ],
+  "development_result_sha256": "2bfe00fdcd0beda30c122bb069d990d487aa9d468b65ecd732a446b887583a08",
+  "forced_nonzero_optimum": {
+    "amplitude": 2.0,
+    "amplitude_solution": {
+      "denominator": 0.0032179746780251544,
+      "lower_bound": 0.05,
+      "lower_bound_hit": false,
+      "numerator": -0.009388819858012761,
+      "selected_amplitude": 2.0,
+      "unconstrained_amplitude": 2.917617693553327,
+      "upper_bound": 2.0,
+      "upper_bound_hit": true
+    },
+    "dev_improved_count": 2,
+    "dev_macro_chi2_per_point": 0.7613648540490608,
+    "dev_macro_delta_chi2_per_point": -0.024683380719950465,
+    "dev_neutral_count": 0,
+    "dev_worsened_count": 2,
+    "eta": 0.5,
+    "valid": true
+  },
+  "heldout_names": [
+    "Draco",
+    "Ursa Minor"
+  ],
+  "no_heldout_parameter_update": true,
+  "no_heldout_row_fallback": true,
+  "primary_policy": "safe_optimum",
+  "safe_optimum": {
+    "amplitude": 2.0,
+    "amplitude_solution": {
+      "denominator": 0.0032179746780251544,
+      "lower_bound": 0.0,
+      "lower_bound_hit": false,
+      "numerator": -0.009388819858012761,
+      "selected_amplitude": 2.0,
+      "unconstrained_amplitude": 2.917617693553327,
+      "upper_bound": 2.0,
+      "upper_bound_hit": true
+    },
+    "dev_improved_count": 2,
+    "dev_macro_chi2_per_point": 0.7613648540490608,
+    "dev_macro_delta_chi2_per_point": -0.024683380719950465,
+    "dev_neutral_count": 0,
+    "dev_worsened_count": 2,
+    "eta": 0.5,
+    "valid": true
+  },
+  "sample_manifest_sha256": "033b2be81e234e48a2c1487a29dedd1d6468426edb34ba2a070ed6e80705add8",
+  "schema_version": "jeans-v2-response-orthogonal-frozen-policy-v1",
+  "status": "FROZEN_BEFORE_HELDOUT_BASELINE_OR_CANDIDATE_SCORING",
+  "timestamp_utc": "2026-07-25T14:40:47.461051+00:00"
+}

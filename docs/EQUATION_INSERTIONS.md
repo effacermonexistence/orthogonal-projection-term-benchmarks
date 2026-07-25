@@ -61,6 +61,31 @@ $$
 
 No separate free residual map is added, and the stellar tracer/mass is not convolved. Development calibration selected `f=0`; the forced nonzero diagnostic was slightly adverse on both heldout galaxies. Full details are in [`JEANS_DSPH_ADAPTER.md`](JEANS_DSPH_ADAPTER.md).
 
+### Jeans-v2 response-orthogonal diagnostic
+
+Jeans-v2 uses the same halo-only smoothing only to generate a raw response,
+then removes the part locally degenerate with fitted baseline nuisances:
+
+$$
+\delta\boldsymbol\sigma_{\rm raw}
+=\boldsymbol\sigma_{\rm Jeans}[M_\star+M_{\rm smoothed}]
+-\boldsymbol\sigma_{\rm base},
+$$
+
+$$
+\delta\boldsymbol\sigma_\perp
+=W^{-1/2}(I-P_{W^{1/2}J})W^{1/2}
+\delta\boldsymbol\sigma_{\rm raw},
+\qquad
+\boldsymbol\sigma_{\rm v2}
+=\boldsymbol\sigma_{\rm base}+a_\perp\delta\boldsymbol\sigma_\perp.
+$$
+
+This is an empirical equation-response adapter, not a new density or source
+law. The development-selected response worsened both untouched heldout
+galaxies. Full details are in
+[`JEANS_DSPH_RESPONSE_ADAPTER_V2.md`](JEANS_DSPH_RESPONSE_ADAPTER_V2.md).
+
 ## SPARC circular-velocity lane
 
 For a SPARC galaxy, the fixed baryonic contribution is

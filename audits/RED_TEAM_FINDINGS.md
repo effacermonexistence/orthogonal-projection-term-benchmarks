@@ -50,10 +50,26 @@ heldout galaxies (`delta chi-square = +0.001905307`), while matched generic
 controls were also near-neutral and adverse in aggregate. The correct result
 is no adapter uplift, not a small positive effect.
 
+## 9. Jeans-v2 untouched-galaxy downlift
+
+Jeans-v2 changed the construction rather than retuning Jeans-v1: the raw
+halo-smoothing response was projected orthogonally to the local weighted
+baseline-nuisance tangent, and one shared scale/amplitude pair was selected on
+Carina, Fornax, Sculptor, and Sextans. The policy was frozen before scoring
+Draco or Ursa Minor from a different catalog.
+
+The frozen Plummer response worsened both heldout galaxies
+(`delta chi-square = +1.250092317`; residual reduction `-5.4743%`).
+Matched Gaussian and top-hat responses also worsened both. The development
+amplitude hit its declared upper bound, but widening that bound after heldout
+inspection would invalidate the locked experiment. The valid result is
+`UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION`.
+
 ## Durable conclusion
 
 The evidence supports a reproducible redistribution effect in selected
 diagnostic spaces, not a universal improvement. The independent Jeans
-calibration rejected the nonzero adapter. The combined record does not
+calibration rejected the nonzero adapter, and the separate Jeans-v2 adapter
+failed on both untouched heldout galaxies. The combined record does not
 currently require or identify a unique physical kernel or new cosmological
 source term.
