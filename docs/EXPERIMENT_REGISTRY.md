@@ -13,9 +13,9 @@ The registry contains **thirteen experimental records**, not thirteen independen
 | SIDM Concerto Halo000 | 1 public simulation-parametric target | New target | Direction pass; specificity fail |
 | SIDM Concerto Halo352 | 1 score-blind fresh target | New target | Direction pass; specificity fail |
 | SPARC rotation-curve adapter | 14 dev / 7 heldout; 6 stable heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | 4.432% aggregate heldout reduction; diagnostic only |
-| Dwarf-spheroidal spherical-Jeans adapter | 2 dev / 2 heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | Safe policy selected `f=0`; forced term slightly worsened both heldout galaxies |
-| Jeans-v2 nuisance-orthogonal response adapter | 4 dev / 2 untouched heldout | Different public heldout catalog and galaxy identities; shared `eta/a_perp` frozen; per-galaxy nuisances fitted | Frozen Plummer response worsened Draco and Ursa Minor; no generalization |
-| Corrective direct formal-source Jeans insertion | 4 dev / 2 post-exposure evaluation | Reuses Draco/Ursa Minor identities after Jeans-v2; direct-source scores were new but not fresh/unseen | Both deltas negative, aggregate reduction 0.005077%; dev-safe policy remained `f=0`; materiality not established |
+| Dwarf-spheroidal spherical-Jeans adapter | 2 dev / 2 heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | Adopted safe policy selected `f=0`; only the unadopted forced diagnostic slightly worsened both heldout galaxies |
+| Jeans-v2 nuisance-orthogonal response adapter | 4 dev / 2 untouched heldout | Different public heldout catalog and galaxy identities; shared `eta/a_perp` frozen; per-galaxy nuisances fitted | Historical off-object adapter negative; excluded from the canonical direct-source method tally |
+| Corrective direct formal-source Jeans insertion | 4 dev / 2 post-exposure evaluation | Reuses Draco/Ursa Minor identities after Jeans-v2; direct-source scores were new but not fresh/unseen | Correct canonical object: both deltas negative, aggregate reduction 0.005077%; dev-safe policy remained `f=0`; materiality not established |
 | X-COP direct hydrostatic-equation insertion | 4 dev / 3 untouched-cluster heldout | New public-profile domain; shared `f/eta` frozen, cluster identities untouched by score before freeze | 145.095308 → 140.737785 chi-square; 3.0032% reduction; 3/3 negative deltas; public-profile consistency diagnostic |
 
 ## Development chain
@@ -48,18 +48,23 @@ The shared `eta=0.5`, `a_perp=2.0` policy was frozen before any heldout model
 score. The Plummer response changed heldout chi-square from 22.835649 to
 24.085741 (`delta = +1.250092`; residual reduction `-5.474%`) and worsened
 both galaxies. Matched Gaussian and top-hat responses also worsened both.
-The result label is
+The raw adapter result label remains
 `UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION`.
 
 This is a stronger heldout boundary than Jeans-v1 for shared adapter transfer,
 but each heldout galaxy still has a fitted NFW/anisotropy baseline. The result
-is therefore a clean negative adapter-generalization diagnostic, not clean
-end-to-end prediction.
+is therefore a clean negative result for that response adapter, not clean
+end-to-end prediction. It does **not** test the requested direct insertion
+`rho_perp=f(K_d*rho_NFW-rho_NFW)` on the canonical Jeans source and is excluded
+from every canonical orthogonal-method downlift, uplift, and no-downlift tally.
+For the canonical-object question it is superseded by
+`DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE`; the raw v2 artifact remains
+preserved for auditability.
 
 
 ## Corrective direct formal-source Jeans lane
 
-Jeans-v2 is an off-object response-space experiment relative to the canonical-source question. The corrective lane preserves it and separately inserts `rho_perp=f(K_d*rho_NFW-rho_NFW)` into the halo density source of the unchanged Jeans equation. Carina, Fornax, Sculptor, and Sextans calibrated the direct shared `f/eta` grid; the safe optimum was `f=0`. The best frozen nonzero diagnostic (`f=0.05`, `eta=0.03125`) moved Draco and Ursa Minor from `22.835647795309` to `22.834488396426` chi-square (`delta=-0.001159398883`, `0.005077%`, 2/0 direction). Because those galaxy identities were already exposed under Jeans-v2, the result is `POST_EXPOSURE_CORRECTIVE_FORMAL_SOURCE_REPRODUCTION`, not a new independent validation.
+Jeans-v2 is an off-object response-space experiment relative to the canonical-source question. The corrective lane preserves it and separately inserts `rho_perp=f(K_d*rho_NFW-rho_NFW)` into the halo density source of the unchanged Jeans equation. Carina, Fornax, Sculptor, and Sextans calibrated the direct shared `f/eta` grid; the safe optimum was `f=0`. The best frozen nonzero diagnostic (`f=0.05`, `eta=0.03125`) moved Draco and Ursa Minor from `22.835647795309` to `22.834488396426` chi-square (`delta=-0.001159398883`, `0.005077%`, 2/0 direction). This corrective row is the only one of the two Draco/Ursa Minor experiments that answers the direct-source method question. Because those galaxy identities were already exposed under Jeans-v2, the result is `POST_EXPOSURE_CORRECTIVE_FORMAL_SOURCE_REPRODUCTION`, not a new independent validation.
 
 ## X-COP direct hydrostatic-equation lane
 

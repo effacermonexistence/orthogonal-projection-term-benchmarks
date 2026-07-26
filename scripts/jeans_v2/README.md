@@ -1,6 +1,6 @@
 # Jeans-v2 public reproduction
 
-These are the exact scientific adapter scripts used for the Jeans-v2 response-orthogonal diagnostic. The private OmarAGI R2 authority body is not redistributed; its bounded manifest-hash invocation and pre/post gate receipts are preserved in `results/`.
+These are the exact scientific adapter scripts used for the Jeans-v2 response-orthogonal diagnostic. This historical adapter is not the canonical direct halo-density source insertion and is excluded from the canonical orthogonal-method tally. The private OmarAGI R2 authority body is not redistributed; its bounded manifest-hash invocation and pre/post gate receipts are preserved in `results/`.
 
 The published sample manifest contains the locked derived dispersion profiles. Raw third-party catalogs are not redistributed.
 
@@ -42,4 +42,8 @@ Both public replays were byte-identical before release. See `results/jeans_dsph_
 
 ## Boundary
 
-The result is negative: the frozen adapter worsened Draco and Ursa Minor. The public scripts support numerical reproduction; they do not create a physical-law claim or redistribute the private R2 source tree.
+The result is negative for the frozen response adapter: it worsened Draco and
+Ursa Minor. The raw record remains reproducible and is not deleted, but it must
+not be cited as a downlift of the canonical direct-source orthogonal method.
+The public scripts support numerical reproduction; they do not create a
+physical-law claim or redistribute the private R2 source tree.

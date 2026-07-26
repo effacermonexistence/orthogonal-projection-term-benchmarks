@@ -93,7 +93,10 @@ $$
 $$
 
 This is an empirical equation-response adapter, not a new density or source
-law and not a direct canonical-equation insertion. Its negative result remains valid only for that response adapter; the corrected direct-source question is recorded separately. The development-selected response worsened both untouched heldout
+law and not a direct canonical-equation insertion. Its negative result remains
+valid only for that response adapter and is excluded from the canonical
+orthogonal-method tally; the corrected direct-source question is recorded
+separately. The development-selected response worsened both untouched heldout
 galaxies. Full details are in
 [`JEANS_DSPH_RESPONSE_ADAPTER_V2.md`](JEANS_DSPH_RESPONSE_ADAPTER_V2.md).
 

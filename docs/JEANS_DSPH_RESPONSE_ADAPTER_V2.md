@@ -1,6 +1,6 @@
 # Jeans-v2 nuisance-orthogonal response adapter
 
-> **Executed-object boundary:** this is a response-space adapter experiment, not the direct orthogonal-density insertion into the canonical Jeans source. Its result is preserved unchanged. The direct formal-source correction is documented separately in [`JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md`](JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md).
+> **Executed-object boundary:** this is a response-space adapter experiment, not the direct orthogonal-density insertion into the canonical Jeans source. Its result is preserved unchanged for auditability but is excluded from the canonical orthogonal-method tally. The direct formal-source correction is documented separately in [`JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md`](JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md).
 
 ## Result
 
@@ -14,9 +14,14 @@ The development-calibrated policy worsened both untouched heldout galaxies:
 - residual reduction: `-5.474302%`;
 - improved / worsened heldout galaxies: `0 / 2`.
 
-**Result label:** `UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION`.
+**Raw adapter result label:** `UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION`.
 
-This is a clean negative generalization result. It is not uplift, physical-law evidence, or Plummer-specific evidence.
+**Canonical-method relevance:** `EXCLUDED_FROM_CANONICAL_ORTHOGONAL_METHOD_TALLY`.
+
+This is a clean negative generalization result for the response adapter that
+was actually executed. It is not a negative result for the canonical
+direct-source orthogonal insertion, nor is it uplift, physical-law evidence,
+or Plummer-specific evidence.
 
 ## Why v2 is a different adapter
 
@@ -114,7 +119,9 @@ The selected amplitude hit the declared upper bound. That is a limitation. The b
 | Draco | 13.087048478046 | 13.537068890508 | +0.450020412462 |
 | Ursa Minor | 9.748600359324 | 10.548672264304 | +0.800071904980 |
 
-All three frozen kernels worsened both heldout galaxies. There is no v2 generalization uplift to adopt.
+All three frozen kernels worsened both heldout galaxies. There is no v2
+response-adapter generalization uplift to adopt. This sentence does not apply
+to the separately executed canonical direct-source term.
 
 ## Execution and verification
 

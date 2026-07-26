@@ -84,6 +84,30 @@ def test_jeans_v2_public_replay_and_audit_pass():
     assert audit['check_count']==27
     assert audit['failed_checks']==[]
 
+def test_jeans_v2_is_excluded_from_canonical_method_tally():
+    registry=json.loads((ROOT/'results/experiment_registry.json').read_text())
+    rows={row['record_id']:row for row in registry['records']}
+    v2=rows['DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER']
+    corrective=rows['DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE']
+    assert v2['status']=='OFF_OBJECT_RESPONSE_ADAPTER_NEGATIVE_NOT_CANONICAL_TERM_TEST'
+    assert v2['method_relevance']=='EXCLUDED_FROM_CANONICAL_ORTHOGONAL_METHOD_TALLY'
+    assert v2['superseded_for_canonical_object_question_by']==corrective['record_id']
+    assert corrective['method_relevance']=='CANONICAL_DIRECT_SOURCE_CORRECTIVE_POST_EXPOSURE'
+
+def test_method_object_identity_audit_passes():
+    x=json.loads((ROOT/'results/downlift_object_identity_audit.json').read_text())
+    assert x['status']=='PASS'
+    rows={row['record_id']:row for row in x['records']}
+    v1=rows['DSPH_SPHERICAL_JEANS_SHARED_ADAPTER']
+    v2=rows['DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER']
+    corrected=rows['DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE']
+    assert v1['adopted_delta_chi2']==0.0
+    assert v1['canonical_method_downlift_adopted'] is False
+    assert v2['canonical_direct_source_test'] is False
+    assert v2['raw_result_preserved'] is True
+    assert corrected['response_projection_used'] is False
+    assert corrected['direct_nonzero_delta_chi2']<0.0
+
 def test_jeans_corrective_direct_source_is_tiny_negative_direction():
     x=json.loads((ROOT/'results/jeans_dsph_formal_corrective_evaluation.json').read_text())
     a=x['aggregates']['direct_nonzero_plummer']

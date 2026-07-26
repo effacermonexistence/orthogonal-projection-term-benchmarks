@@ -1,29 +1,30 @@
 {
   "files": {
     ".gitignore": "dd4590868e2000d3daf9e16cdde6c103da349bdb014ce4d9f961b45c1ffdad91",
-    "CITATION.cff": "a2dd8680fd49bd1183d6fb8649a05335fe5289bfecb3da8197e83646252bfc0d",
+    "CITATION.cff": "a1bc1fa15a69be78c5ac12fe60e942e7fdf90137a83d3ef031cf82dcf77906fc",
     "CONTRIBUTING.md": "4f57869d00c07c437599794757ff3ca27eec6bdbcbc2f4e7e6a3f8d78785af87",
     "LICENSE": "d95323c24238cff39db77472ea54c675ae45196f36ff7fe401c00bba53d09a9c",
-    "README.md": "d6ae82d1e19506628ed49cbc5d717e14818d6ef5675d86ffdc5ae9b5110b8806",
-    "audits/RED_TEAM_FINDINGS.md": "604a2fb0930a595a26bd68bc7f062b67cb82da07e7686fad762e970bbe06132f",
+    "README.md": "fe1ab949814c8f65c1a1aa823d78f99c0445ba6600a29d232e374eaf3e859fff",
+    "audits/RED_TEAM_FINDINGS.md": "e3d126fa63bbab6d8435592af0b29faeb5a1c335cb805f3e8797d26caebeebb3",
     "data/README.md": "3da8030cef81e4e31345f3aa8b3f63fb8d5ed30dcf22d02221b946034ea5da19",
-    "docs/CLAIM_BOUNDARIES.md": "79d1072cce30cf7597f708a660d328f76c21752b1a8ee90ebf6bea166c699632",
+    "docs/CLAIM_BOUNDARIES.md": "f08067be58c34496206428ae1132c7bd50dd0246a033548627c34f8480c922a8",
     "docs/DATA_PROVENANCE.md": "6fdd4d778959cac0336ffe4363e05295981062927837404a22422ec8f4cf2a97",
-    "docs/EQUATION_INSERTIONS.md": "1340d9718380b9850866e69338e14279a7b48084ebd82e81c26965270cc49dea",
-    "docs/EXPERIMENT_REGISTRY.md": "177e4a4c6a77706d3dc59448a3387e70f1142969c40e3451cb06e86048368188",
+    "docs/EQUATION_INSERTIONS.md": "3918a0728e13e20e8370c8531e8f8fd549099a2da511bae7010e85935f0eb499",
+    "docs/EXPERIMENT_REGISTRY.md": "6b9bb907b04e1b974d75cb6d9cad7a2c1335d47062d78d3599826e6cfbc1ea97",
     "docs/JEANS_DSPH_ADAPTER.md": "ce5b13fd0312365e6fa2dbf1b4f6722ca37089121db1a9d5e8428f75de493e14",
     "docs/JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md": "e00d1b5895cb2745a51b1fdc3fe1044a42c4f6291688741723af44e64dda5e57",
-    "docs/JEANS_DSPH_RESPONSE_ADAPTER_V2.md": "4747cc7b109f53ff0d9ab4effff8c0820d871aebf4d59786a6a7b32b42c1bd3e",
+    "docs/JEANS_DSPH_RESPONSE_ADAPTER_V2.md": "c58b7710e1e808a2f235d880c11f59c993a0bc118a6b65492f7f117fb48262af",
     "docs/OPERATOR.md": "4603e708e08920c78657e36dadcd0c093bbf0f4d4a274db6afadc774116969e8",
     "docs/SPARC_ROTATION_CURVE_ADAPTER.md": "23875a30f94e40e360381ea9e754a3a606582e05c540e063613f001b67f9d598",
     "docs/XCOP_HYDROSTATIC_DIRECT_FORMAL.md": "ffd90bff41b7d536db20e01956f800d9a81c7207b81fbbd04ca8ee3c5a8de9e1",
-    "pyproject.toml": "3434b77744f38535a6daa136231811794c7397fe23fa965133a00dcd7455a339",
+    "pyproject.toml": "0c6266ecc1e42f75ee73be078776fb68a6cc1e7a185ea2a841f00f14d1fc2717",
     "results/SOURCE_ARTIFACT_CHECKSUMS.json": "edfefc45304b379e3466730f99030f69a614bca8b3e8f38e4e65cb091e761bf7",
     "results/as1063_b2_matched_controls.json": "2047873c40b0552dc40248e6ffa1acdc4b608c979e55e2efac07effdf312b862",
     "results/as1063_b2_true_density.json": "ba4f36052c54c6950b74811dee6291d00c8942a4139f14bbb9e3f767c54530a1",
     "results/canonical_equation_channels.json": "36aa5826e193341d2ef4e42ed9e4efd80f9799fe9863794cc096cae1c489bc6e",
-    "results/experiment_registry.csv": "04f63114d434c8442e6a845e9ec0b9c163d041e30ed9a2fa39fc84e0c3489a6f",
-    "results/experiment_registry.json": "043dd2ee46e8bf0dbc27c38a733e409c93bc4666c96e0dd96a7818153354ffae",
+    "results/downlift_object_identity_audit.json": "1ff409f3e495a2a9ae514f36065f29a3d3a8f6862bc249d00c3e7cf436f617a4",
+    "results/experiment_registry.csv": "c9b0ff30b995d0186b796f2d05a21054c95761a9ec35047c2a9ebcd023f7c61e",
+    "results/experiment_registry.json": "0975a08539272f5ecc60c7b64b0f6bcc109014d4b5c491460c88789a2a31ecc6",
     "results/hff_six_cluster_transfer.csv": "d0f1047f6d3aee30cc774b9da4ffc6a585081f7ac1fd723fbedb318c2f788bf6",
     "results/hff_six_cluster_transfer.json": "db58c1d7e57ac3c405323a0e194ccd17c1538309af06365926ade41554746673",
     "results/jeans_dsph_dev_grid.json": "bc98a8f258a9b07078e6d522ceeb018fc771a50bf542b0cd3dd11409397e1dfa",
@@ -79,6 +80,7 @@
     "results/xcop_hse_result_summary.json": "dc6d353e6c9953960fc0d1a7badb5ebfb643f8de6b43f08dd5058ac8690a7f2d",
     "results/xcop_hse_run_receipt.json": "1edc8687df36e910a39a380fa103abf84a4ea9a99070ddc142d9c64ef4ef2ece",
     "results/xcop_hse_sample_manifest.json": "48a68d7dd0f5b8863976eaa822595141922337a7dde1f683ffd21b9f562dacb7",
+    "scripts/audit_method_object_identity.py": "330eab69a52a0a88f5173b03c51a871e152ee7dcf4937eeecb177f95c193d9e7",
     "scripts/jeans/README.md": "b4a3fbf13c059a00e47eb9c28d4befef336e704370ba1b7b7711cc4467646e9c",
     "scripts/jeans/evaluate_jeans_heldout.py": "3b5ce14c7e2f59f3f2e19e81bf9e3e777504911cf9a2895f39b813b157a04991",
     "scripts/jeans/jeans_adapter_common.py": "2e9d4aad63f813a9b264190e725a736b94223bf735937dba97503e09bbdddaf0",
@@ -91,7 +93,7 @@
     "scripts/jeans_formal_corrective/lock_jeans_formal_sample.py": "d46a332d725d3acabc2586cdcd711302ff17ed6076283bd9c1f5fd3593c91b60",
     "scripts/jeans_formal_corrective/optimize_jeans_formal_dev.py": "781f3eb631461c0e99b00dc240ed907c2efda98fe6519cc3b58c7698595621d8",
     "scripts/jeans_formal_corrective/verify_corrective_result.py": "852e01b3501bbcd28ac0e6062690e100512367e62627522adb29c433d23092c6",
-    "scripts/jeans_v2/README.md": "4ec731f03751bff58bfa734735a9254d5dbfe6abcf16bccfb6b76e07b1bf6c21",
+    "scripts/jeans_v2/README.md": "b2eb74abc584271b025cffc255b0be92531d135fe3ade39a343cfb10d4abcf94",
     "scripts/jeans_v2/evaluate_jeans_v2_heldout.py": "c187ba650ea4d39689d6a4b870841aeca516c4c0f05c85fc46e6732e65156ab9",
     "scripts/jeans_v2/freeze_jeans_v2_policy.py": "4856b33380af202e59f5808c3fc08fc7f4166ca199724c853f187046feecaf89",
     "scripts/jeans_v2/jeans_v2_common.py": "903d7389f5edc0865e83614084f0cdab6b81a0e03732f40a03408ebf6e94e816",
@@ -106,7 +108,7 @@
     "scripts/sparc/optimize_sparc_dev.py": "7e184ec0843d31d6705f9923aa016cc085a16f8d9c1b457c99d7e46572517b3e",
     "scripts/sparc/prepare_public_reproduction.py": "3bc1165ca1f997180e52b71bf651a238d7ab924870fb1f425acb3ba8bea1eb7b",
     "scripts/sparc/sparc_adapter_common.py": "4609393861001e828d3e4c7c3b4443fd56e598c17378c54702765694559b2f9d",
-    "scripts/verify_published_results.py": "cd5c0f53764af5f28b38912b60857c307f06a67cbe5d48d047c7649320606691",
+    "scripts/verify_published_results.py": "7e3e1a7a4bf18e6003eae2494b053710739b175cd407f1faa8807638d5df7088",
     "scripts/xcop_hse/README.md": "11d669ce0c415a836ceb77809830f6c6fc0e501fdf4a0dbf029efc01bd76077a",
     "scripts/xcop_hse/audit_xcop_run.py": "77ef501571838d7b8b308aefaba70d67439ddaf562d09a1603ec946ca50145b0",
     "scripts/xcop_hse/evaluate_xcop_heldout.py": "ef969dce454413a5ab63235e1d846a9e6aa8ef122b9ee86f81291b7d413913ee",
@@ -121,10 +123,10 @@
     "src/orthogonal_projection_term/scoring.py": "06a1d7ba639b2fb8109203d110f54c25c7ae968acfe36e74c34e064c2bdfa7cf",
     "tests/test_hff_adapter.py": "178773b63d937d641e251152f0c14734b428ddb8d2040b258540632119bdcc07",
     "tests/test_operator.py": "5cdb76002f4ac52c0316f1d4d185b56dd8526989c7833e9f1aab32074b440b6d",
-    "tests/test_results.py": "d8e3570b623b8142e4513344b34c5a5f368d2a4a27aec8c56c41ee42de68fbbc"
+    "tests/test_results.py": "d2167e4d9da2ac9d650fdd36c31c20e5d353567bdcf9bb78028bfd1bcfd0102f"
   },
-  "generated_at_utc": "2026-07-25T22:06:01.730877+00:00",
-  "release": "0.5.0",
+  "generated_at_utc": "2026-07-26T00:13:24.434235+00:00",
+  "release": "0.5.1",
   "release_config": {
     "clean_predictive_claim": false,
     "negative_results_preserved": true,
@@ -145,12 +147,22 @@
       "jeans_v2_response_adapter": {
         "amplitude": 2.0,
         "amplitude_upper_bound_hit": true,
+        "method_relevance": "EXCLUDED_FROM_CANONICAL_ORTHOGONAL_METHOD_TALLY",
         "scale_rule": "d_g = 0.5 * rhalf_g",
-        "selection_result": "UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION"
+        "selection_result": "OFF_OBJECT_RESPONSE_ADAPTER_NEGATIVE_EXCLUDED_FROM_CANONICAL_DIRECT_SOURCE_TALLY",
+        "superseded_for_canonical_object_question_by": "DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE"
       },
       "legacy_fixed_lanes": {
         "fraction": 0.3,
         "scale_kpc": 16.0
+      },
+      "method_object_identity_repair": {
+        "canonical_corrective_record": "DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE",
+        "classification": "TASK_LOCAL_ADAPTER_OVER_R2_PRIMITIVES",
+        "corrective_proof_mode": "POST_EXPOSURE_CORRECTIVE_FORMAL_SOURCE_REPRODUCTION",
+        "material_uplift_claim": false,
+        "raw_v2_artifact_preserved": true,
+        "v2_removed_from_canonical_method_tally": true
       },
       "sparc_shared_adapter": {
         "fraction": 1.0,
@@ -159,8 +171,8 @@
       "xcop_hydrostatic_direct_source": {
         "fraction": 1.0,
         "fraction_upper_bound_hit": true,
-        "scale_rule": "d_g = 0.01 R500,g",
         "proof_mode": "PUBLIC_XCOP_PROFILE_DEV_CALIBRATION_PLUS_UNTOUCHED_CLUSTER_HELDOUT_SHARED_OPERATOR_DIRECT_EQUATION_DIAGNOSTIC",
+        "scale_rule": "d_g = 0.01 R500,g",
         "selection_result": "3_OF_3_HELDOUT_NEGATIVE_DELTA_NO_ROWWISE_FALLBACK"
       }
     },
@@ -168,8 +180,8 @@
     "plummer_specificity_claim": false,
     "project": "orthogonal-projection-term-benchmarks",
     "publication_mode": "public_research_record_with_reproduction_artifacts",
-    "release": "0.5.0"
+    "release": "0.5.1"
   },
-  "release_config_sha256": "318df1487d8fdf4ba8ce12d66394f1cf279bb6112757b304d8511e3b84b5aa8d",
-  "schema_version": "orthogonal-projection-public-release-v6"
+  "release_config_sha256": "f2ea3ac726f324e977b64ae28a0f5e69a4d15d2579350e1d6eb86eb8139cc46e",
+  "schema_version": "orthogonal-projection-public-release-v7"
 }

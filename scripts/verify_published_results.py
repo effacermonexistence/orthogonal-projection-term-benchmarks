@@ -207,6 +207,27 @@ def verify_jeans_formal_corrective():
     assert public_reproduction['direction_counts_preserved'] is True
     assert public_reproduction['delta_signs_preserved'] is True
     close(public_reproduction['max_raw_delta_chi2_difference'],0.0)
+def verify_method_object_identity():
+    registry=load('results/experiment_registry.json')
+    audit=load('results/downlift_object_identity_audit.json')
+    rows={row['record_id']:row for row in registry['records']}
+    assert audit['status']=='PASS'
+    audit_rows={row['record_id']:row for row in audit['records']}
+    v1_id='DSPH_SPHERICAL_JEANS_SHARED_ADAPTER'
+    v2_id='DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER'
+    corrective_id='DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE'
+    assert rows[v2_id]['method_relevance']=='EXCLUDED_FROM_CANONICAL_ORTHOGONAL_METHOD_TALLY'
+    assert rows[v2_id]['superseded_for_canonical_object_question_by']==corrective_id
+    assert rows[corrective_id]['method_relevance']=='CANONICAL_DIRECT_SOURCE_CORRECTIVE_POST_EXPOSURE'
+    assert audit_rows[v1_id]['canonical_method_downlift_adopted'] is False
+    assert audit_rows[v2_id]['canonical_direct_source_test'] is False
+    assert audit_rows[v2_id]['raw_result_preserved'] is True
+    assert audit_rows[corrective_id]['response_projection_used'] is False
+    assert audit_rows[corrective_id]['direct_nonzero_delta_chi2']<0.0
+    assert audit_rows[corrective_id]['fresh_unseen'] is False
+    assert audit_rows[corrective_id]['material_uplift_established'] is False
+    assert audit['adoption_decision']['remove_v2_from_canonical_method_tally'] is True
+    assert audit['adoption_decision']['delete_v2_raw_artifact'] is False
 def verify_xcop_hse():
     held=load('results/xcop_hse_heldout.json')
     policy=load('results/xcop_hse_frozen_policy.json')
@@ -281,6 +302,7 @@ def main():
     verify_jeans()
     verify_jeans_v2()
     verify_jeans_formal_corrective()
+    verify_method_object_identity()
     verify_xcop_hse()
     forbidden=[re.compile('/'+'Users/'),re.compile(r'sk-(?:proj-)?[A-Za-z0-9_-]{16,}'),re.compile(r'BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY')]
     skipped={'.git','.venv','__pycache__','.pytest_cache','build','dist'}

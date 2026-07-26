@@ -50,7 +50,7 @@ heldout galaxies (`delta chi-square = +0.001905307`), while matched generic
 controls were also near-neutral and adverse in aggregate. The correct result
 is no adapter uplift, not a small positive effect.
 
-## 9. Jeans-v2 untouched-galaxy downlift
+## 9. Jeans-v2 off-object response-adapter downlift
 
 Jeans-v2 changed the construction rather than retuning Jeans-v1: the raw
 halo-smoothing response was projected orthogonally to the local weighted
@@ -63,11 +63,13 @@ The frozen Plummer response worsened both heldout galaxies
 Matched Gaussian and top-hat responses also worsened both. The development
 amplitude hit its declared upper bound, but widening that bound after heldout
 inspection would invalidate the locked experiment. The valid result is
-`UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION`.
+`UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION` **for this response
+adapter only**. It is not the direct halo-density source insertion and is
+excluded from the canonical orthogonal-method tally.
 
 ## 10. Jeans executed-object correction
 
-Jeans-v2 answered a response-adapter question rather than the requested direct canonical-source insertion. The record now labels that mismatch explicitly and preserves both experiments. In the corrected formal-source run, development again selected the baseline `f=0`. A frozen nonzero diagnostic moved both post-exposure evaluation deltas negative, but only by `delta chi-square = -0.001159399` (`0.005077%`). That establishes executed-object correction and a tiny directional delta, not material uplift, fresh proof, or adoption support.
+Jeans-v2 answered a response-adapter question rather than the requested direct canonical-source insertion. Counting its downlift against the requested method was an object-identity error. The record now quarantines that inference while preserving the raw experiment. In the corrected formal-source run, development again selected the baseline `f=0`. A frozen nonzero diagnostic moved both post-exposure evaluation deltas negative, but only by `delta chi-square = -0.001159399` (`0.005077%`). That establishes executed-object correction and a tiny directional delta, not material uplift, fresh proof, or adoption support.
 
 ## 11. X-COP direct equation: direction survives, specificity remains open
 
@@ -88,9 +90,13 @@ Plummer-specific proof.
 ## Durable conclusion
 
 The evidence supports a reproducible redistribution effect in selected
-diagnostic spaces, not a universal improvement. The independent Jeans
-calibration rejected the nonzero adapter, and the separate Jeans-v2 adapter
-failed on both untouched heldout galaxies. The combined record does not
-currently require or identify a unique physical kernel or new cosmological
-source term. The X-COP direct-equation lane adds a clean heldout directional
-diagnostic, but generic-smoother and same-profile-family boundaries remain.
+diagnostic spaces, not a universal improvement. The first Jeans calibration
+adopted the exact baseline; its forced nonzero diagnostic was slightly adverse
+but was not adopted. The separate Jeans-v2 response adapter failed on two
+untouched heldout galaxies, but that off-object result is not evidence that the
+canonical direct-source method downlifted. The corrected direct-source record
+moved both post-exposure deltas slightly negative, with materially tiny
+aggregate effect. The combined record does not currently require or identify a
+unique physical kernel or new cosmological source term. The X-COP
+direct-equation lane adds a clean heldout directional diagnostic, but
+generic-smoother and same-profile-family boundaries remain.
