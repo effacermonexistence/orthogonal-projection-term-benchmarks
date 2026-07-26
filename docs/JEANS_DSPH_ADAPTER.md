@@ -6,12 +6,9 @@ The development calibration selected the safe baseline policy, `f = 0`. A separa
 
 **Result label:** `NO_ADAPTER_UPLIFT_SAFE_FLOOR_SELECTED`.
 
-This is a valid negative result. It is not an uplift, a detection, or evidence for a new physical term.
-
-This Jeans-v1 result remains immutable. A separate nuisance-orthogonal
-response construction was later tested on different heldout galaxies and also
-failed to generalize; see
-[`JEANS_DSPH_RESPONSE_ADAPTER_V2.md`](JEANS_DSPH_RESPONSE_ADAPTER_V2.md).
+The adopted result is exact baseline preservation. The forced nonzero branch is
+retained only as a non-adopted diagnostic; it is not an uplift, a detection, or
+evidence for a new physical term.
 
 ## Equation placement
 

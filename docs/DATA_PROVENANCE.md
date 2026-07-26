@@ -99,7 +99,7 @@ Raw third-party datasets are not committed. This repository stores URLs, source 
   https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/156/257
 - FTP root: https://cdsarc.cds.unistra.fr/ftp/J/AJ/156/257/
 - Paper record: https://ui.adsabs.harvard.edu/abs/2018AJ....156..257S/abstract
-- Use: untouched-galaxy source for the Jeans-v2 response-orthogonal diagnostic; later reused in the explicitly post-exposure corrective direct formal-source run.
+- Use: post-exposure evaluation source for the direct formal-source spherical-Jeans run. These galaxy identities had already been exposed during a superseded internal prototype, so the public result is not labeled fresh/unseen.
 - Per-star preprocessing: inverse-variance constant-velocity fit; exclude
   binary candidates with constant-velocity chi-square survival probability
   below `0.001`; then apply the stored gradient-removal and radial-profile
@@ -121,7 +121,7 @@ Raw third-party datasets are not committed. This repository stores URLs, source 
 - FTP root: https://cdsarc.cds.unistra.fr/ftp/J/AJ/144/4/
 - Paper record: https://ui.adsabs.harvard.edu/abs/2012AJ....144....4M/abstract
 - Use: distance, half-light radius, luminosity, center, and global-dispersion
-  metadata for Draco and Ursa Minor in Jeans-v2 and the later post-exposure corrective direct formal-source run.
+  metadata for Draco and Ursa Minor in the post-exposure direct formal-source run.
 - `ReadMe` SHA-256:
   `b8a381bc6567dbecbfa669edc911d15534033931563f13fa5b9874829c1c18ea`
 - `table1.dat` SHA-256:

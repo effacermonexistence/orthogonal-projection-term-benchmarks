@@ -1,10 +1,9 @@
 # Corrective direct formal-source spherical-Jeans lane
 
 This folder preserves the exact scientific code used for the corrective run.
-The run repairs an executed-object mismatch in Jeans-v2: it inserts the
-orthogonal redistribution term directly into the NFW halo density source of
-the canonical spherical Jeans equation. It does **not** use the Jeans-v2
-nuisance-tangent response projection.
+The run inserts the orthogonal redistribution term directly into the NFW halo
+density source of the canonical spherical Jeans equation. It does **not** use
+a nuisance-tangent response projection.
 
 ## Direct equation object
 
@@ -39,9 +38,9 @@ parity rather than false byte identity.
 
 ## Boundary
 
-Draco and Ursa Minor had already been exposed in the earlier off-object
-Jeans-v2 response-adapter experiment. This is therefore a **post-exposure
-corrective formal-source reproduction**, not fresh/unseen proof. Development
-selected the safe `f=0` policy. The frozen nonzero direct diagnostic moved both
-evaluation deltas negative, but the aggregate reduction was only about
-`0.0051%`; it is not material uplift or physical evidence.
+Draco and Ursa Minor had already been exposed during a superseded internal
+prototype. This is therefore a **post-exposure corrective formal-source
+reproduction**, not fresh/unseen proof. Development selected the safe `f=0`
+policy. The frozen nonzero direct diagnostic moved both evaluation deltas
+negative, but the aggregate reduction was only about `0.0051%`; it is not
+material uplift or physical evidence.

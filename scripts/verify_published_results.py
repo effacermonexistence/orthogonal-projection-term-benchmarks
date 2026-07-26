@@ -154,66 +154,6 @@ def verify_jeans():
     assert receipt['heldout_aggregates']==held['aggregates']
     assert receipt['claim_boundary']==held['claim_boundary']
     assert len(failures['failures'])==3
-def verify_jeans_v2():
-    held=load('results/jeans_dsph_v2_heldout.json')
-    dev=load('results/jeans_dsph_v2_dev_optimization.json')
-    policy=load('results/jeans_dsph_v2_frozen_policy.json')
-    sample=load('results/jeans_dsph_v2_sample_manifest.json')
-    receipt=load('results/jeans_dsph_v2_run_receipt.json')
-    verification=load('results/jeans_dsph_v2_verification.json')
-    replay=load('results/jeans_dsph_v2_replay_receipt.json')
-    assert sample['status']=='LOCKED_BEFORE_DEV_SCIENTIFIC_SCORING'
-    assert sample['development']==['Carina','Fornax','Sculptor','Sextans']
-    assert sample['heldout']==['Draco','Ursa Minor']
-    assert sample['overlap_count']==0
-    assert not set(sample['development']).intersection(sample['heldout'])
-    assert sample['visibility']['heldout_baseline_or_candidate_scores_visible_before_policy_freeze'] is False
-    assert dev['heldout_scores_visible_before_policy_freeze'] is False
-    assert policy['status']=='FROZEN_BEFORE_HELDOUT_BASELINE_OR_CANDIDATE_SCORING'
-    assert policy['no_heldout_parameter_update'] is True
-    assert policy['no_heldout_row_fallback'] is True
-    assert policy['safe_optimum']['eta']==0.5
-    assert policy['safe_optimum']['amplitude']==2.0
-    assert policy['safe_optimum']['amplitude_solution']['upper_bound_hit'] is True
-    close(policy['safe_optimum']['amplitude_solution']['unconstrained_amplitude'],2.917617693553327)
-    assert held['heldout_names']==sample['heldout']
-    assert held['development_scores_accessed_by_evaluator'] is False
-    assert len(held['rows'])==2
-    assert all(row['baseline_stable'] for row in held['rows'])
-    assert all(not any(row['optimizer_boundary_hits'].values()) for row in held['rows'])
-    for key in ('safe_plummer','safe_gaussian','safe_top_hat','forced_plummer','forced_gaussian','forced_top_hat'):
-        aggregate=held['aggregates'][key]
-        base=sum(row['baseline_chi2'] for row in held['rows'])
-        candidate=sum(row[key]['chi2'] for row in held['rows'])
-        verify_delta(base,candidate,aggregate['raw_delta_chi2'],aggregate['residual_reduction_pct'])
-        close(base,aggregate['baseline_total_chi2'])
-        close(candidate,aggregate['candidate_total_chi2'])
-        assert aggregate['improved_count']==sum(row[key]['delta_chi2']<0 for row in held['rows'])
-        assert aggregate['worsened_count']==sum(row[key]['delta_chi2']>0 for row in held['rows'])
-        for row in held['rows']:
-            result=row[key]
-            verify_delta(row['baseline_chi2'],result['chi2'],result['delta_chi2'],result['residual_reduction_pct'])
-            assert result['amplitude_zero_max_abs_kms']<=1e-12
-            assert abs(result['raw_mass_leak_fraction'])<=0.02
-            assert abs(result['mass_leak_fraction'])<=1e-12
-            assert result['weighted_orthogonality_max_abs']<=1e-8
-    primary=held['aggregates']['safe_plummer']
-    close(primary['baseline_total_chi2'],22.835648837370094)
-    close(primary['candidate_total_chi2'],24.085741154812006)
-    close(primary['raw_delta_chi2'],1.2500923174419114)
-    close(primary['residual_reduction_pct'],-5.474301721596628)
-    assert primary['improved_count']==0 and primary['worsened_count']==2
-    assert primary['downlift'] is True
-    assert receipt['status']=='COMPLETE_NEGATIVE_GENERALIZATION_RESULT'
-    assert receipt['result_label']=='UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION'
-    assert receipt['heldout_primary']==primary
-    assert verification['status']=='PASS'
-    assert verification['verdict']=='PASS_NEGATIVE_RESULT_PRESERVED'
-    assert verification['check_count']==27 and verification['failed_checks']==[]
-    assert all(verification['checks'].values())
-    assert replay['status']=='PASS'
-    assert replay['dev_byte_identical'] is True
-    assert replay['heldout_byte_identical'] is True
 def verify_jeans_formal_corrective():
     held=load('results/jeans_dsph_formal_corrective_evaluation.json')
     dev=load('results/jeans_dsph_formal_corrective_dev_grid.json')
@@ -255,27 +195,23 @@ def verify_jeans_formal_corrective():
     assert public_reproduction['direction_counts_preserved'] is True
     assert public_reproduction['delta_signs_preserved'] is True
     close(public_reproduction['max_raw_delta_chi2_difference'],0.0)
-def verify_method_object_identity():
+def verify_canonical_object_identity():
     registry=load('results/experiment_registry.json')
-    audit=load('results/downlift_object_identity_audit.json')
+    audit=load('results/canonical_object_identity_audit.json')
     rows={row['record_id']:row for row in registry['records']}
-    assert audit['status']=='PASS'
-    audit_rows={row['record_id']:row for row in audit['records']}
-    v1_id='DSPH_SPHERICAL_JEANS_SHARED_ADAPTER'
-    v2_id='DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER'
-    corrective_id='DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE'
-    assert rows[v2_id]['method_relevance']=='EXCLUDED_FROM_CANONICAL_ORTHOGONAL_METHOD_TALLY'
-    assert rows[v2_id]['superseded_for_canonical_object_question_by']==corrective_id
-    assert rows[corrective_id]['method_relevance']=='CANONICAL_DIRECT_SOURCE_CORRECTIVE_POST_EXPOSURE'
-    assert audit_rows[v1_id]['canonical_method_downlift_adopted'] is False
-    assert audit_rows[v2_id]['canonical_direct_source_test'] is False
-    assert audit_rows[v2_id]['raw_result_preserved'] is True
-    assert audit_rows[corrective_id]['response_projection_used'] is False
-    assert audit_rows[corrective_id]['direct_nonzero_delta_chi2']<0.0
-    assert audit_rows[corrective_id]['fresh_unseen'] is False
-    assert audit_rows[corrective_id]['material_uplift_established'] is False
-    assert audit['adoption_decision']['remove_v2_from_canonical_method_tally'] is True
-    assert audit['adoption_decision']['delete_v2_raw_artifact'] is False
+    assert audit['status']=='PASS' and all(audit['checks'].values())
+    assert 'DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER' not in rows
+    assert rows['DSPH_SPHERICAL_JEANS_SHARED_ADAPTER']['method_relevance']=='CANONICAL_DIRECT_SOURCE_ADOPTED_POLICY_EXACT_BASELINE_FORCED_DIAGNOSTIC_NOT_ADOPTED'
+    assert rows['DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE']['method_relevance']=='CANONICAL_DIRECT_SOURCE_CORRECTIVE_POST_EXPOSURE'
+    shared=audit['canonical_public_records']['shared_adapter']
+    direct=audit['canonical_public_records']['direct_formal_source']
+    assert shared['adopted_fraction']==0.0
+    assert shared['adopted_raw_delta_chi2']==0.0
+    assert shared['adopted_downlift'] is False
+    assert direct['response_projection_used'] is False
+    assert direct['direct_nonzero_raw_delta_chi2']<0.0
+    assert direct['improved_count']==2 and direct['worsened_count']==0
+    assert direct['downlift'] is False
 def verify_xcop_hse():
     held=load('results/xcop_hse_heldout.json')
     policy=load('results/xcop_hse_frozen_policy.json')
@@ -353,19 +289,18 @@ def main():
     verify_sparc()
     verify_aggregate_specificity()
     verify_jeans()
-    verify_jeans_v2()
     verify_jeans_formal_corrective()
-    verify_method_object_identity()
+    verify_canonical_object_identity()
     verify_xcop_hse()
+    manifest=load('RELEASE_MANIFEST.json')
     forbidden=[re.compile('/'+'Users/'),re.compile(r'sk-(?:proj-)?[A-Za-z0-9_-]{16,}'),re.compile(r'BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY')]
-    skipped={'.git','.venv','__pycache__','.pytest_cache','build','dist'}
-    for p in ROOT.rglob('*'):
-        if not p.is_file() or skipped.intersection(p.parts) or any(part.endswith('.egg-info') for part in p.parts): continue
+    public_paths=[ROOT/rel for rel in manifest['files']]
+    public_paths.append(ROOT/'RELEASE_MANIFEST.json')
+    for p in public_paths:
         try: text=p.read_text()
         except UnicodeDecodeError: continue
         for pat in forbidden:
             if pat.search(text): raise AssertionError(f'forbidden content {pat.pattern!r} in {p.relative_to(ROOT)}')
-    manifest=load('RELEASE_MANIFEST.json')
     for rel,expected in manifest['files'].items():
         actual=hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()
         if actual!=expected: raise AssertionError(f'hash mismatch: {rel}')

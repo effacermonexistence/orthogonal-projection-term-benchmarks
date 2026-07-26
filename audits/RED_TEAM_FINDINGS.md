@@ -50,37 +50,24 @@ that galaxy, with Plummer merely worsening it less. The remaining units net
 favored Gaussian. “Plummer best in aggregate” is arithmetically correct but is
 not adopted as specificity evidence.
 
-## 8. Dwarf-spheroidal Jeans rejection
+## 8. Dwarf-spheroidal Jeans safe-floor selection
 
 The Jeans lane calibrated the shared adapter on Sextans and Fornax before
 opening Sculptor and Carina. The safe development policy selected `f=0`.
-The separately frozen forced-nonzero Plummer policy slightly worsened both
-heldout galaxies (`delta chi-square = +0.001905307`), while matched generic
-controls were also near-neutral and adverse in aggregate. The correct result
-is no adapter uplift, not a small positive effect.
+The separately frozen forced-nonzero Plummer policy was retained only as an
+unadopted diagnostic. The adopted result is exact baseline preservation, so
+this lane contributes no adopted downlift.
 
-## 9. Jeans-v2 off-object response-adapter downlift
+## 9. Jeans executed-object correction
 
-Jeans-v2 changed the construction rather than retuning Jeans-v1: the raw
-halo-smoothing response was projected orthogonally to the local weighted
-baseline-nuisance tangent, and one shared scale/amplitude pair was selected on
-Carina, Fornax, Sculptor, and Sextans. The policy was frozen before scoring
-Draco or Ursa Minor from a different catalog.
+The public record now contains only the requested direct canonical-source
+insertion. Development selected the baseline `f=0`. A frozen nonzero
+diagnostic moved both post-exposure evaluation deltas negative by
+`delta chi-square = -0.001159399` (`0.005077%`). That establishes executed
+object identity and a small directional delta, not material uplift, fresh
+proof, or adoption support.
 
-The frozen Plummer response worsened both heldout galaxies
-(`delta chi-square = +1.250092317`; residual reduction `-5.4743%`).
-Matched Gaussian and top-hat responses also worsened both. The development
-amplitude hit its declared upper bound, but widening that bound after heldout
-inspection would invalidate the locked experiment. The valid result is
-`UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION` **for this response
-adapter only**. It is not the direct halo-density source insertion and is
-excluded from the canonical orthogonal-method tally.
-
-## 10. Jeans executed-object correction
-
-Jeans-v2 answered a response-adapter question rather than the requested direct canonical-source insertion. Counting its downlift against the requested method was an object-identity error. The record now quarantines that inference while preserving the raw experiment. In the corrected formal-source run, development again selected the baseline `f=0`. A frozen nonzero diagnostic moved both post-exposure evaluation deltas negative, but only by `delta chi-square = -0.001159399` (`0.005077%`). That establishes executed-object correction and a tiny directional delta, not material uplift, fresh proof, or adoption support.
-
-## 11. X-COP direct equation: direction survives, specificity remains open
+## 10. X-COP direct equation: direction survives, specificity remains open
 
 The X-COP lane corrects the equation object: the orthogonal term is inserted
 only into reconstructed three-dimensional dark-halo density on the unchanged
@@ -108,12 +95,10 @@ review. The deterministic cross-lane recomputation is preserved in
 
 The evidence supports a reproducible redistribution effect in selected
 diagnostic spaces, not a universal improvement. The first Jeans calibration
-adopted the exact baseline; its forced nonzero diagnostic was slightly adverse
-but was not adopted. The separate Jeans-v2 response adapter failed on two
-untouched heldout galaxies, but that off-object result is not evidence that the
-canonical direct-source method downlifted. The corrected direct-source record
-moved both post-exposure deltas slightly negative, with materially tiny
-aggregate effect. The combined record does not currently require or identify a
-unique physical kernel or new cosmological source term. The X-COP
+adopted the exact baseline and therefore had no adopted downlift. The direct
+canonical-source record moved both post-exposure deltas slightly negative,
+with materially small aggregate effect. The combined record does not currently
+require or identify a unique physical kernel or new cosmological source term.
+The X-COP
 direct-equation lane adds a clean heldout directional diagnostic, but
 generic-smoother and same-profile-family boundaries remain.

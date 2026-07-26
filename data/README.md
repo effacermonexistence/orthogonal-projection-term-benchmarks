@@ -10,7 +10,7 @@ For the dwarf-spheroidal Jeans lane, download the CDS/VizieR
 `J/AJ/137/3100` `ReadMe` and `table2.dat` through `table5.dat`; commands and
 expected hashes are in [`scripts/jeans/README.md`](../scripts/jeans/README.md).
 
-Jeans-v2 additionally uses the Spencer et al. (2018) CDS/VizieR
+The post-exposure direct formal-source Jeans run additionally uses the Spencer et al. (2018) CDS/VizieR
 `J/AJ/156/257` Draco and Ursa Minor multi-epoch tables and McConnachie (2012)
 `J/AJ/144/4` structural metadata. Exact source identifiers and hashes are in
 [`docs/DATA_PROVENANCE.md`](../docs/DATA_PROVENANCE.md); raw catalogs are not

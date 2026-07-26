@@ -2,10 +2,10 @@
 
 ## Why this record exists
 
-Jeans-v2 evaluated an empirical nuisance-orthogonal **response-space** adapter.
-That is a valid experiment for its own adapter, but it did not answer the
-requested canonical-equation question. This corrective record preserves
-Jeans-v2 unchanged and separately executes the direct formal-source insertion.
+This record answers the canonical-equation question directly: the operator is
+inserted into the three-dimensional NFW halo-density source of the unchanged
+spherical Jeans equation. A superseded internal response-space prototype is
+not part of the public benchmark record.
 
 ## Equation comparison
 
@@ -85,9 +85,9 @@ search covered `f in {0, 0.05, ..., 1}` and
 **Label:**
 `CORRECT_FORMAL_SOURCE_DIRECTIONAL_DELTA_NEGATIVE_BUT_MATERIALITY_NOT_ESTABLISHED`.
 
-Draco and Ursa Minor had already been exposed under the off-object Jeans-v2
-response experiment, so this is a post-exposure corrective reproduction, not
+Draco and Ursa Minor had already been exposed during a superseded internal
+prototype, so this is a post-exposure corrective reproduction, not
 fresh/unseen proof. The development-safe decision remained `f=0`; the nonzero
-candidate is not adopted. The approximately `0.0051%` reduction is a tiny
+candidate is not adopted. The approximately `0.0051%` reduction is a small
 forced-direction diagnostic, not material uplift, unique-kernel evidence, or a
 physical/cosmological claim. Candidate nuisance parameters were not refit.

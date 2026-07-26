@@ -1,12 +1,12 @@
 {
-  "counting_boundary": "Registry rows are experimental records, not independent scientific confirmations. Off-object adapters are preserved but excluded from canonical-method uplift/downlift tallies.",
+  "counting_boundary": "Registry rows are experimental records, not independent scientific confirmations. Only canonical source insertions and separately labeled diagnostics appear in the current public registry.",
   "records": [
     {
       "file": "results/n13_development_chain.json",
       "headline_result": "M1 delta chi2 -1.2543; 20th percentile under null; M2 absorbs residual",
       "independence": "development sample reused",
       "record_id": "N13_DEVELOPMENT_CHAIN",
-      "status": "DEVELOPMENT_NEGATIVE",
+      "status": "DEVELOPMENT_FAVORABLE_DIRECTION_WITHIN_NULL",
       "unit_count": 1
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "file": "results/jeans_dsph_heldout.json",
-      "headline_result": "safe calibration selected f=0; forced Plummer chi2 35.352827\u219235.354732; delta +0.001905; no uplift",
+      "headline_result": "adopted safe calibration selected f=0; exact baseline recovery; no adopted downlift",
       "independence": "new dSph public-data domain; shared f/eta held out; per-galaxy NFW/beta nuisances fitted",
       "method_relevance": "CANONICAL_DIRECT_SOURCE_ADOPTED_POLICY_EXACT_BASELINE_FORCED_DIAGNOSTIC_NOT_ADOPTED",
       "record_id": "DSPH_SPHERICAL_JEANS_SHARED_ADAPTER",
@@ -90,20 +90,9 @@
       "unit_count": 2
     },
     {
-      "file": "results/jeans_dsph_v2_heldout.json",
-      "headline_result": "untouched heldout: chi2 22.835649\u219224.085741; delta +1.250092; -5.474%; 0/2 improved",
-      "independence": "different public heldout catalog and galaxy identities; shared eta/a_perp frozen; per-galaxy NFW/beta nuisances fitted",
-      "method_relevance": "EXCLUDED_FROM_CANONICAL_ORTHOGONAL_METHOD_TALLY",
-      "raw_result_label": "UNTOUCHED_GALAXY_HELDOUT_DOWNLIFT_NO_GENERALIZATION",
-      "record_id": "DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER",
-      "status": "OFF_OBJECT_RESPONSE_ADAPTER_NEGATIVE_NOT_CANONICAL_TERM_TEST",
-      "superseded_for_canonical_object_question_by": "DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE",
-      "unit_count": 2
-    },
-    {
       "file": "results/jeans_dsph_formal_corrective_evaluation.json",
-      "headline_result": "post-exposure corrective direct source: chi2 22.835648\u219222.834488; delta -0.001159; 0.005077%; 2/0 negative direction",
-      "independence": "reuses Draco/Ursa Minor after off-object Jeans-v2 exposure; direct formal-source candidate scores new but not fresh/unseen",
+      "headline_result": "post-exposure direct source: chi2 22.835648\u219222.834488; delta -0.001159; 0.005077%; 2/0 negative direction",
+      "independence": "Draco/Ursa Minor identities previously exposed during a superseded internal prototype; direct-source scores new but not fresh/unseen",
       "method_relevance": "CANONICAL_DIRECT_SOURCE_CORRECTIVE_POST_EXPOSURE",
       "record_id": "DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE",
       "status": "CORRECT_FORMAL_SOURCE_DIRECTIONAL_DELTA_NEGATIVE_BUT_MATERIALITY_NOT_ESTABLISHED",

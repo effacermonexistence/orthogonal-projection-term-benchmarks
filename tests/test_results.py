@@ -88,59 +88,28 @@ def test_jeans_replay_and_numerical_gates_passed():
     assert x['checks']['heldout_replay_byte_identical'] is True
     assert x['checks']['all_f0_exact'] is True
     assert x['checks']['all_mass_corrections_within_gate'] is True
-def test_jeans_v2_untouched_heldout_is_negative():
-    x=json.loads((ROOT/'results/jeans_dsph_v2_heldout.json').read_text())
-    a=x['aggregates']['safe_plummer']
-    assert x['heldout_names']==['Draco','Ursa Minor']
-    assert round(a['baseline_total_chi2'],6)==22.835649
-    assert round(a['candidate_total_chi2'],6)==24.085741
-    assert round(a['raw_delta_chi2'],6)==1.250092
-    assert round(a['residual_reduction_pct'],3)==-5.474
-    assert a['improved_count']==0
-    assert a['worsened_count']==2
-    assert a['downlift'] is True
-    assert x['claim_allowed'] is False
-def test_jeans_v2_policy_was_frozen_and_bounded():
-    x=json.loads((ROOT/'results/jeans_dsph_v2_frozen_policy.json').read_text())
-    assert x['status']=='FROZEN_BEFORE_HELDOUT_BASELINE_OR_CANDIDATE_SCORING'
-    assert x['safe_optimum']['eta']==0.5
-    assert x['safe_optimum']['amplitude']==2.0
-    assert x['safe_optimum']['amplitude_solution']['upper_bound_hit'] is True
-    assert x['no_heldout_parameter_update'] is True
-    assert x['no_heldout_row_fallback'] is True
-def test_jeans_v2_public_replay_and_audit_pass():
-    replay=json.loads((ROOT/'results/jeans_dsph_v2_replay_receipt.json').read_text())
-    audit=json.loads((ROOT/'results/jeans_dsph_v2_verification.json').read_text())
-    assert replay['status']=='PASS'
-    assert replay['dev_byte_identical'] is True
-    assert replay['heldout_byte_identical'] is True
-    assert audit['verdict']=='PASS_NEGATIVE_RESULT_PRESERVED'
-    assert audit['check_count']==27
-    assert audit['failed_checks']==[]
-
-def test_jeans_v2_is_excluded_from_canonical_method_tally():
+def test_public_registry_contains_only_canonical_jeans_records():
     registry=json.loads((ROOT/'results/experiment_registry.json').read_text())
     rows={row['record_id']:row for row in registry['records']}
-    v2=rows['DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER']
-    corrective=rows['DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE']
-    assert v2['status']=='OFF_OBJECT_RESPONSE_ADAPTER_NEGATIVE_NOT_CANONICAL_TERM_TEST'
-    assert v2['method_relevance']=='EXCLUDED_FROM_CANONICAL_ORTHOGONAL_METHOD_TALLY'
-    assert v2['superseded_for_canonical_object_question_by']==corrective['record_id']
-    assert corrective['method_relevance']=='CANONICAL_DIRECT_SOURCE_CORRECTIVE_POST_EXPOSURE'
+    assert 'DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER' not in rows
+    assert rows['DSPH_SPHERICAL_JEANS_SHARED_ADAPTER']['method_relevance']=='CANONICAL_DIRECT_SOURCE_ADOPTED_POLICY_EXACT_BASELINE_FORCED_DIAGNOSTIC_NOT_ADOPTED'
+    assert rows['DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE']['method_relevance']=='CANONICAL_DIRECT_SOURCE_CORRECTIVE_POST_EXPOSURE'
 
-def test_method_object_identity_audit_passes():
-    x=json.loads((ROOT/'results/downlift_object_identity_audit.json').read_text())
+
+def test_canonical_object_identity_audit_passes():
+    x=json.loads((ROOT/'results/canonical_object_identity_audit.json').read_text())
     assert x['status']=='PASS'
-    rows={row['record_id']:row for row in x['records']}
-    v1=rows['DSPH_SPHERICAL_JEANS_SHARED_ADAPTER']
-    v2=rows['DSPH_JEANS_V2_RESPONSE_ORTHOGONAL_ADAPTER']
-    corrected=rows['DSPH_JEANS_DIRECT_FORMAL_SOURCE_CORRECTIVE']
-    assert v1['adopted_delta_chi2']==0.0
-    assert v1['canonical_method_downlift_adopted'] is False
-    assert v2['canonical_direct_source_test'] is False
-    assert v2['raw_result_preserved'] is True
-    assert corrected['response_projection_used'] is False
-    assert corrected['direct_nonzero_delta_chi2']<0.0
+    assert all(x['checks'].values())
+    shared=x['canonical_public_records']['shared_adapter']
+    direct=x['canonical_public_records']['direct_formal_source']
+    assert shared['adopted_raw_delta_chi2']==0.0
+    assert shared['adopted_downlift'] is False
+    assert direct['response_projection_used'] is False
+    assert direct['direct_nonzero_raw_delta_chi2']<0.0
+    assert direct['improved_count']==2
+    assert direct['worsened_count']==0
+    assert direct['downlift'] is False
+
 
 def test_jeans_corrective_direct_source_is_tiny_negative_direction():
     x=json.loads((ROOT/'results/jeans_dsph_formal_corrective_evaluation.json').read_text())

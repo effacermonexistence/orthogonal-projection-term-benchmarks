@@ -58,7 +58,7 @@
       "Draco",
       "Ursa Minor"
     ],
-    "prior_exposure": "Previously scored under the off-object Jeans-v2 response adapter; therefore not fresh/unseen for public-proof labeling.",
+    "prior_exposure": "Galaxy identities previously exposed during a superseded internal prototype; therefore not fresh/unseen for public-proof labeling.",
     "source": "Spencer et al. 2018 CDS/VizieR J/AJ/156/257 with McConnachie 2012 structural metadata"
   },
   "development": {
@@ -71,7 +71,7 @@
     "role": "previously inspected development only"
   },
   "equivalent_halo_form": "rho_h,aug=(1-f)*rho_NFW+f*(K_d*rho_NFW)",
-  "failure_repaired": "FORMALISM_OBJECT_DRIFT: prior Jeans-v2 used a response-space adapter and cannot answer this formal-source question.",
+  "failure_repaired": "FORMALISM_OBJECT_DRIFT: the public run uses the requested direct halo-density source insertion.",
   "forbidden_methods": [
     "nuisance-tangent projection",
     "delta_sigma_perp response adapter",

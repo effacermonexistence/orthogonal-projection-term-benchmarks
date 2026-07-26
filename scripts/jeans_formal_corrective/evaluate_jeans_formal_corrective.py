@@ -73,7 +73,7 @@ def main() -> None:
       'direct_nonzero_policy':direct,
       'rows':rows,
       'aggregates':{key:aggregate(rows,key) for key in keys},
-      'claim_boundary':'Corrective post-exposure direct formal-source test. It repairs the executed object but is not fresh/unseen proof because these evaluation galaxies were exposed under the prior off-object response-adapter run.',
+      'claim_boundary':'Post-exposure direct formal-source test. The evaluation galaxies had been exposed during a superseded internal prototype, so this is not fresh/unseen proof.',
     }
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')

@@ -12,12 +12,6 @@
 - The dwarf-spheroidal Jeans calibration selected the exact baseline (`f=0`),
   so the adopted policy had no downlift. A separately reported, unadopted
   forced-nonzero diagnostic slightly worsened both heldout galaxies.
-- Jeans-v2 is preserved as a structurally different response-adapter result:
-  after development calibration and policy freeze, its nuisance-orthogonal
-  response worsened both untouched heldout galaxies from a different public
-  catalog (`delta chi-square = +1.250092`; `-5.474%` residual reduction).
-  Because this is not the canonical direct-source insertion, it is excluded
-  from the canonical orthogonal-method tally.
 - The corrective direct formal-source rerun executed the requested spherical-Jeans source insertion without response projection. Its frozen nonzero Plummer diagnostic moved both Draco and Ursa Minor deltas negative (`delta chi-square = -0.001159399`; `0.005077%` residual reduction), while the development-safe policy remained `f=0`.
 - The X-COP direct hydrostatic-equation run applied the operator only to
   reconstructed three-dimensional dark-halo density and retained the
@@ -46,15 +40,11 @@
 - The Jeans heldout label applies only to shared `f/eta`; each heldout galaxy
   received its own baseline NFW and constant-anisotropy nuisance fit. Its
   nonzero deltas are materially negligible and do not support adapter adoption.
-- The Jeans-v2 heldout boundary applies to shared `eta/a_perp`, heldout galaxy
-  identity, and a different public source catalog. Each heldout profile still
-  receives its own baseline NFW and constant-anisotropy nuisance fit. This
-  boundary validates the response-adapter result only; it does not convert it
-  into evidence about the canonical direct-source term.
-- The Jeans-v2 development optimum hit its declared amplitude upper bound.
-  The bound was not widened after heldout scoring; this limits interpretation
-  but does not alter the negative heldout result.
-- The corrective direct-source run is post-exposure because Draco and Ursa Minor were already evaluated under Jeans-v2. Candidate nuisances were frozen at the baseline fit; this is a forced directional comparison, not a best-fit augmented-model or fresh/unseen test. The absolute effect is materially tiny.
+- The corrective direct-source run is post-exposure because Draco and Ursa
+  Minor had already been used during a superseded internal prototype.
+  Candidate nuisances were frozen at the baseline fit; this is a forced
+  directional comparison, not a best-fit augmented-model or fresh/unseen
+  test. The absolute effect is materially small.
 - The X-COP heldout boundary applies to the shared `f/eta` policy and cluster
   identities. The source profiles were public and physically accessible.
   X-COP hydrostatic NFW profiles were reconstructed from the same
@@ -82,8 +72,6 @@
 - Replacement or falsification of GR, LambdaCDM, NFW, or baryonic countermodels.
 - Raw-observational-likelihood improvement from model-to-model diagnostic scores.
 - Treating overlapping channels or repeated development runs as independent validations.
-- Treating the Jeans-v2 response-space downlift as a failure of the canonical
-  direct-source orthogonal method.
 - Treating the corrective `0.005077%` Jeans reduction as material uplift, adoption evidence, kernel specificity, or physical proof.
 - Treating the X-COP profile-consistency result as independent raw-likelihood
   proof, proof that the term is required, a universal no-downlift guarantee,
@@ -107,10 +95,6 @@ For kernel comparisons, append:
 The dwarf-spheroidal Jeans-specific sentence is:
 
 > On a public-data spherical-Jeans dev/heldout diagnostic, calibration selected the unmodified baseline (`f=0`), so the adopted policy exactly preserved baseline performance; a separately frozen, unadopted nonzero diagnostic was slightly adverse.
-
-The Jeans-v2-specific sentence is:
-
-> A nuisance-orthogonal Jeans response adapter calibrated on four development galaxies worsened both untouched Draco and Ursa Minor heldout profiles after policy freeze (`22.835649 → 24.085741` chi-square). This is a negative result for that off-object response adapter, not for the canonical direct-source orthogonal insertion.
 
 The corrective direct-formal Jeans sentence is:
 

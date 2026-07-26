@@ -1272,7 +1272,7 @@
       "catalog": "CDS/VizieR J/AJ/156/257 Spencer et al. 2018",
       "profile_bin_count": 9,
       "profile_member_count": 311,
-      "role": "corrective evaluation galaxy; previously exposed under Jeans-v2 response adapter, not previously scored under the direct formal-source policy",
+      "role": "post-exposure evaluation galaxy; identity previously exposed during a superseded internal prototype, not previously scored under the direct formal-source policy",
       "structural_catalog": "CDS/VizieR J/AJ/144/4 McConnachie 2012",
       "structural_readme_path": "CDS/VizieR J/AJ/144/4/ReadMe",
       "structural_readme_sha256": "b8a381bc6567dbecbfa669edc911d15534033931563f13fa5b9874829c1c18ea",
@@ -1316,7 +1316,7 @@
       "catalog": "CDS/VizieR J/AJ/156/257 Spencer et al. 2018",
       "profile_bin_count": 8,
       "profile_member_count": 266,
-      "role": "corrective evaluation galaxy; previously exposed under Jeans-v2 response adapter, not previously scored under the direct formal-source policy",
+      "role": "post-exposure evaluation galaxy; identity previously exposed during a superseded internal prototype, not previously scored under the direct formal-source policy",
       "structural_catalog": "CDS/VizieR J/AJ/144/4 McConnachie 2012",
       "structural_readme_path": "CDS/VizieR J/AJ/144/4/ReadMe",
       "structural_readme_sha256": "b8a381bc6567dbecbfa669edc911d15534033931563f13fa5b9874829c1c18ea",
@@ -1324,7 +1324,7 @@
       "table_sha256": "0a185607d1b2e17febbadc1343ecddc71bbbb2ff8070a7e9d6069e2f9aa62f2f"
     }
   },
-  "split_rule": "all four Walker galaxies are development; Draco and Ursa Minor are corrective evaluation targets previously exposed under the off-object response adapter but not previously scored under this direct formal-source policy",
+  "split_rule": "all four Walker galaxies are development; Draco and Ursa Minor are post-exposure evaluation targets not previously scored under this direct formal-source policy",
   "status": "LOCKED_FOR_CORRECTIVE_FORMAL_SOURCE_RERUN",
   "timestamp_utc": "2026-07-25T20:26:47.762472+00:00",
   "visibility": {

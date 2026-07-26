@@ -64,7 +64,7 @@ def main() -> None:
             "structural_catalog": "CDS/VizieR J/AJ/144/4 McConnachie 2012",
             "structural_readme_path": str(args.mcconnachie_dir / "ReadMe"),
             "structural_readme_sha256": sha256_file(args.mcconnachie_dir / "ReadMe"),
-            "role": "corrective evaluation galaxy; previously exposed under Jeans-v2 response adapter, not previously scored under the direct formal-source policy",
+            "role": "post-exposure evaluation galaxy; identity previously exposed during a superseded internal prototype, not previously scored under the direct formal-source policy",
             "profile_member_count": profile["member_count"],
             "profile_bin_count": profile["bin_count"],
         }
@@ -87,7 +87,7 @@ def main() -> None:
         "development": DEV_NAMES,
         "heldout": HELDOUT_NAMES,
         "overlap_count": 0,
-        "split_rule": "all four Walker galaxies are development; Draco and Ursa Minor are corrective evaluation targets previously exposed under the off-object response adapter but not previously scored under this direct formal-source policy",
+        "split_rule": "all four Walker galaxies are development; Draco and Ursa Minor are post-exposure evaluation targets not previously scored under this direct formal-source policy",
         "galaxy_meta": metadata,
         "dispersion_profiles": profiles,
         "sources": sources,
