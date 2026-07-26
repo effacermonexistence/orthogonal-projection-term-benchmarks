@@ -7,6 +7,22 @@ def close(a,b,tol=1e-10):
 def load(rel): return json.loads((ROOT/rel).read_text())
 def verify_delta(base,aug,delta,reduction):
     close(aug-base,delta); close(100*(base-aug)/base,reduction)
+def verify_conceptual_origin():
+    readme=(ROOT/'README.md').read_text()
+    origin=(ROOT/'docs/CONCEPTUAL_ORIGIN.md').read_text()
+    operator=(ROOT/'docs/OPERATOR.md').read_text()
+    boundaries=(ROOT/'docs/CLAIM_BOUNDARIES.md').read_text()
+    lower=origin.lower()
+    assert 'docs/CONCEPTUAL_ORIGIN.md' in readme
+    assert 'vision pro' in lower
+    assert 'einstein-rosen' in lower
+    assert '10.1103/physrev.48.73' in lower
+    assert 'not empirical evidence' in lower
+    assert 'not derived' in lower and 'einstein-rosen' in lower
+    assert 'not derived uniquely' in lower and 'plummer' in lower
+    assert 'extra spatial' in lower and 'has been observed' in lower
+    assert 'CONCEPTUAL_ORIGIN.md' in operator
+    assert 'Vision Pro observation' in boundaries
 def verify_sparc():
     held=load('results/sparc_rotation_curve_heldout.json')
     dev=load('results/sparc_rotation_curve_dev_grid.json')
@@ -325,6 +341,7 @@ def verify_xcop_hse():
     assert public_reproduction['within_numerical_tolerance_1e_10'] is True
     assert max(public_reproduction['max_absolute_differences'].values()) < 1e-10
 def main():
+    verify_conceptual_origin()
     hff=load('results/hff_six_cluster_transfer.json')
     for row in hff['rows']:
         for key in ('plummer_like_2d','gaussian_2d','top_hat_2d'):

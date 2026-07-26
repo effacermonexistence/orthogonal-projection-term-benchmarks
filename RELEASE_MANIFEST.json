@@ -1,23 +1,24 @@
 {
   "files": {
     ".gitignore": "dd4590868e2000d3daf9e16cdde6c103da349bdb014ce4d9f961b45c1ffdad91",
-    "CITATION.cff": "e42c68703af0e8c33d82b4f782b8005cc65f57c43568b6bc52f199657fb52111",
+    "CITATION.cff": "492bb1a83193e68df8ae24e28ad03035916cc7dfda69be86c51acbe74ea0cf9f",
     "CONTRIBUTING.md": "4f57869d00c07c437599794757ff3ca27eec6bdbcbc2f4e7e6a3f8d78785af87",
     "LICENSE": "d95323c24238cff39db77472ea54c675ae45196f36ff7fe401c00bba53d09a9c",
-    "README.md": "9f364b071afcf347b166030152b796c5e3899a32163fa67354b3bc17ccedd8d3",
+    "README.md": "90dbb5daaaae65bbb9254a606a7b2a8f26ba37df378eb6866812d6082aa84432",
     "audits/RED_TEAM_FINDINGS.md": "7e92f1fdaa47d57b5b96a13ee03412ce3e96930a43f0664da60b509f0b3c315e",
     "data/README.md": "3da8030cef81e4e31345f3aa8b3f63fb8d5ed30dcf22d02221b946034ea5da19",
-    "docs/CLAIM_BOUNDARIES.md": "7e915df2a7b891e53fe780a94b6f8f2dfed71f35f20a355a3ac4780953dbb25f",
+    "docs/CLAIM_BOUNDARIES.md": "97b4f35a1e2b3527275eb82e107e46ebda476af353961327a6dc15553cc74fb9",
+    "docs/CONCEPTUAL_ORIGIN.md": "e839e472efed049d1e25e318978c9331735f075d461900c72dcaa1c3c2962fd1",
     "docs/DATA_PROVENANCE.md": "6fdd4d778959cac0336ffe4363e05295981062927837404a22422ec8f4cf2a97",
     "docs/EQUATION_INSERTIONS.md": "250ab6b68d04378ed5ac4c35992bf4ea96f814b062ae9e08c9de899aaabe0eb8",
     "docs/EXPERIMENT_REGISTRY.md": "1e2d8c9730b48b184a486369f4371954dc8f7f81858495250b47771d03dec0f9",
     "docs/JEANS_DSPH_ADAPTER.md": "ce5b13fd0312365e6fa2dbf1b4f6722ca37089121db1a9d5e8428f75de493e14",
     "docs/JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md": "e00d1b5895cb2745a51b1fdc3fe1044a42c4f6291688741723af44e64dda5e57",
     "docs/JEANS_DSPH_RESPONSE_ADAPTER_V2.md": "c58b7710e1e808a2f235d880c11f59c993a0bc118a6b65492f7f117fb48262af",
-    "docs/OPERATOR.md": "5ad35c4f5d9ce72ab7d14e65d930dfe043ee41d007bd96aed86552a092d21670",
+    "docs/OPERATOR.md": "9ee94431e4dd1a7bc8c902d9031649ecba98edb3b913bdafef5548eb55c52b91",
     "docs/SPARC_ROTATION_CURVE_ADAPTER.md": "9ffbb6107c288467f5d541a48a3b177b2826caff344424026907b2387a164e92",
     "docs/XCOP_HYDROSTATIC_DIRECT_FORMAL.md": "58ebed55fb938323df9398ee107097223fd9267f82641192f3b7dee700705bd6",
-    "pyproject.toml": "b14c7dfb6dac3c71ec2ed9ab6e287d2715ed34cfa71956e588b338bf4c5ae6e3",
+    "pyproject.toml": "6fe8bcd0eec86d447deca61b2e37ce53a981e15cebf9d922d2d3af1320214d73",
     "results/SOURCE_ARTIFACT_CHECKSUMS.json": "6b084e8d76a907f64cbe9bacd2b47a39f803b1a5fec55cd028f175d5f5ea959f",
     "results/aggregate_specificity_audit.json": "6223bf99696f714e8b6f5f403ae0a45e0804495fdb310c8c2105bfe0bcdb1e06",
     "results/as1063_b2_matched_controls.json": "2047873c40b0552dc40248e6ffa1acdc4b608c979e55e2efac07effdf312b862",
@@ -110,7 +111,7 @@
     "scripts/sparc/optimize_sparc_dev.py": "7e184ec0843d31d6705f9923aa016cc085a16f8d9c1b457c99d7e46572517b3e",
     "scripts/sparc/prepare_public_reproduction.py": "3bc1165ca1f997180e52b71bf651a238d7ab924870fb1f425acb3ba8bea1eb7b",
     "scripts/sparc/sparc_adapter_common.py": "4609393861001e828d3e4c7c3b4443fd56e598c17378c54702765694559b2f9d",
-    "scripts/verify_published_results.py": "24907a27145ad738a5271e8fb126f2f6a857ed71a0e0b4ff5980c20e481df8c9",
+    "scripts/verify_published_results.py": "b56db941979a4b2fb4530104c866df5a35d85bffd5cc8e4b04cf073fc14b9b24",
     "scripts/xcop_hse/README.md": "11d669ce0c415a836ceb77809830f6c6fc0e501fdf4a0dbf029efc01bd76077a",
     "scripts/xcop_hse/audit_xcop_run.py": "77ef501571838d7b8b308aefaba70d67439ddaf562d09a1603ec946ca50145b0",
     "scripts/xcop_hse/evaluate_xcop_heldout.py": "ef969dce454413a5ab63235e1d846a9e6aa8ef122b9ee86f81291b7d413913ee",
@@ -125,10 +126,10 @@
     "src/orthogonal_projection_term/scoring.py": "06a1d7ba639b2fb8109203d110f54c25c7ae968acfe36e74c34e064c2bdfa7cf",
     "tests/test_hff_adapter.py": "178773b63d937d641e251152f0c14734b428ddb8d2040b258540632119bdcc07",
     "tests/test_operator.py": "5cdb76002f4ac52c0316f1d4d185b56dd8526989c7833e9f1aab32074b440b6d",
-    "tests/test_results.py": "7bfae05cd8cd01bfdc597b4fe69cf2fd0800a9f0a47837a04f459a413bba4aa4"
+    "tests/test_results.py": "7170544ea229be2842af8a18ad45ac6fa242b94ed6f7b07ca674432523e84e60"
   },
-  "generated_at_utc": "2026-07-26T00:23:32.210755+00:00",
-  "release": "0.5.2",
+  "generated_at_utc": "2026-07-26T01:51:27.686566+00:00",
+  "release": "0.5.3",
   "release_config": {
     "clean_predictive_claim": false,
     "negative_results_preserved": true,
@@ -202,8 +203,17 @@
     "plummer_specificity_claim": false,
     "project": "orthogonal-projection-term-benchmarks",
     "publication_mode": "public_research_record_with_reproduction_artifacts",
-    "release": "0.5.2"
+    "release": "0.5.3",
+    "conceptual_origin": {
+      "provenance_class": "USER_CONFIRMED_CURRENT",
+      "public_document": "docs/CONCEPTUAL_ORIGIN.md",
+      "vision_pro_trigger_is_empirical_physics_evidence": false,
+      "einstein_rosen_role": "TOPOLOGICAL_INSPIRATION_NOT_PHYSICAL_DERIVATION",
+      "operator_derived_from_einstein_rosen_metric": false,
+      "plummer_kernel_uniquely_derived_from_origin": false,
+      "physical_discovery_claim": false
+    }
   },
-  "release_config_sha256": "666c9fa33227cfaa30e84330a6577da36ef2e5bc5cef597112bd387cd2f2648a",
-  "schema_version": "orthogonal-projection-public-release-v8"
+  "release_config_sha256": "d8c8cce6d3f343734e287ddec2fc0e21a7d8a3fd7442b2a67be73b5d06f8ffa0",
+  "schema_version": "orthogonal-projection-public-release-v9"
 }

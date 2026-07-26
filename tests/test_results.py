@@ -1,6 +1,17 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+def test_conceptual_origin_is_public_and_evidence_bounded():
+    readme=(ROOT/'README.md').read_text()
+    origin=(ROOT/'docs/CONCEPTUAL_ORIGIN.md').read_text().lower()
+    boundaries=(ROOT/'docs/CLAIM_BOUNDARIES.md').read_text()
+    assert 'docs/CONCEPTUAL_ORIGIN.md' in readme
+    assert 'vision pro' in origin
+    assert 'einstein-rosen' in origin
+    assert 'not empirical evidence' in origin
+    assert 'not derived' in origin
+    assert 'plummer' in origin and 'not derived uniquely' in origin
+    assert 'Vision Pro observation' in boundaries
 def test_fresh_halo352_numbers():
     x=json.loads((ROOT/'results/sidm_halo352_fresh_3d.json').read_text())
     assert round(x['kernels']['plummer_3d']['residual_reduction_pct'],3)==41.000

@@ -18,6 +18,29 @@ development-frozen shared policy is evaluated on three untouched cluster
 identities with no row-level fallback. Its selected `f = 1.0` is likewise the
 full-replacement endpoint, not the legacy partial mixture.
 
+## Conceptual origin
+
+The hypothesis did not begin as a fit to cosmology data. It began with an
+ordinary mixed-reality observation in a fully immersive Vision Pro
+environment: the rendered scene made nearby space appear open, while an
+unrendered physical wall still constrained movement. That mismatch prompted a
+structural question: can the field available to an observer omit a boundary
+that remains active in the larger constraint system?
+
+Einstein and Rosen's two-sheet bridge construction then supplied a geometric
+motif, not a physical derivation. The project retained the abstraction of
+linked descriptions and a constraint-bearing structure outside the baseline
+representation. It did **not** infer that mixed reality reveals cosmology,
+that a white hole or hidden sheet has been observed, or that the operator
+follows from the Einstein-Rosen metric.
+
+The motif was converted into the bounded, falsifiable redistribution operator
+shown above. The later benchmark program tests that operator against public
+data and matched generic controls. Its results—not the origin story—determine
+the empirical status. See
+[`docs/CONCEPTUAL_ORIGIN.md`](docs/CONCEPTUAL_ORIGIN.md) for the full
+provenance and boundary.
+
 ## What the record shows
 
 | Diagnostic | Frozen directional result | Matched-control result | Evidence boundary |
@@ -44,6 +67,7 @@ Scientific iteration is easier to audit when positive deltas, failed specificity
 
 ## Repository map
 
+- [`docs/CONCEPTUAL_ORIGIN.md`](docs/CONCEPTUAL_ORIGIN.md) — the author-confirmed mixed-reality trigger, Einstein-Rosen topological inspiration, mathematical translation, and evidence boundary.
 - [`docs/OPERATOR.md`](docs/OPERATOR.md) — exact 2D/3D operator definitions and kernel lineage.
 - [`docs/EQUATION_INSERTIONS.md`](docs/EQUATION_INSERTIONS.md) — Poisson, lensing, halo-profile, Jeans, Friedmann, and Einstein-container placements.
 - [`docs/EXPERIMENT_REGISTRY.md`](docs/EXPERIMENT_REGISTRY.md) — what was run and what is or is not independent.

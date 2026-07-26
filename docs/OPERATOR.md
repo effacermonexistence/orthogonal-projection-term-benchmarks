@@ -1,5 +1,10 @@
 # Frozen orthogonal redistribution operator
 
+The operator's author-confirmed conceptual provenance is documented in
+[`CONCEPTUAL_ORIGIN.md`](CONCEPTUAL_ORIGIN.md). That provenance explains the
+mixed-reality trigger and Einstein-Rosen topological inspiration; it is not a
+derivation of this operator and is not empirical evidence for new physics.
+
 ## General form
 
 For a selected object `X` (halo density, surface density, convergence, or a derived mass profile):

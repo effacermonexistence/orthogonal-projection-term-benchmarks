@@ -72,6 +72,10 @@
 
 ## Not supported
 
+- Treating the Vision Pro observation or Einstein-Rosen topological
+  inspiration as cosmological evidence, a physical derivation of the
+  operator, or evidence for a white hole, wormhole, hidden sheet, or extra
+  dimension.
 - Detection of an orthogonal source, hidden sheet, or new stress-energy component.
 - Plummer-specific physics.
 - Einstein-equation or cosmological proof.
