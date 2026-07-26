@@ -29,6 +29,29 @@ def test_sparc_generic_controls_are_visible():
     assert p < g and p < t
     assert x['aggregates']['forced_gaussian']['improved_count']==5
     assert x['aggregates']['forced_top_hat']['improved_count']==5
+    stable=[row for row in x['rows'] if row['baseline_stable']]
+    assert sum(
+        row['forced_plummer']['delta_chi2'] < row['forced_gaussian']['delta_chi2']
+        and row['forced_plummer']['delta_chi2'] < row['forced_top_hat']['delta_chi2']
+        for row in stable
+    )==3
+
+def test_aggregate_specificity_boundary_is_machine_readable():
+    x=json.loads((ROOT/'results/aggregate_specificity_audit.json').read_text())
+    assert x['status']=='PASS'
+    assert x['adoption_decision']['aggregate_directional_results_preserved'] is True
+    assert x['adoption_decision']['aggregate_plummer_ranking_preserved_as_arithmetic'] is True
+    assert x['adoption_decision']['plummer_specificity_claim'] is False
+    assert x['sparc']['frozen_fraction']==1.0
+    assert x['sparc']['plummer_beats_both_controls_count']==3
+    assert x['sparc']['unit_count']==6
+    assert x['sparc']['weight_concentration']['dominant_unit']=='NGC5585'
+    assert x['sparc']['weight_concentration']['dominant_unit_fraction_of_aggregate_gaussian_advantage']>1.0
+    assert x['xcop']['frozen_fraction']==1.0
+    assert x['xcop']['plummer_beats_both_controls_count']==1
+    assert x['xcop']['unit_count']==3
+    assert x['xcop']['aggregate_advantage_concentration']['dominant_unit']=='A644'
+    assert x['xcop']['aggregate_advantage_concentration']['dominant_unit_fraction_of_aggregate_gaussian_advantage']>1.0
 def test_sparc_public_reproduction_check_is_bounded():
     x=json.loads((ROOT/'results/sparc_rotation_curve_public_reproduction_check.json').read_text())
     assert x['status']=='PASS'
@@ -163,7 +186,15 @@ def test_xcop_controls_and_audit_boundary():
     assert audit['status']=='PASS'
     assert audit['direct_formal_equation_label']=='PASS'
     assert audit['heldout_directional_label']=='DESCRIPTIVE_PASS_3_OF_3_NO_DOWNLIFT'
-    assert audit['plummer_specificity_label']=='AGGREGATE_ADVANTAGE_OVER_MATCHED_CONTROLS_NOT_ESTABLISHED_AS_UNIQUE'
+    assert audit['plummer_specificity_label']=='AGGREGATE_RANKING_ARITHMETICALLY_TRUE_PER_UNIT_SPECIFICITY_NOT_ESTABLISHED'
+    assert audit['audit_authority']=='INTERNAL_SELF_AUDIT_NOT_INDEPENDENT_EXTERNAL_REVIEW'
+    assert audit['aggregate_specificity_addendum']['plummer_beats_both_controls_count']==1
+
+def test_xcop_public_summary_does_not_overclaim_audit_authority():
+    x=json.loads((ROOT/'results/xcop_hse_result_summary.json').read_text())
+    assert x['verification']['independent_audit']=='NOT_ESTABLISHED'
+    assert x['verification']['adversarial_audit']=='INTERNAL_SELF_AUDIT_PASS'
+    assert x['verification']['aggregate_specificity_audit']=='PASS_CONDITIONAL_DOWNGRADE'
 
 def test_xcop_public_reproduction_numerical_parity():
     x=json.loads((ROOT/'results/xcop_hse_public_reproduction_check.json').read_text())

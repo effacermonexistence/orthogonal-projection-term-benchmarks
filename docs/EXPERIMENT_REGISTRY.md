@@ -12,11 +12,11 @@ The registry contains **thirteen experimental records**, not thirteen independen
 | HFF map transfer | 6 clusters | Six targets, shared teams/systematics | Generic low-pass effect |
 | SIDM Concerto Halo000 | 1 public simulation-parametric target | New target | Direction pass; specificity fail |
 | SIDM Concerto Halo352 | 1 score-blind fresh target | New target | Direction pass; specificity fail |
-| SPARC rotation-curve adapter | 14 dev / 7 heldout; 6 stable heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | 4.432% aggregate heldout reduction; diagnostic only |
+| SPARC rotation-curve adapter | 14 dev / 7 heldout; 6 stable heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | 4.432% aggregate heldout reduction; `f=1` endpoint; Plummer beats both controls per unit 3/6 |
 | Dwarf-spheroidal spherical-Jeans adapter | 2 dev / 2 heldout | New public-data domain; shared adapter held out, per-galaxy nuisances fitted | Adopted safe policy selected `f=0`; only the unadopted forced diagnostic slightly worsened both heldout galaxies |
 | Jeans-v2 nuisance-orthogonal response adapter | 4 dev / 2 untouched heldout | Different public heldout catalog and galaxy identities; shared `eta/a_perp` frozen; per-galaxy nuisances fitted | Historical off-object adapter negative; excluded from the canonical direct-source method tally |
 | Corrective direct formal-source Jeans insertion | 4 dev / 2 post-exposure evaluation | Reuses Draco/Ursa Minor identities after Jeans-v2; direct-source scores were new but not fresh/unseen | Correct canonical object: both deltas negative, aggregate reduction 0.005077%; dev-safe policy remained `f=0`; materiality not established |
-| X-COP direct hydrostatic-equation insertion | 4 dev / 3 untouched-cluster heldout | New public-profile domain; shared `f/eta` frozen, cluster identities untouched by score before freeze | 145.095308 → 140.737785 chi-square; 3.0032% reduction; 3/3 negative deltas; public-profile consistency diagnostic |
+| X-COP direct hydrostatic-equation insertion | 4 dev / 3 untouched-cluster heldout | New public-profile domain; shared `f/eta` frozen, cluster identities untouched by score before freeze | 145.095308 → 140.737785 chi-square; 3.0032% reduction; `f=1` endpoint; Plummer beats both controls per unit 1/3 |
 
 ## Development chain
 
@@ -34,6 +34,14 @@ The strongest fresh 3D run passed the first question and failed the second. Ther
 ## SPARC shared-adapter lane
 
 SPARC adds a new observational domain and freezes one shared `f/eta` policy after development before evaluating the heldout galaxy identities. This is stronger than replaying the same development rows, but the heldout boundary does not cover each galaxy's baseline NFW nuisance fit. One of seven heldout baselines hit a bound and is retained as an excluded row. The valid public label is `PUBLIC_DATA_DEV_OPTIMIZATION_PLUS_HELDOUT_SHARED_ADAPTER_DIAGNOSTIC`.
+
+The selected fraction was `f=1.0`, the full-smoothed-profile replacement
+endpoint rather than the legacy partial `f=0.30` mixture. Plummer ranked first
+in aggregate, but beat both matched controls on only 3/6 stable galaxies.
+NGC5585 alone contributed 103.24% of the total Plummer-over-Gaussian aggregate
+advantage; all kernels worsened that galaxy and the other rows net favored
+Gaussian. The aggregate ordering is preserved as arithmetic but is not
+classified as kernel-specific evidence.
 
 ## Dwarf-spheroidal Jeans lane
 
@@ -82,3 +90,9 @@ three clusters, although Plummer was strongest in aggregate. The lane is
 therefore a heldout shared-operator **public-profile consistency diagnostic**,
 not an independent raw-observational likelihood or a Plummer-specific physical
 validation.
+
+The selected `f=1.0` is the full-replacement endpoint. Per cluster, Plummer
+beat both matched controls on only 1/3 rows. A644 supplied 144.57% of the total
+Plummer-over-Gaussian aggregate advantage; A2029 and A1795 net favored
+Gaussian. This aggregate-masking result is recorded in
+[`aggregate_specificity_audit.json`](../results/aggregate_specificity_audit.json).

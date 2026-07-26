@@ -35,9 +35,14 @@
   still received a fitted NFW baseline, one of seven baselines was unstable,
   and the 5/6 sign result is not confirmatory (`p = 0.109375` under an
   independent equal-sign null).
+- The SPARC development optimum reached the declared `f=1.0` boundary. This is
+  the full-smoothed-profile replacement endpoint of the declared family, not
+  the earlier partial `f=0.30` mixture.
 - Plummer beat the two frozen matched generic controls in SPARC aggregate
-  chi-square, but Gaussian and top-hat also improved 5/6 stable galaxies.
-  Kernel-specific physics remains unproven.
+  chi-square, but it beat both controls per galaxy in only 3/6 stable rows.
+  NGC5585 supplied 103.24% of the aggregate Plummer-over-Gaussian advantage
+  while all three kernels worsened that galaxy; the remaining rows net favored
+  Gaussian. The aggregate ordering is arithmetic, not kernel-specific evidence.
 - The Jeans heldout label applies only to shared `f/eta`; each heldout galaxy
   received its own baseline NFW and constant-anisotropy nuisance fit. Its
   nonzero deltas are materially negligible and do not support adapter adoption.
@@ -56,10 +61,14 @@
   thermodynamic profile family used by the pressure consistency score, so the
   lane is not an independent raw-observational likelihood.
 - The X-COP development optimum reached the declared `f=1.0` grid boundary.
-  The grid was not widened after heldout scoring.
+  The grid was not widened after heldout scoring. As in SPARC, this is the
+  full-smoothed-profile replacement endpoint rather than the legacy partial
+  `f=0.30` mixture.
 - Matched Gaussian and top-hat controls also improved all three X-COP heldout
-  clusters. Plummer was strongest in aggregate, but unique kernel physics is
-  not established.
+  clusters. Plummer was strongest in aggregate but beat both controls on only
+  1/3 clusters. A644 supplied 144.57% of the aggregate
+  Plummer-over-Gaussian advantage while A2029 and A1795 net favored Gaussian.
+  Unique kernel physics is not established.
 
 ## Not supported
 
@@ -84,6 +93,13 @@ The SPARC-specific sentence is:
 
 > A development-selected galaxy-scaled redistribution adapter reduced aggregate residuals on a heldout SPARC subset by 4.432%, while matched generic smoothers also improved the same 5/6 stable galaxies; this is a shared-adapter diagnostic, not clean predictive or physical proof.
 
+For kernel comparisons, append:
+
+> The selected policy was the `f=1` full-replacement endpoint. Plummer ranked
+> first in aggregate but beat both matched controls in only 3/6 stable galaxies,
+> with the aggregate advantage concentrated in NGC5585; this does not establish
+> Plummer specificity.
+
 The dwarf-spheroidal Jeans-specific sentence is:
 
 > On a public-data spherical-Jeans dev/heldout diagnostic, calibration selected the unmodified baseline (`f=0`), so the adopted policy exactly preserved baseline performance; a separately frozen, unadopted nonzero diagnostic was slightly adverse.
@@ -104,3 +120,10 @@ The X-COP hydrostatic-equation sentence is:
 > reduction), with negative delta in 3/3 clusters and no heldout downlift;
 > this is a public-profile direct-equation diagnostic, not independent
 > raw-observational or physical proof.
+
+For kernel comparisons, append:
+
+> The selected policy was the `f=1` full-replacement endpoint. Plummer ranked
+> first in aggregate but beat both matched controls in only 1/3 clusters, with
+> the aggregate advantage concentrated in A644; this does not establish
+> Plummer specificity.

@@ -66,10 +66,17 @@
       "unit_count": 1
     },
     {
+      "aggregate_specificity_audit_file": "results/aggregate_specificity_audit.json",
       "file": "results/sparc_rotation_curve_heldout.json",
-      "headline_result": "heldout shared adapter: chi2 208.845\u2192199.589; delta -9.256; 4.432%; 5/6 stable galaxies improved",
+      "fraction_grid_boundary_hit": true,
+      "frozen_fraction": 1.0,
+      "headline_result": "heldout shared adapter: chi2 208.845\u2192199.589; delta -9.256; 4.432%; 5/6 stable galaxies improved; aggregate Plummer rank retained but per-unit specificity 3/6",
       "independence": "new SPARC public-data domain; shared f/eta held out; per-galaxy baseline nuisances fitted",
+      "operator_boundary": "FULL_SMOOTHED_PROFILE_REPLACEMENT_ENDPOINT_NOT_LEGACY_F0_30_MIXTURE",
+      "plummer_beats_both_controls_count": 3,
       "record_id": "SPARC_ROTATION_CURVE_SHARED_ADAPTER",
+      "specificity_status": "AGGREGATE_RANKING_ARITHMETICALLY_TRUE_PER_UNIT_SPECIFICITY_NOT_ESTABLISHED",
+      "specificity_unit_count": 6,
       "status": "PUBLIC_DATA_DEV_OPTIMIZATION_PLUS_HELDOUT_SHARED_ADAPTER_DIAGNOSTIC",
       "unit_count": 7
     },
@@ -103,10 +110,17 @@
       "unit_count": 2
     },
     {
+      "aggregate_specificity_audit_file": "results/aggregate_specificity_audit.json",
       "file": "results/xcop_hse_heldout.json",
-      "headline_result": "untouched-cluster heldout: pressure chi2 145.095308\u2192140.737785; delta -4.357523; 3.0032%; 3/3 negative direction",
+      "fraction_grid_boundary_hit": true,
+      "frozen_fraction": 1.0,
+      "headline_result": "untouched-cluster heldout: pressure chi2 145.095308\u2192140.737785; delta -4.357523; 3.0032%; 3/3 negative direction; aggregate Plummer rank retained but per-unit specificity 1/3",
       "independence": "new X-COP public-profile domain; shared f/eta frozen before heldout scores; source profiles public; profile-consistency diagnostic",
+      "operator_boundary": "FULL_SMOOTHED_PROFILE_REPLACEMENT_ENDPOINT_NOT_LEGACY_F0_30_MIXTURE",
+      "plummer_beats_both_controls_count": 1,
       "record_id": "XCOP_HYDROSTATIC_DIRECT_FORMAL_SOURCE",
+      "specificity_status": "AGGREGATE_RANKING_ARITHMETICALLY_TRUE_PER_UNIT_SPECIFICITY_NOT_ESTABLISHED",
+      "specificity_unit_count": 3,
       "status": "PUBLIC_XCOP_PROFILE_DIRECT_EQUATION_DIAGNOSTIC",
       "unit_count": 3
     }

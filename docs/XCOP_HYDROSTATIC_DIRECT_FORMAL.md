@@ -141,6 +141,14 @@ Plummer is strongest in aggregate under this frozen comparison, but every
 generic smoother also improves all three clusters. The result therefore does
 not establish unique Plummer physics.
 
+The aggregate ordering is not a per-cluster specificity result. Plummer beat
+both matched controls on only 1/3 clusters. A644 supplied 144.57% of the total
+Plummer-over-Gaussian aggregate advantage, while A2029 and A1795 net favored
+Gaussian. The selected `f=1.0` is the full-smoothed-profile replacement
+endpoint, not the legacy partial `f=0.30` mixture. The deterministic
+recomputation is in
+[`aggregate_specificity_audit.json`](../results/aggregate_specificity_audit.json).
+
 ## Verification
 
 - Direct formal-equation insertion: PASS.
@@ -152,8 +160,9 @@ not establish unique Plummer physics.
 - Deterministic byte-identical replay: PASS.
 - R2 source-authority pre-gate: PASS.
 - Executed-source post-gate: PASS.
-- Independent arithmetic audit: PASS.
-- Adversarial audit: PASS.
+- Internal arithmetic self-audit: PASS.
+- Internal execution-path adversarial self-audit: PASS.
+- Independent external audit: not established in the stored result artifacts.
 
 ## Evidence and claim boundary
 

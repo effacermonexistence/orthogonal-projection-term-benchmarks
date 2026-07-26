@@ -41,6 +41,15 @@ nuisance parameters. Plummer was best in aggregate, but all three matched
 kernels improved 5/6 stable galaxies, one heldout baseline was unstable, and
 the stable sample is too small for confirmatory or kernel-specific claims.
 
+The aggregate rank masks the unit-level comparison. The selected `f=1.0` is
+the full-smoothed-profile replacement endpoint, not the legacy partial
+`f=0.30` mixture. Plummer beat both matched controls on only 3/6 stable
+galaxies. NGC5585 carried 75.58% of baseline chi-square and supplied 103.24% of
+the total Plummer-over-Gaussian aggregate advantage; all three kernels worsened
+that galaxy, with Plummer merely worsening it less. The remaining units net
+favored Gaussian. “Plummer best in aggregate” is arithmetically correct but is
+not adopted as specificity evidence.
+
 ## 8. Dwarf-spheroidal Jeans rejection
 
 The Jeans lane calibrated the shared adapter on Sextans and Fornax before
@@ -86,6 +95,14 @@ optimum reached the `f=1` grid boundary, and half-mass-matched Gaussian and
 top-hat controls also improved all three clusters. The valid interpretation is
 a public-profile direct-equation diagnostic, not independent raw-likelihood or
 Plummer-specific proof.
+
+The `f=1` endpoint fully replaces the selected halo profile with its smoothed
+counterpart. Plummer beat both controls on only 1/3 clusters. A644 supplied
+144.57% of the total Plummer-over-Gaussian aggregate advantage; A2029 and
+A1795 net favored Gaussian. The stored X-COP “adversarial audit” is an
+execution-path **internal self-audit**, not an independently authored external
+review. The deterministic cross-lane recomputation is preserved in
+[`aggregate_specificity_audit.json`](../results/aggregate_specificity_audit.json).
 
 ## Durable conclusion
 

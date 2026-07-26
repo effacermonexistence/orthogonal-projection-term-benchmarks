@@ -28,6 +28,11 @@ $$
 f=1.0,\qquad d_g=0.125R_{{\rm disk},g}.
 $$
 
+At `f=1.0`, the selected halo profile is fully replaced by its smoothed
+counterpart. This is the endpoint of the same declared operator family, but it
+is not the legacy partial `f=0.30` mixture. The X-COP development policy also
+selected this endpoint with `d=0.01R500`.
+
 Its finite-grid convolution is deterministically renormalized to the unchanged
 halo mass, while the pre-renormalization leakage remains reported and gated.
 

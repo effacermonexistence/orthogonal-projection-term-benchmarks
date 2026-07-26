@@ -127,6 +127,16 @@ improved 5/6 stable galaxies, so generic low-pass redistribution remains a live
 explanation. The one-sided 5/6 equal-sign-null value is 0.109375; no
 confirmatory significance claim is made.
 
+That aggregate rank is not a per-galaxy specificity result. Plummer beat both
+matched controls on only 3/6 stable galaxies. NGC5585 supplied 75.58% of the
+aggregate baseline chi-square and 103.24% of the total
+Plummer-over-Gaussian aggregate advantage. All three kernels worsened NGC5585;
+Plummer simply worsened it less, while the remaining galaxies net favored
+Gaussian. The selected `f=1.0` is the full-smoothed-profile replacement
+endpoint of the declared operator family, not the earlier partial `f=0.30`
+mixture. The deterministic per-unit receipt is
+[`aggregate_specificity_audit.json`](../results/aggregate_specificity_audit.json).
+
 ### Heldout galaxy rows
 
 | Galaxy | $R_{\rm disk}$ kpc | $d$ kpc | Baseline $\chi^2$ | Plummer $\chi^2$ | $\Delta\chi^2$ | Reduction |
@@ -184,8 +194,11 @@ See [`sparc_rotation_curve_failure_ledger.json`](../results/sparc_rotation_curve
 ### Supported
 
 The frozen galaxy-scaled density adapter reduced aggregate heldout residuals
-under this implementation and selected score, and Plummer was the best of the
-three frozen matched kernels in aggregate on the six stable heldout galaxies.
+under this implementation and selected score. Plummer was the best of the
+three frozen matched kernels in aggregate on the six stable heldout galaxies;
+that arithmetic ordering is conditional and is not adopted as kernel-specific
+evidence because the per-galaxy count was 3/6 and the aggregate advantage was
+concentrated in one adverse row.
 
 ### Not established
 

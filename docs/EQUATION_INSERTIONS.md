@@ -174,7 +174,8 @@ $$
 No projected-kappa proxy, total-profile smoothing, or response-space
 transformation is used. The development-selected shared policy was
 `f=1.0`, `d=0.01 R500`, frozen before scoring the three heldout cluster
-identities. See
+identities. Here `f=1.0` is the full-smoothed-profile replacement endpoint of
+the declared operator family, not the legacy partial `f=0.30` mixture. See
 [`XCOP_HYDROSTATIC_DIRECT_FORMAL.md`](XCOP_HYDROSTATIC_DIRECT_FORMAL.md).
 
 ## Program C Friedmann/background-fluid lane — a different term

@@ -54,6 +54,38 @@ def verify_sparc():
     assert public_reproduction['status']=='PASS'
     assert public_reproduction['scope']=='PUBLIC_REPRODUCTION_NUMERICAL_PARITY_ONLY'
     assert public_reproduction['heldout_numeric_match']['aggregate']==plummer
+def verify_aggregate_specificity():
+    audit=load('results/aggregate_specificity_audit.json')
+    registry=load('results/experiment_registry.json')
+    summary=load('results/xcop_hse_result_summary.json')
+    xcop_self_audit=load('results/xcop_hse_adversarial_audit.json')
+    assert audit['status']=='PASS'
+    assert audit['adoption_decision']['aggregate_directional_results_preserved'] is True
+    assert audit['adoption_decision']['aggregate_plummer_ranking_preserved_as_arithmetic'] is True
+    assert audit['adoption_decision']['plummer_specificity_claim'] is False
+    assert audit['r2_manifest_identity']['callable']=='sample_ids_sha256'
+    assert audit['r2_manifest_identity']['audit_unit_ids_sha256']=='ad78c102841ada6185808f72f443e8aa1326706bdd8402ae644fa4dcf893f661'
+    sparc=audit['sparc']; xcop=audit['xcop']
+    assert sparc['frozen_fraction']==1.0 and sparc['fraction_grid_boundary_hit'] is True
+    assert sparc['unit_count']==6 and sparc['plummer_beats_both_controls_count']==3
+    assert sparc['aggregate']['plummer_best'] is True
+    assert sparc['weight_concentration']['dominant_unit']=='NGC5585'
+    assert sparc['weight_concentration']['dominant_unit_fraction_of_aggregate_gaussian_advantage']>1.0
+    assert xcop['frozen_fraction']==1.0 and xcop['fraction_grid_boundary_hit'] is True
+    assert xcop['unit_count']==3 and xcop['plummer_beats_both_controls_count']==1
+    assert xcop['aggregate']['plummer_best'] is True
+    assert xcop['aggregate_advantage_concentration']['dominant_unit']=='A644'
+    assert xcop['aggregate_advantage_concentration']['dominant_unit_fraction_of_aggregate_gaussian_advantage']>1.0
+    rows={row['record_id']:row for row in registry['records']}
+    assert rows['SPARC_ROTATION_CURVE_SHARED_ADAPTER']['plummer_beats_both_controls_count']==3
+    assert rows['SPARC_ROTATION_CURVE_SHARED_ADAPTER']['specificity_unit_count']==6
+    assert rows['XCOP_HYDROSTATIC_DIRECT_FORMAL_SOURCE']['plummer_beats_both_controls_count']==1
+    assert rows['XCOP_HYDROSTATIC_DIRECT_FORMAL_SOURCE']['specificity_unit_count']==3
+    assert summary['verification']['independent_audit']=='NOT_ESTABLISHED'
+    assert summary['verification']['adversarial_audit']=='INTERNAL_SELF_AUDIT_PASS'
+    assert summary['aggregate_specificity']['plummer_beats_both_controls_count']==1
+    assert xcop_self_audit['audit_authority']=='INTERNAL_SELF_AUDIT_NOT_INDEPENDENT_EXTERNAL_REVIEW'
+    assert xcop_self_audit['aggregate_specificity_addendum']['plummer_beats_both_controls_count']==1
 def verify_jeans():
     held=load('results/jeans_dsph_heldout.json')
     dev=load('results/jeans_dsph_dev_grid.json')
@@ -277,7 +309,10 @@ def verify_xcop_hse():
     assert audit['status']=='PASS'
     assert all(audit['checks'].values())
     assert audit['direct_formal_equation_label']=='PASS'
+    assert audit['audit_authority']=='INTERNAL_SELF_AUDIT_NOT_INDEPENDENT_EXTERNAL_REVIEW'
     assert summary['verification']['deterministic_byte_identical_replay'] is True
+    assert summary['verification']['independent_audit']=='NOT_ESTABLISHED'
+    assert summary['verification']['adversarial_audit']=='INTERNAL_SELF_AUDIT_PASS'
     assert public_reproduction['status']=='PASS_NUMERICAL_PARITY'
     assert public_reproduction['scope']=='PUBLIC_REPRODUCTION_NUMERICAL_PARITY_ONLY'
     assert public_reproduction['policy_identity_preserved'] is True
@@ -299,6 +334,7 @@ def main():
         x=load(rel); base=x['base_chi_total']
         for r in x['kernels'].values(): verify_delta(base,r['chi_total'],r['raw_delta_chi_total'],r['residual_reduction_pct'])
     verify_sparc()
+    verify_aggregate_specificity()
     verify_jeans()
     verify_jeans_v2()
     verify_jeans_formal_corrective()

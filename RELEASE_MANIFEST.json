@@ -1,30 +1,31 @@
 {
   "files": {
     ".gitignore": "dd4590868e2000d3daf9e16cdde6c103da349bdb014ce4d9f961b45c1ffdad91",
-    "CITATION.cff": "a1bc1fa15a69be78c5ac12fe60e942e7fdf90137a83d3ef031cf82dcf77906fc",
+    "CITATION.cff": "e42c68703af0e8c33d82b4f782b8005cc65f57c43568b6bc52f199657fb52111",
     "CONTRIBUTING.md": "4f57869d00c07c437599794757ff3ca27eec6bdbcbc2f4e7e6a3f8d78785af87",
     "LICENSE": "d95323c24238cff39db77472ea54c675ae45196f36ff7fe401c00bba53d09a9c",
-    "README.md": "fe1ab949814c8f65c1a1aa823d78f99c0445ba6600a29d232e374eaf3e859fff",
-    "audits/RED_TEAM_FINDINGS.md": "e3d126fa63bbab6d8435592af0b29faeb5a1c335cb805f3e8797d26caebeebb3",
+    "README.md": "9f364b071afcf347b166030152b796c5e3899a32163fa67354b3bc17ccedd8d3",
+    "audits/RED_TEAM_FINDINGS.md": "7e92f1fdaa47d57b5b96a13ee03412ce3e96930a43f0664da60b509f0b3c315e",
     "data/README.md": "3da8030cef81e4e31345f3aa8b3f63fb8d5ed30dcf22d02221b946034ea5da19",
-    "docs/CLAIM_BOUNDARIES.md": "f08067be58c34496206428ae1132c7bd50dd0246a033548627c34f8480c922a8",
+    "docs/CLAIM_BOUNDARIES.md": "7e915df2a7b891e53fe780a94b6f8f2dfed71f35f20a355a3ac4780953dbb25f",
     "docs/DATA_PROVENANCE.md": "6fdd4d778959cac0336ffe4363e05295981062927837404a22422ec8f4cf2a97",
-    "docs/EQUATION_INSERTIONS.md": "3918a0728e13e20e8370c8531e8f8fd549099a2da511bae7010e85935f0eb499",
-    "docs/EXPERIMENT_REGISTRY.md": "6b9bb907b04e1b974d75cb6d9cad7a2c1335d47062d78d3599826e6cfbc1ea97",
+    "docs/EQUATION_INSERTIONS.md": "250ab6b68d04378ed5ac4c35992bf4ea96f814b062ae9e08c9de899aaabe0eb8",
+    "docs/EXPERIMENT_REGISTRY.md": "1e2d8c9730b48b184a486369f4371954dc8f7f81858495250b47771d03dec0f9",
     "docs/JEANS_DSPH_ADAPTER.md": "ce5b13fd0312365e6fa2dbf1b4f6722ca37089121db1a9d5e8428f75de493e14",
     "docs/JEANS_DSPH_FORMAL_SOURCE_CORRECTIVE.md": "e00d1b5895cb2745a51b1fdc3fe1044a42c4f6291688741723af44e64dda5e57",
     "docs/JEANS_DSPH_RESPONSE_ADAPTER_V2.md": "c58b7710e1e808a2f235d880c11f59c993a0bc118a6b65492f7f117fb48262af",
-    "docs/OPERATOR.md": "4603e708e08920c78657e36dadcd0c093bbf0f4d4a274db6afadc774116969e8",
-    "docs/SPARC_ROTATION_CURVE_ADAPTER.md": "23875a30f94e40e360381ea9e754a3a606582e05c540e063613f001b67f9d598",
-    "docs/XCOP_HYDROSTATIC_DIRECT_FORMAL.md": "ffd90bff41b7d536db20e01956f800d9a81c7207b81fbbd04ca8ee3c5a8de9e1",
-    "pyproject.toml": "0c6266ecc1e42f75ee73be078776fb68a6cc1e7a185ea2a841f00f14d1fc2717",
-    "results/SOURCE_ARTIFACT_CHECKSUMS.json": "edfefc45304b379e3466730f99030f69a614bca8b3e8f38e4e65cb091e761bf7",
+    "docs/OPERATOR.md": "5ad35c4f5d9ce72ab7d14e65d930dfe043ee41d007bd96aed86552a092d21670",
+    "docs/SPARC_ROTATION_CURVE_ADAPTER.md": "9ffbb6107c288467f5d541a48a3b177b2826caff344424026907b2387a164e92",
+    "docs/XCOP_HYDROSTATIC_DIRECT_FORMAL.md": "58ebed55fb938323df9398ee107097223fd9267f82641192f3b7dee700705bd6",
+    "pyproject.toml": "b14c7dfb6dac3c71ec2ed9ab6e287d2715ed34cfa71956e588b338bf4c5ae6e3",
+    "results/SOURCE_ARTIFACT_CHECKSUMS.json": "6b084e8d76a907f64cbe9bacd2b47a39f803b1a5fec55cd028f175d5f5ea959f",
+    "results/aggregate_specificity_audit.json": "6223bf99696f714e8b6f5f403ae0a45e0804495fdb310c8c2105bfe0bcdb1e06",
     "results/as1063_b2_matched_controls.json": "2047873c40b0552dc40248e6ffa1acdc4b608c979e55e2efac07effdf312b862",
     "results/as1063_b2_true_density.json": "ba4f36052c54c6950b74811dee6291d00c8942a4139f14bbb9e3f767c54530a1",
     "results/canonical_equation_channels.json": "36aa5826e193341d2ef4e42ed9e4efd80f9799fe9863794cc096cae1c489bc6e",
     "results/downlift_object_identity_audit.json": "1ff409f3e495a2a9ae514f36065f29a3d3a8f6862bc249d00c3e7cf436f617a4",
-    "results/experiment_registry.csv": "c9b0ff30b995d0186b796f2d05a21054c95761a9ec35047c2a9ebcd023f7c61e",
-    "results/experiment_registry.json": "0975a08539272f5ecc60c7b64b0f6bcc109014d4b5c491460c88789a2a31ecc6",
+    "results/experiment_registry.csv": "99c5c1c0357324724745cca4616a47786786abb80365478bbf1b896324625de7",
+    "results/experiment_registry.json": "5c50434246eb4e9984ae5871688f251c60d7ddb8740d15c1e387aea0b2c1d8fc",
     "results/hff_six_cluster_transfer.csv": "d0f1047f6d3aee30cc774b9da4ffc6a585081f7ac1fd723fbedb318c2f788bf6",
     "results/hff_six_cluster_transfer.json": "db58c1d7e57ac3c405323a0e194ccd17c1538309af06365926ade41554746673",
     "results/jeans_dsph_dev_grid.json": "bc98a8f258a9b07078e6d522ceeb018fc771a50bf542b0cd3dd11409397e1dfa",
@@ -72,14 +73,15 @@
     "results/sparc_rotation_curve_run_receipt.json": "e5b87f02bb0020af7c7ba4b77b3c7242a6899ad62c592dfd8a991f6d78b183fe",
     "results/sparc_rotation_curve_sample_manifest.json": "2c5244265298b37b31d9f9cf20311597ac597e70eecb0be466943aae764fe1aa",
     "results/sparc_rotation_curve_verification.json": "efa1e14b0412994315cc918122fa2b3a30b0505a8704f0992e143b67e291bb86",
-    "results/xcop_hse_adversarial_audit.json": "ab151ce45d6f44ea9eb013521892c22a7238429a0e55f5d5ae58c6689ff07c05",
+    "results/xcop_hse_adversarial_audit.json": "4b38fe77a934a6af420c3b291cc2f311956e2c15ab9e01a539c21642bcc111ad",
     "results/xcop_hse_frozen_policy.json": "02a63e2528bb3f314df6c02e5a7404921a7ab2b91eaa75183e79f86fc2842835",
     "results/xcop_hse_heldout.json": "a64fc7ed91078d796be9fa3be17e179c3e00b1c7d70ebae835c53aa760338065",
     "results/xcop_hse_proof_contract.json": "502e58ac35b1edc1b90faa1afc02605cbf0927a2a56937abe77fa4c5c45d0d8d",
     "results/xcop_hse_public_reproduction_check.json": "d742c4a436bd76d98f7b0036da6c92948ba272e15e0a5df7935390f499e18ca8",
-    "results/xcop_hse_result_summary.json": "dc6d353e6c9953960fc0d1a7badb5ebfb643f8de6b43f08dd5058ac8690a7f2d",
+    "results/xcop_hse_result_summary.json": "6ab495bb517b9756e40a6f7ab88b38bb8dcb98d866d1dee131b536ca52e8d7e6",
     "results/xcop_hse_run_receipt.json": "1edc8687df36e910a39a380fa103abf84a4ea9a99070ddc142d9c64ef4ef2ece",
     "results/xcop_hse_sample_manifest.json": "48a68d7dd0f5b8863976eaa822595141922337a7dde1f683ffd21b9f562dacb7",
+    "scripts/audit_aggregate_specificity.py": "83bea9dec95f72553619b7d59a26fe9ee0ef9130196647ff9fd40fce512c9e70",
     "scripts/audit_method_object_identity.py": "330eab69a52a0a88f5173b03c51a871e152ee7dcf4937eeecb177f95c193d9e7",
     "scripts/jeans/README.md": "b4a3fbf13c059a00e47eb9c28d4befef336e704370ba1b7b7711cc4467646e9c",
     "scripts/jeans/evaluate_jeans_heldout.py": "3b5ce14c7e2f59f3f2e19e81bf9e3e777504911cf9a2895f39b813b157a04991",
@@ -108,7 +110,7 @@
     "scripts/sparc/optimize_sparc_dev.py": "7e184ec0843d31d6705f9923aa016cc085a16f8d9c1b457c99d7e46572517b3e",
     "scripts/sparc/prepare_public_reproduction.py": "3bc1165ca1f997180e52b71bf651a238d7ab924870fb1f425acb3ba8bea1eb7b",
     "scripts/sparc/sparc_adapter_common.py": "4609393861001e828d3e4c7c3b4443fd56e598c17378c54702765694559b2f9d",
-    "scripts/verify_published_results.py": "7e3e1a7a4bf18e6003eae2494b053710739b175cd407f1faa8807638d5df7088",
+    "scripts/verify_published_results.py": "24907a27145ad738a5271e8fb126f2f6a857ed71a0e0b4ff5980c20e481df8c9",
     "scripts/xcop_hse/README.md": "11d669ce0c415a836ceb77809830f6c6fc0e501fdf4a0dbf029efc01bd76077a",
     "scripts/xcop_hse/audit_xcop_run.py": "77ef501571838d7b8b308aefaba70d67439ddaf562d09a1603ec946ca50145b0",
     "scripts/xcop_hse/evaluate_xcop_heldout.py": "ef969dce454413a5ab63235e1d846a9e6aa8ef122b9ee86f81291b7d413913ee",
@@ -123,14 +125,23 @@
     "src/orthogonal_projection_term/scoring.py": "06a1d7ba639b2fb8109203d110f54c25c7ae968acfe36e74c34e064c2bdfa7cf",
     "tests/test_hff_adapter.py": "178773b63d937d641e251152f0c14734b428ddb8d2040b258540632119bdcc07",
     "tests/test_operator.py": "5cdb76002f4ac52c0316f1d4d185b56dd8526989c7833e9f1aab32074b440b6d",
-    "tests/test_results.py": "d2167e4d9da2ac9d650fdd36c31c20e5d353567bdcf9bb78028bfd1bcfd0102f"
+    "tests/test_results.py": "7bfae05cd8cd01bfdc597b4fe69cf2fd0800a9f0a47837a04f459a413bba4aa4"
   },
-  "generated_at_utc": "2026-07-26T00:13:24.434235+00:00",
-  "release": "0.5.1",
+  "generated_at_utc": "2026-07-26T00:23:32.210755+00:00",
+  "release": "0.5.2",
   "release_config": {
     "clean_predictive_claim": false,
     "negative_results_preserved": true,
     "operator_configs": {
+      "aggregate_specificity_audit": {
+        "aggregate_directional_results_preserved": true,
+        "aggregate_plummer_ranking_preserved_as_arithmetic": true,
+        "audit_unit_ids_sha256": "ad78c102841ada6185808f72f443e8aa1326706bdd8402ae644fa4dcf893f661",
+        "classification": "TASK_LOCAL_ADAPTER_OVER_R2_PRIMITIVES",
+        "plummer_specificity_claim": false,
+        "public_surface_requires_f1_boundary": true,
+        "public_surface_requires_per_unit_counts": true
+      },
       "jeans_corrective_formal_source": {
         "direct_nonzero_diagnostic_fraction": 0.05,
         "proof_mode": "POST_EXPOSURE_CORRECTIVE_FORMAL_SOURCE_REPRODUCTION",
@@ -165,23 +176,34 @@
         "v2_removed_from_canonical_method_tally": true
       },
       "sparc_shared_adapter": {
-        "fraction": 1.0,
-        "scale_rule": "d_g = 0.125 * Rdisk_g"
-      },
-      "xcop_hydrostatic_direct_source": {
+        "aggregate_specificity_audit_file": "results/aggregate_specificity_audit.json",
         "fraction": 1.0,
         "fraction_upper_bound_hit": true,
+        "operator_boundary": "FULL_SMOOTHED_PROFILE_REPLACEMENT_ENDPOINT_NOT_LEGACY_F0_30_MIXTURE",
+        "plummer_beats_both_controls_count": 3,
+        "scale_rule": "d_g = 0.125 * Rdisk_g",
+        "specificity_status": "AGGREGATE_RANKING_ARITHMETICALLY_TRUE_PER_UNIT_SPECIFICITY_NOT_ESTABLISHED",
+        "specificity_unit_count": 6
+      },
+      "xcop_hydrostatic_direct_source": {
+        "aggregate_specificity_audit_file": "results/aggregate_specificity_audit.json",
+        "fraction": 1.0,
+        "fraction_upper_bound_hit": true,
+        "operator_boundary": "FULL_SMOOTHED_PROFILE_REPLACEMENT_ENDPOINT_NOT_LEGACY_F0_30_MIXTURE",
+        "plummer_beats_both_controls_count": 1,
         "proof_mode": "PUBLIC_XCOP_PROFILE_DEV_CALIBRATION_PLUS_UNTOUCHED_CLUSTER_HELDOUT_SHARED_OPERATOR_DIRECT_EQUATION_DIAGNOSTIC",
         "scale_rule": "d_g = 0.01 R500,g",
-        "selection_result": "3_OF_3_HELDOUT_NEGATIVE_DELTA_NO_ROWWISE_FALLBACK"
+        "selection_result": "3_OF_3_HELDOUT_NEGATIVE_DELTA_NO_ROWWISE_FALLBACK",
+        "specificity_status": "AGGREGATE_RANKING_ARITHMETICALLY_TRUE_PER_UNIT_SPECIFICITY_NOT_ESTABLISHED",
+        "specificity_unit_count": 3
       }
     },
     "physical_discovery_claim": false,
     "plummer_specificity_claim": false,
     "project": "orthogonal-projection-term-benchmarks",
     "publication_mode": "public_research_record_with_reproduction_artifacts",
-    "release": "0.5.1"
+    "release": "0.5.2"
   },
-  "release_config_sha256": "f2ea3ac726f324e977b64ae28a0f5e69a4d15d2579350e1d6eb86eb8139cc46e",
-  "schema_version": "orthogonal-projection-public-release-v7"
+  "release_config_sha256": "666c9fa33227cfaa30e84330a6577da36ef2e5bc5cef597112bd387cd2f2648a",
+  "schema_version": "orthogonal-projection-public-release-v8"
 }
